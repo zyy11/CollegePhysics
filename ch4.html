@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第4章 功和能</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>目录</h2>
+    <ul>
+      <li><a href="index.html">封面</a></li>
+      <li><a href="ch1.html">第1章 质点运动学</a></li>
+      <li><a href="ch2.html">第2章 运动定律</a></li>
+      <li><a href="ch3.html">第3章 动量与角动量</a></li>
+      <li><a href="ch4.html">第4章 功和能</a></li>
+      <li><a href="ch5.html">第5章 机械振动</a></li>
+      <li><a href="ch6.html">第6章 机械波</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content ">
+    <h1 id="刚体定轴转动">刚体定轴转动</h1>
+<h2 id="刚体转动的描述">刚体转动的描述</h2>
+<h3 id="刚体">刚体</h3>
+<p><strong>刚体</strong>是受力时形状和大小不发生改变的物体，是一种理想模型。</p>
+<h3 id="刚体转动的描述-1">刚体转动的描述</h3>
+<p>对于刚体的定轴转动，我们只关心其转过的角度，因此可用角位移<span class="math inline">\(\theta\)</span>、角速度<span class="math inline">\(\omega\)</span>、角加速度<span class="math inline">\(\alpha\)</span>描述，它们的关系与圆周运动的质点相同。</p>
+<figure data-latex-placement="htb">
+<img src="asset/ch1/T8.png" style="width:60.0%" />
+</figure>
+<div class="formula">
+<p><span class="math inline">\(\omega=\dfrac{d\theta}{dt},~\alpha=\dfrac{d\omega}{dt},~\theta=\theta_0+\displaystyle\int_0^t{\omega dt},~\omega=\omega_0+\displaystyle\int_0^t{\alpha dt}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>转动的描述</span> 飞轮从<span class="math inline">\(\SI{5}{rad/s}\)</span>开始均匀减速，在<span class="math inline">\(\SI{20}{s}\)</span>后，角速度减为原来的<span class="math inline">\(80\%\)</span>。求前<span class="math inline">\(\SI{150}{s}\)</span>内转过的角度。 仿照匀变速直线运动的公式，把线量替换成角量，注意刹车陷阱。</p>
+<p>根据<span class="math inline">\(\omega_1=\omega_0+\alpha t_1\)</span>，得角加速度<span class="math inline">\(\alpha=\SI{-0.05}{rad/s^2}\)</span>，飞轮停下来的时间<span class="math inline">\(t\)</span>满足<span class="math inline">\(0=\omega_0+\alpha t_1\)</span></p>
+<p>求得<span class="math inline">\(t=\SI{100}{s}\)</span>，说明飞轮在<span class="math inline">\(t=\SI{100}{s}\)</span>时就已经停下来，<span class="math inline">\(\SI{150}{s}\)</span>是干扰信息。</p>
+<p>飞轮转过的角度<span class="math inline">\(\theta\)</span>满足<span class="math inline">\(0-\omega_0^2=2\alpha \theta\)</span>，得<span class="math inline">\(\theta=\SI{250}{rad}\)</span> 【补充练习】汽车发动机的主轴，在<span class="math inline">\(\SI{7.0}{s}\)</span>的时间内，从<span class="math inline">\(\SI{200}{r/min}\)</span>均匀增加到<span class="math inline">\(\SI{3000}{r/min}\)</span>. 求：角加速度、这段时间内转过的圈数。</p>
+</div>
+<h2 id="刚体的转动定律">刚体的转动定律</h2>
+<h3 id="转动惯量">转动惯量</h3>
+<h4 id="转动惯量的定义">转动惯量的定义</h4>
+<p>质点惯性的度量是质量，而刚体惯性的度量是<strong>转动惯量</strong><span class="math inline">\(J\)</span>，计算方法如下。</p>
+<div class="formula">
+<p><span class="math inline">\(J=\sum{m_ir_i^2}\)</span></p>
+</div>
+<h4 id="转动惯量的计算">转动惯量的计算</h4>
+<p>在计算组合体的转动惯量时，可拆成多个部分计算后再相加：</p>
+<ul>
+<li><p>对于孤立的质点，对转轴的转动惯量就是<span class="math inline">\(J=MR^2\)</span></p></li>
+<li><p>对于连续型的物体，则需要切成小段之后积分求解，<span class="math inline">\(J=\displaystyle\int{r^2dm}\)</span></p></li>
+</ul>
+<h4 id="典型物体的转动惯量">典型物体的转动惯量</h4>
+<p>以下常见均匀物体的转动惯量需要记忆，可在考试中直接使用。</p>
+<div class="tabular">
+<p><span>|C<span>3cm</span>|C<span>3cm</span>|C<span>3cm</span>|C<span>2.5cm</span>|</span> 刚体形状 &amp; 图示 &amp; 转轴 &amp; 转动惯量<br />
+</p>
+<p>细杆 &amp; <img src="asset/ch4/T7.png" style="width:12.0%" alt="image" /> &amp; 通过一端垂直于杆 &amp; <span class="math inline">\(J=\dfrac{1}{3}ml^2\)</span><br />
+细杆 &amp; <img src="asset/ch4/T6.png" style="width:12.0%" alt="image" /> &amp; 通过中点垂直于杆 &amp; <span class="math inline">\(J=\dfrac{1}{12}ml^2\)</span><br />
+圆环/空心圆筒 &amp; <img src="asset/ch4/T4.png" style="width:8.0%" alt="image" /> &amp; 通过圆心垂直于环 &amp; <span class="math inline">\(J=mR^2\)</span><br />
+圆盘/空心圆柱 &amp; <img src="asset/ch4/T5.png" style="width:8.0%" alt="image" /> &amp; 通过圆心垂直于盘 &amp; <span class="math inline">\(J=\dfrac{1}{2}mR^2\)</span><br />
+空心球壳 &amp; <img src="asset/ch4/T8.png" style="width:5.0%" alt="image" /> &amp; 直径 &amp; <span class="math inline">\(J=\dfrac{2}{3}mR^2\)</span><br />
+实心球 &amp; <img src="asset/ch4/T9.png" style="width:5.0%" alt="image" /> &amp; 直径 &amp; <span class="math inline">\(J=\dfrac{2}{5}mR^2\)</span><br />
+</p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>转动惯量的计算</span> 长度为<span class="math inline">\(l\)</span>、质量为<span class="math inline">\(m\)</span>的均匀细杆，一端固定在天花板上，另一端和中点处各固定一个质量为<span class="math inline">\(m\)</span>的小球（小球可视为质点）。求该整体对转轴的转动惯量。</p>
+<div class="minipage">
+<p>这是一个组合体，可以拆成两个小球和一根细杆分别计算。</p>
+<p>两个小球到转轴的距离分别为<span class="math inline">\(\dfrac{l}{2},~l\)</span>，它们转动惯量合计是<span class="math inline">\(m\left(\dfrac{l}{2}\right)^2+ml^2=\dfrac{5}{4}ml^2\)</span></p>
+<p>均匀细杆可切分为长度为<span class="math inline">\(dx\)</span>的许多小段，每段质量为<span class="math inline">\(\dfrac{mdx}{l}\)</span>。</p>
+<p>到转轴距离为<span class="math inline">\(x\)</span>的小段，转动惯量是<span class="math inline">\(\dfrac{mdx}{l}x^2\)</span></p>
+<p>所以细杆的转动惯量为<span class="math inline">\(\displaystyle \int_0^l{\dfrac{mdx}{l}x^2}=\left.\dfrac{mx^3}{3l}\right|_0^l=\dfrac{1}{3}ml^2\)</span></p>
+<p>因此整个整体的转动惯量为<span class="math inline">\(J=\dfrac{5}{4}ml^2+\dfrac{1}{3}ml^2=\dfrac{19}{12}ml^2\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T1.png" alt="image" /></p>
+</div>
+<div class="minipage">
+<p>【补充练习】一个长为<span class="math inline">\(2L\)</span>、质量为<span class="math inline">\(2m\)</span>的均匀铁丝在中点处弯折成<span class="math inline">\(120^\circ\)</span>，如图所示，AO边与<span class="math inline">\(x\)</span>轴重合。求该铁丝AOB对于<span class="math inline">\(x\)</span>轴的转动惯量。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T2.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="转动定律">转动定律</h3>
+<p>对于某一固定轴，刚体所受合外力矩<span class="math inline">\(M\)</span>，等于转动惯量<span class="math inline">\(J\)</span>与角加速度<span class="math inline">\(\alpha\)</span>的乘积。</p>
+<div class="formula">
+<p><span class="math inline">\(F=ma~~~\rightarrow~~~M=J\alpha\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>转动定律（单物体）</span> 长度为<span class="math inline">\(l\)</span>、质量为<span class="math inline">\(m\)</span>的细杆，一端固定在天花板上，另一端与质量为<span class="math inline">\(m\)</span>的小球相连（小球可视为质点），从水平位置向下摆动。求摆动<span class="math inline">\(\theta\)</span>角时，摆动的角加速度大小。</p>
+<div class="minipage">
+<p>细杆和小球构成的整体可看做一个刚体，转动惯量<span class="math inline">\(J=\dfrac{1}{3}ml^2+ml^2=\dfrac{4}{3}ml^2\)</span></p>
+<p>刚体的受力包括重力和转轴给的力，但转轴给的力过转轴，对转动没有作用。</p>
+<p>杆的重力可视为作用于重心，力臂是<span class="math inline">\(\dfrac{l}{2}\cos{\theta}\)</span>，而小球的重力的力臂是<span class="math inline">\(l\cos{\theta}\)</span></p>
+<p>因此刚体受力对转轴的力矩为<span class="math inline">\(M=mg\dfrac{l}{2}\cos{\theta}+mgl\cos{\theta}=\dfrac{3}{2}mgl\cos{\theta}\)</span></p>
+<p>根据转动定律，<span class="math inline">\(M=J\alpha\)</span>，可得角加速度<span class="math inline">\(\alpha=\dfrac{9g\cos{\theta}}{8l}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T11.png" alt="image" /></p>
+</div>
+<div class="minipage">
+<p>【补充练习】如图所示，半径为<span class="math inline">\(R\)</span>、质量为<span class="math inline">\(M\)</span>的均匀圆盘可绕过圆心的固定轴任意转动。大小相等、方向相反的力<span class="math inline">\(F\)</span>，分别作用于边缘和半径中点，不计所有摩擦。(1) 求圆盘转动的角加速度大小；(2) 判断圆盘现在是加速还是减速；</p>
+<p>(3) 当圆盘的角速度从<span class="math inline">\(\omega_0\)</span>变为<span class="math inline">\(\omega\)</span>时，求经过的时间<span class="math inline">\(t\)</span>和转过的角度<span class="math inline">\(\theta\)</span>.</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T12.png" alt="image" /></p>
+</div>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>转动定律（多物体）</span></p>
+<div class="minipage">
+<p>如图所示，定滑轮可看作半径为<span class="math inline">\(R\)</span>、质量为<span class="math inline">\(3m\)</span>的匀质圆盘，绳在圆盘处无滑动，忽略其他摩擦，由静止释放。已知物体质量分别为<span class="math inline">\(m,2m\)</span>，求：(1) 两侧绳拉力和物体运动的加速度；(2) 物体下落<span class="math inline">\(h\)</span>时圆盘的角速度。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T13.png" alt="image" /></p>
+</div>
+<p>(1) 在本题中，圆盘和两个物体不能视为一个刚体，需要用隔离法分别分析。</p>
+<p>两个物体运动的加速度相同，设为<span class="math inline">\(a\)</span>，但要注意两侧绳拉力是不同的。</p>
+<p>由牛顿第二定律，<span class="math inline">\(mg-T_1=ma,~T_2=2ma\)</span>，根据线量与角量的关系，<span class="math inline">\(a=\alpha R\)</span></p>
+<p>对于圆盘，转动惯量为<span class="math inline">\(J=\dfrac{1}{2}3mR^2\)</span>，两个力的力臂都是<span class="math inline">\(R\)</span>，但方向相反</p>
+<p>所以合外力矩<span class="math inline">\(M=(T_1-T_2)R\)</span>，代入转动定律得<span class="math inline">\((T_1-T_2)R=\dfrac{1}{2}\cdot 3mR^2\cdot \alpha\)</span></p>
+<p>联立以上各式解得<span class="math inline">\(a=\dfrac{2}{9}g,~T_1=\dfrac{7}{9}mg,~T_2=\dfrac{4}{9}mg\)</span></p>
+<p>(2) 利用匀变速直线运动规律，<span class="math inline">\(v^2=2ah\)</span>. 根据线量和角量的关系，<span class="math inline">\(v=\omega R\)</span>，解得<span class="math inline">\(\omega=\dfrac{2\sqrt{2gh}}{3R}\)</span></p>
+<div class="minipage">
+<p>【补充练习】半径分别为<span class="math inline">\(R,2R\)</span>、质量分别为<span class="math inline">\(m,4m\)</span>的均匀圆盘，同轴地粘在一起，可绕过盘心且垂直盘面的水平光滑轴任意转动。两盘边缘都绕有轻绳，下端分别挂有质量均为<span class="math inline">\(m\)</span>的物体A、B。求物体A、B运动的加速度。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T14.png" alt="image" /></p>
+</div>
+</div>
+<h2 id="转动中的功与能">转动中的功与能</h2>
+<h3 id="动能定理">动能定理</h3>
+<p>力矩<span class="math inline">\(M\)</span>所做的功，就是力矩在角度上的积累。</p>
+<div class="formula">
+<p><span class="math inline">\(W=\displaystyle\int{Fdx}~~~\rightarrow~~~W=\displaystyle\int{Md\theta}\)</span></p>
+</div>
+<p>绕定轴转动的刚体转动动能可表示为</p>
+<div class="formula">
+<p><span class="math inline">\(E_k=\dfrac{1}{2}mv^2~~~\rightarrow~~~E_k=\dfrac{1}{2}J\omega^2\)</span></p>
+</div>
+<p>合外力矩对定轴转动刚体所做的功，等于转动动能的增量。</p>
+<div class="formula">
+<p><span class="math inline">\(W=\displaystyle\int{Md\theta}=\Delta E_k=\dfrac{1}{2}J\omega_2^2-\dfrac{1}{2}J\omega_1^2\)</span></p>
+</div>
+<h3 id="机械能守恒定律">机械能守恒定律</h3>
+<h4 id="刚体的重力势能">刚体的重力势能</h4>
+<p>只要刚体不太大，刚体的重力势能，只需将高度代入质心所在的高度即可。</p>
+<div class="formula">
+<p><span class="math inline">\(E_p=mgh~~~\rightarrow~~~E_p=mgh_C\)</span></p>
+</div>
+<h4 id="守恒定律">守恒定律</h4>
+<p>对于包括刚体在内的系统，动能定理、功能原理和机械能守恒定律仍然成立。</p>
+<p>如果只有保守内力做功，则系统机械能守恒。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>刚体与机械能守恒</span></p>
+<div class="minipage">
+<p>如图所示，滑轮可视为均匀圆盘，质量为<span class="math inline">\(M\)</span>，半径为<span class="math inline">\(R\)</span>。在初始状态下，劲度系数为<span class="math inline">\(k\)</span>的轻弹簧处于原长，质量为<span class="math inline">\(m\)</span>的物体静止于倾角为<span class="math inline">\(\theta\)</span>的光滑固定斜面上。求：(1) 重物沿斜面下滑<span class="math inline">\(L\)</span>距离后的速度大小；(2) 重物下滑的最远距离。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T16.png" alt="image" /></p>
+</div>
+<p>(1) 在此过程中，只有重力和弹簧弹力做功，系统的机械能守恒。</p>
+<p>重力势能转化为弹簧的弹性势能和滑轮与重物的动能，<span class="math inline">\(mgL\sin{\theta}=\dfrac{1}{2}kL^2+\dfrac{1}{2}mv^2+\dfrac{1}{2}J\omega^2\)</span></p>
+<p>均匀圆盘的转动惯量<span class="math inline">\(J=\dfrac{1}{2}MR^2\)</span>，根据线量与角量的关系，<span class="math inline">\(v=\omega R\)</span></p>
+<p>联立以上各式解得<span class="math inline">\(v=\sqrt{\dfrac{4mgL\sin\theta-2kL^2}{M+2m}}\)</span></p>
+<p>(2) 重物下滑最远距离时，速度为零，重力势能完全转化为弹簧的弹性势能。</p>
+<p>由<span class="math inline">\(mgL\sin{\theta}=\dfrac{1}{2}kL^2\)</span>，得<span class="math inline">\(L=\dfrac{2mg\sin{\theta}}{k}\)</span></p>
+<div class="minipage">
+<p>【补充练习】长为<span class="math inline">\(L\)</span>、质量为<span class="math inline">\(m\)</span>的均匀细杆可绕光滑固定轴O在竖直面内旋转，细杆由静止自由下摆，求棒转过<span class="math inline">\(\theta\)</span>角时的角速度和角加速度。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T15.png" alt="image" /></p>
+</div>
+</div>
+<h2 id="角动量守恒">角动量守恒</h2>
+<h3 id="刚体的角动量">刚体的角动量</h3>
+<p>在质点动力学中，我们已经学习过质点对轴的角动量，等于动量乘以动量臂。</p>
+<p>刚体对轴的角动量<span class="math inline">\(L\)</span>，等于转动惯量乘以角速度。</p>
+<div class="formula">
+<p><span class="math inline">\(p=mv~~~\rightarrow~~~L=J\omega\)</span></p>
+</div>
+<p>对于刚体和质点组成的系统，角动量就是系统内所有研究对象的角动量之和。</p>
+<h3 id="角动量定理">角动量定理</h3>
+<p>力矩在时间上的积累称为角冲量或冲量矩<span class="math inline">\(H\)</span>，刚体所受角冲量等于角动量的变化<span class="math inline">\(\Delta L\)</span>。</p>
+<div class="formula">
+<p><span class="math inline">\(I=\displaystyle \int{Fdt}=\Delta p=p_2-p_1~~~\rightarrow~~~H=\displaystyle \int{Mdt}=\Delta L=L_2-L_1=J\omega_2-J\omega_1\)</span></p>
+</div>
+<h3 id="角动量守恒定律">角动量守恒定律</h3>
+<p>对刚体和质点组成的系统，若合外力矩为零，则角动量守恒。</p>
+<div class="formula">
+<p>若<span class="math inline">\(M_{\text{外}}=0\)</span>，则<span class="math inline">\(L\)</span>不变。</p>
+</div>
+<p>一种常见的情况是，若刚体可绕转轴自由旋转，所受外力全部过转轴，则角动量守恒。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>刚体与角动量守恒</span></p>
+<div class="minipage">
+<p>有半径为<span class="math inline">\(R\)</span>、质量为<span class="math inline">\(M\)</span>的均匀水平转台，可绕过圆心的转轴自由旋转，中间有一个质量为<span class="math inline">\(m\)</span>的人，初始角速度为<span class="math inline">\(\omega_0\)</span>，从上向下看为顺时针旋转。</p>
+<p>(1) 若人走到转台边缘，并于转台相对静止，求此时的角速度。</p>
+<p>(2) 若人相对圆盘以恒定速率<span class="math inline">\(v\)</span>逆时针沿边缘运动，求圆盘的角速度。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T17.png" alt="image" /></p>
+</div>
+<p>转台可绕转轴自由旋转，若以人和圆盘组成的系统为研究对象，人与转台之间的力是内力，则所受外力全部过转轴，系统角动量守恒。</p>
+<p>(1) 在初状态，人位于圆心，对转动惯量和角动量无贡献。</p>
+<p>因此初角动量只需考虑圆盘的贡献，转动惯量<span class="math inline">\(J_1=\dfrac{1}{2}MR^2\)</span>，角动量<span class="math inline">\(L_1=J_1\omega_0\)</span></p>
+<p>而在末状态，人位于边缘且相对圆盘静止，需要考虑其对转动惯量的贡献。</p>
+<p>将人与圆盘视为一个整体，这个整体的转动惯量<span class="math inline">\(J_2=\dfrac{1}{2}MR^2+mR^2\)</span>，角动量<span class="math inline">\(L_2=J_2\omega\)</span></p>
+<p>根据角动量守恒定律，<span class="math inline">\(L_1=L_2\)</span>，解得<span class="math inline">\(\omega=\dfrac{M}{M+2m}\omega_0\)</span></p>
+<p>(2) 在末状态，人和圆盘需要分别计算角动量，系统的角动量是二者之和。</p>
+<p>圆盘的转动惯量仍为<span class="math inline">\(J_1=\dfrac{1}{2}MR^2\)</span>，角动量为<span class="math inline">\(\dfrac{1}{2}MR^2\omega\)</span></p>
+<p>若以顺时针为正方向，则人相对于大地的速率是<span class="math inline">\(\omega R-v\)</span>，因此角动量为<span class="math inline">\(m(\omega R-v)R\)</span></p>
+<p>（回忆第2章质点角动量的知识，匀速圆周运动的质点，其角动量大小为<span class="math inline">\(mvR\)</span>）</p>
+<p>根据角动量守恒定律，<span class="math inline">\(L_1=\dfrac{1}{2}MR^2\omega+m(\omega R-v)R\)</span>，解得<span class="math inline">\(\omega=\dfrac{MR\omega_0+2mv}{(M+2m)R}\)</span></p>
+<div class="minipage">
+<p>【补充练习】判断下列说法是否正确：(1) 作用力与反作用力的力矩之和为零；(2) 两个等大反向的力作用在刚体上，刚体的角动量不变；(3) 内力矩不改变系统的角动量；(4) 两个相同质量的子弹同时相向射入并留在旋转的盘子内部（如图所示），盘子转动的角速度不变。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T18.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="碰撞">碰撞</h3>
+<p>质点的碰撞通常考虑动量守恒，而刚体转动中的碰撞通常考虑角动量守恒。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>刚体转动与碰撞</span></p>
+<div class="minipage">
+<p>均匀细杆长为<span class="math inline">\(L\)</span>，质量为<span class="math inline">\(6m\)</span>，被光滑轴固定在天花板上。一个质量为<span class="math inline">\(m\)</span>的子弹以速度<span class="math inline">\(v\)</span>射入细杆自由端，并留在细杆内。(1) 研究细杆和子弹组成的系统，判断碰撞前后，机械能、动量、对转轴的角动量是否守恒。(2) 求碰撞后瞬间细杆的角速度；(3) 求细杆最大摆角的余弦值。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T19.png" alt="image" /></p>
+</div>
+<p>(1) 由于子弹留在细杆中，相当于完全非弹性碰撞，能量损失最大，机械能不守恒。</p>
+<p>在碰撞瞬间，虽然时间极短，但是转轴处产生的冲击力不可忽略，合外力不为零，动量不守恒。</p>
+<p>但是转轴处产生的冲击力通过转轴，合外力矩为零，所以对转轴的角动量守恒。</p>
+<p>(2) 碰撞前只有子弹在运动，系统角动量<span class="math inline">\(L_1=mvL\)</span></p>
+<p>碰撞后二者结合在一起运动，系统转动惯量<span class="math inline">\(J=\dfrac{1}{3}\cdot 6mL^2+mL^2\)</span>，角动量<span class="math inline">\(L_2=J\omega\)</span></p>
+<p>碰撞前后角动量守恒，由<span class="math inline">\(L_1=L_2\)</span>解得碰撞后瞬间角速度<span class="math inline">\(\omega=\dfrac{v}{3L}\)</span></p>
+<p>(3) 在碰撞后摆动的过程中，只有重力做功，系统机械能守恒，系统的重力势能可以分别计算。</p>
+<p>由<span class="math inline">\(\dfrac{1}{2}J\omega^2=6mg\dfrac{L}{2}(1-\cos\theta)+mgL(1-\cos\theta)\)</span>，求得<span class="math inline">\(\cos\theta=1-\dfrac{3v^2}{8gL}\)</span></p>
+<div class="minipage">
+<p>【补充练习】质量为<span class="math inline">\(m\)</span>的黏土块，以水平速度<span class="math inline">\(v\)</span>撞在竖直平面的静止圆盘顶端，并粘在一起。圆盘半径为<span class="math inline">\(R\)</span>，质量为<span class="math inline">\(2m\)</span>，圆盘轴光滑。求：(1) 碰撞后瞬间圆盘的角速度；(2) 圆盘转过<span class="math inline">\(90^\circ\)</span>时的角速度。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T20.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="质点与刚体的对比">质点与刚体的对比</h3>
+<div class="center">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">质点</th>
+<th style="text-align: center;">刚体</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">运动的描述</td>
+<td style="text-align: center;">线量<span class="math inline">\(x,v,a\)</span></td>
+<td style="text-align: center;">角量<span class="math inline">\(\theta, \omega, \alpha\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">惯性的度量</td>
+<td style="text-align: center;">质量<span class="math inline">\(m\)</span></td>
+<td style="text-align: center;">转动惯量<span class="math inline">\(J\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">运动定律</td>
+<td style="text-align: center;"><span class="math inline">\(F=ma\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(M=J\alpha\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">动能</td>
+<td style="text-align: center;"><span class="math inline">\(E_k=\dfrac{1}{2}mv^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(E_k=\dfrac{1}{2}J\omega^2\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">动能定理</td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\int{Fdx}=\Delta E_k\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\int{Md\theta}=\Delta E_k\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">重力势能</td>
+<td style="text-align: center;"><span class="math inline">\(E_p=mgh\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(E_p=mgh_C\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">机械能守恒条件</td>
+<td style="text-align: center;">只有保守内力做功</td>
+<td style="text-align: center;">只有保守内力做功</td>
+</tr>
+<tr>
+<td style="text-align: center;">动量/角动量</td>
+<td style="text-align: center;"><span class="math inline">\(p=mv\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(L=J\omega\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">动量/角动量定理</td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\int{Fdt}=\Delta p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\int{Mdt}=\Delta L\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">动量/角动量守恒条件</td>
+<td style="text-align: center;">合外力为零</td>
+<td style="text-align: center;">合外力矩为零</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="拓展内容">拓展内容</h2>
+<h3 id="计算转动惯量的其他方法">计算转动惯量的其他方法</h3>
+<h4 id="平行轴定理">平行轴定理</h4>
+<p>刚体的转动惯量与转轴的选取有关，如果需要平移转轴，可以使用平行轴定理。</p>
+<p>若已知转轴过质心的转动惯量<span class="math inline">\(J_C\)</span>，将转轴平行移动距离<span class="math inline">\(d\)</span>后，转动惯量<span class="math inline">\(J\)</span>的公式为</p>
+<div class="formula">
+<p><span class="math inline">\(J=J_C+md^2\)</span></p>
+</div>
+<h4 id="正交轴定理">正交轴定理</h4>
+<p>对于<span class="math inline">\(xy\)</span>平面上的薄平板刚体，它对于三个坐标轴的转动惯量满足</p>
+<div class="formula">
+<p><span class="math inline">\(J_z=J_x+J_y\)</span></p>
+</div>
+<p>例如，以一条直径为轴，圆环的转动惯量<span class="math inline">\(J=\dfrac{1}{2}MR^2\)</span>，圆盘的转动惯量<span class="math inline">\(J=\dfrac{1}{4}MR^2\)</span>.</p>
+<div class="center">
+<p><img src="asset/ch4/T21.png" style="width:35.0%" alt="image" /></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>平行轴定理*</span> 如图所示，长为<span class="math inline">\(L\)</span>、质量为<span class="math inline">\(m_1\)</span>的均匀细杆，一端与转轴相连，另一端连接半径为<span class="math inline">\(r\)</span>、质量为<span class="math inline">\(m_2\)</span>的均匀圆盘。求整个物体相对于转轴的转动惯量。</p>
+<div class="minipage">
+<p>对于细杆而言，转轴位于一端，转动惯量为<span class="math inline">\(\dfrac{1}{3}m_1L^2\)</span></p>
+<p>对于圆盘而言，转轴转轴到圆心的距离是<span class="math inline">\(L+r\)</span>，需要使用平行轴定理。</p>
+<p>对于过圆心的转轴，转动惯量为<span class="math inline">\(J_0=\dfrac{1}{2}m_2r^2\)</span></p>
+<p>利用平行轴定理可知转动惯量变为<span class="math inline">\(\dfrac{1}{2}m_2r^2+m_2(L+r)^2\)</span></p>
+<p>因此整个物体的转动惯量为<span class="math inline">\(J=\dfrac{1}{3}m_1L^2+\dfrac{1}{2}m_2r^2+m_2(L+r)^2\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T3.png" alt="image" /></p>
+</div>
+<div class="minipage">
+<p>【补充练习】三根长为<span class="math inline">\(L\)</span>、质量为<span class="math inline">\(m\)</span>的均匀细杆焊接成一个等边三角形，转轴垂直于这个三角形所在平面，且过其中一个顶点。求这个物体相对于该转轴的转动惯量。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T10.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="刚体与质心运动定理">刚体与质心运动定理</h3>
+<p>在刚体转动过程中，若要求出转轴对刚体的力，应考虑使用质心运动定理。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>刚体与质心运动定理结合</span> 长为<span class="math inline">\(l\)</span>、质量为<span class="math inline">\(m\)</span>的均匀细杆，一端用光滑轴固定在天花板上，由水平状态静止下落。求下摆<span class="math inline">\(60^\circ\)</span>角时的：(1) 角速度；(2) 角加速度；(3) 转轴对细杆的力。</p>
+<div class="minipage">
+<p>(1) 要求角速度应用机械能守恒定律</p>
+<p>细杆相对于转轴的转动惯量为<span class="math inline">\(J=\dfrac{1}{3}ml^2\)</span></p>
+<p>注意重心位于细杆中央，因此<span class="math inline">\(\dfrac{1}{2}mgl\sin{60^\circ}=\dfrac{1}{2}J\omega^2\)</span>，解得<span class="math inline">\(\omega=\sqrt{\dfrac{3\sqrt{3}g}{2l}}\)</span></p>
+<p>(2) 要求角加速度应用转动定律，<span class="math inline">\(mg\dfrac{l}{2}\cos{60^\circ}=J\alpha\)</span>，解得<span class="math inline">\(\alpha=\dfrac{3g}{4l}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T24.png" alt="image" /></p>
+</div>
+<div class="minipage">
+<p>(3) 要求转轴对细杆的力，可用质心运动定理。</p>
+<p>质心做圆周运动，需要切向和法向分别考虑。</p>
+<p>在沿杆方向上，<span class="math inline">\(F_1-mg\sin{60^\circ}=m\omega^2\dfrac{l}{2}\)</span>，得<span class="math inline">\(F_1=\dfrac{5\sqrt{3}}{4}mg\)</span></p>
+<p>在垂直杆方向上，<span class="math inline">\(mg\cos{60^\circ}-F_2=m\alpha\dfrac{l}{2}\)</span>，得<span class="math inline">\(F_2=\dfrac{1}{8}mg\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T26.png" alt="image" /></p>
+</div>
+<p>【补充练习】针对补充练习7的情景，在圆盘转过<span class="math inline">\(90^\circ\)</span>时，求：(1) 圆盘转动的角加速度；(2) 转轴对圆盘的作用力。</p>
+</div>
+<h3 id="平面运动的刚体">平面运动的刚体</h3>
+<div class="minipage">
+<p>对于做平面运动的刚体，其运动可以分解为整体随质心的平动和绕质心的转动。</p>
+<p>根据柯尼希定理，刚体的动能就等于这两项动能之和。</p>
+<div class="formula">
+<p><span class="math inline">\(E_k=\dfrac{1}{2}mv_C^2+\dfrac{1}{2}J\omega_C^2\)</span></p>
+</div>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T25.png" alt="image" /></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>平面运动的刚体*</span> 长为<span class="math inline">\(L\)</span>的均匀细杆竖直放在光滑地面上，从静止倒下，求杆滑到地面瞬间的质心速度。</p>
+<div class="minipage">
+<p>杆在水平方向不受外力，因此质心速度一定竖直向下，设为<span class="math inline">\(v\)</span></p>
+<p>杆的A端在水平面上运动，在最终状态运动到最远点，速度为零。</p>
+<p>因此杆绕质心转动的角速度<span class="math inline">\(\omega\)</span>满足<span class="math inline">\(v=\omega \cdot \dfrac{L}{2}\)</span></p>
+<p>整个过程只有重力做功，机械能守恒，<span class="math inline">\(mg\dfrac{L}{2}=\dfrac{1}{2}mv^2+\dfrac{1}{2}J\omega^2\)</span></p>
+<p>其中杆绕质心的转动惯量<span class="math inline">\(J=\dfrac{1}{12}mL^2\)</span>，联立解得<span class="math inline">\(v=\dfrac{\sqrt{3gL}}{2}\)</span>.</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T22.png" alt="image" /></p>
+</div>
+<div class="minipage">
+<p>【补充练习】半径为<span class="math inline">\(R\)</span>、质量为<span class="math inline">\(m\)</span>的匀质实心球由静止沿斜面无滑动地滚动下来，求质心下降<span class="math inline">\(h\)</span>时的速度大小。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch4/T23.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="连续受力的刚体">连续受力的刚体</h3>
+<div class="example"><div class="example-title">例题</div>
+<p><span>连续受力的刚体</span> 长为<span class="math inline">\(L\)</span>、质量为<span class="math inline">\(m\)</span>的均匀细杆放在桌面上，绕中点在桌面上旋转。桌面与细杆的动摩擦因数为<span class="math inline">\(\mu\)</span>. 求：(1) 细杆所受的摩擦力矩；(2) 细杆转动的角加速度。 (1) 将细杆切成长为<span class="math inline">\(dx\)</span>的小段，每小段的质量为<span class="math inline">\(m\dfrac{dx}{L}\)</span>，所受摩擦力为<span class="math inline">\(\mu mg\dfrac{dx}{L}\)</span></p>
+<p>对于到中点距离为<span class="math inline">\(x\)</span>的小段，摩擦力矩为<span class="math inline">\(\mu mg\dfrac{xdx}{L}\)</span></p>
+<p>因此全长的摩擦力矩为<span class="math inline">\(M=2\displaystyle\int_0^{L/2}{\mu mg\dfrac{xdx}{L}}=\dfrac{\mu mgL}{4}\)</span></p>
+<p>(2) 细杆相对于中点的转动惯量为<span class="math inline">\(J=\dfrac{1}{12}mL^2\)</span>，根据转动定律<span class="math inline">\(M=J\alpha\)</span>，可得<span class="math inline">\(\alpha=\dfrac{3\mu g}{L}\)</span></p>
+<p>【补充练习】半径为<span class="math inline">\(R\)</span>、质量为<span class="math inline">\(m\)</span>的均匀圆盘放在桌面上，绕圆心在桌面上旋转。桌面与圆盘的动摩擦因数为<span class="math inline">\(\mu\)</span>. 若圆盘的初角速度为<span class="math inline">\(\omega\)</span>，求停止之前转过的角度。</p>
+</div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

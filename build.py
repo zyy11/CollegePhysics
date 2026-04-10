@@ -72,6 +72,23 @@ def read_template():
 
 def latex_to_html(latex_file, chapter_class):
     """使用 pandoc 将 LaTeX 转换为 HTML"""
+    # 特殊情况：ch4.tex 有 pandoc 不支持的 \newcolumntype，需要预处理
+    temp_file = None
+    original_file = latex_file
+
+    if latex_file.name == "ch4.tex":
+        # 读取原文件，去掉问题行
+        content = latex_file.read_text(encoding="utf-8")
+        lines = content.split('\n')
+        # 移除包含 \newcolumntype 的行
+        cleaned_lines = [line for line in lines if '\\newcolumntype' not in line]
+        cleaned_content = '\n'.join(cleaned_lines)
+
+        # 创建临时文件
+        temp_file = latex_file.parent / "ch4_temp.tex"
+        temp_file.write_text(cleaned_content, encoding="utf-8")
+        latex_file = temp_file
+
     try:
         result = subprocess.run(
             [
@@ -88,8 +105,12 @@ def latex_to_html(latex_file, chapter_class):
         )
         content = result.stdout or ""
 
+        # 清理临时文件
+        if temp_file and temp_file.exists():
+            temp_file.unlink()
+
         if not content:
-            print(f"警告: {latex_file} 转换结果为空")
+            print(f"警告: {original_file} 转换结果为空")
             return ""
 
         # 提取 body 内容
