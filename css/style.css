@@ -186,3 +186,31 @@ body {
     padding: 20px;
   }
 }
+
+/* 封面页 */
+.cover {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.cover h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.cover h2 {
+  font-size: 1.5em;
+  color: var(--main-green);
+  margin-bottom: 10px;
+}
+
+.cover h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+
+.cover .author {
+  font-size: 1em;
+  color: #666;
+}
