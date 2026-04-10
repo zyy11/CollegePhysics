@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第2章 运动定律</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>目录</h2>
+    <ul>
+      <li><a href="index.html">封面</a></li>
+      <li><a href="ch1.html">第1章 质点运动学</a></li>
+      <li><a href="ch2.html">第2章 运动定律</a></li>
+      <li><a href="ch3.html">第3章 动量与角动量</a></li>
+      <li><a href="ch4.html">第4章 功和能</a></li>
+      <li><a href="ch5.html">第5章 机械振动</a></li>
+      <li><a href="ch6.html">第6章 机械波</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content ">
+    <h1 id="质点动力学上">质点动力学（上）</h1>
+<h2 id="牛顿运动定律">牛顿运动定律</h2>
+<ul>
+<li><p>牛顿第一定律：任何物体都保持静止或匀速直线运动的状态，除非作用在它上面的力迫使它改变这种状态</p></li>
+<li><p>牛顿第二定律：运动的变化与所加的动力成正比，并且发生在这个力所沿的直线方向</p>
+<div class="formula">
+<p><span class="math inline">\(\vec{F}=\dfrac{d\vec{p}}{dt}=m\dfrac{d\vec{v}}{dt}=m\vec{a}\)</span></p>
+</div></li>
+<li><p>牛顿第三定律：两个物体对各自对方的相互作用总是相等的，而且指向相反方向</p></li>
+</ul>
+<div class="example"><div class="example-title">例题</div>
+<p><span>牛顿第二定律与微积分结合</span> 汽艇关掉发动机后，因水面阻力而逐渐减速。设关机后速度为<span class="math inline">\(v_0\)</span>，阻力大小为<span class="math inline">\(kv\)</span>，汽艇质量为<span class="math inline">\(m\)</span>，求<span class="math inline">\(t\)</span>时刻的速率和停止前通过的路程。</p>
+<p>(1) 根据牛顿第二定律，<span class="math inline">\(F=-kv=m\dfrac{dv}{dt}\)</span>，分离变量得<span class="math inline">\(\dfrac{dv}{v}=-\dfrac{k}{m}dt\)</span></p>
+<p>两边分别积分<span class="math inline">\(\displaystyle\int{\dfrac{dv}{v}}=-\int{\dfrac{k}{m}dt}\)</span>，得<span class="math inline">\(\ln{v}=C-\dfrac{k}{m}t\)</span></p>
+<p>初始条件为<span class="math inline">\(t=0\)</span>时，<span class="math inline">\(v=v_0\)</span>，代入求得<span class="math inline">\(C=\ln{v_0}\)</span>. 代回整理得<span class="math inline">\(v=v_0 e^{-\frac{k}{m}t}\)</span></p>
+<p>(2) 位移<span class="math inline">\(x=\displaystyle \int_0^t{v_0 e^{-\frac{k}{m}t}dt}=\dfrac{m}{k}v_0(1-e^{-\frac{k}{m}t})\)</span>， 当<span class="math inline">\(t\rightarrow \infty\)</span>时，<span class="math inline">\(x\rightarrow \dfrac{m}{k}v_0\)</span>，这就是停止前通过的路程。</p>
+<p>【补充练习】质量为<span class="math inline">\(m\)</span>的物体由静止下落，空气阻力大小为<span class="math inline">\(kv\)</span>，求任意时刻的速度和收尾速度。</p>
+</div>
+<h2 id="机械能守恒">机械能守恒</h2>
+<h3 id="功与功率">功与功率</h3>
+<h4 id="功">功</h4>
+<p>力对物体做的功，定义为力与作用点位移的数量积。特别地，恒力做功<span class="math inline">\(W=\vec{F}\cdot \Delta \vec{r}\)</span></p>
+<div class="formula">
+<p><span class="math inline">\(dW=\vec{F}\cdot d\vec{r},~~W=\displaystyle\int{\vec{F}\cdot d\vec{r}}\)</span></p>
+</div>
+<h4 id="功率">功率</h4>
+<p>单位时间内的功称为功率。平均功率等于做功除以时间，瞬时功率等于力与速度的数量积。</p>
+<div class="formula">
+<p><span class="math inline">\(\bar{P}=\dfrac{W}{t},~P=\vec{F}\cdot \vec{v}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>做功的计算</span> 质点在几个力的作用下在平面上运动，运动方程<span class="math inline">\(\vec{r}=t\hat{i}+t^2\hat{j}\)</span>. 求下面几个力在<span class="math inline">\(t=\SI{1}{s}\)</span>和<span class="math inline">\(t=\SI{2}{s}\)</span>之间所做的功。并求出第(1)个力在这段时间内的平均功率、<span class="math inline">\(t=\SI{2}{s}\)</span>时的瞬时功率。</p>
+<p>(1) <span class="math inline">\(\vec{F}=5\hat{i}+5\hat{j}\)</span>, (2) <span class="math inline">\(\vec{F}=5x\hat{i}+5y\hat{j}\)</span>, (3) <span class="math inline">\(\vec{F}=5y\hat{i}+5x\hat{j}\)</span></p>
+<p>(1) 这个力是恒力，只需求出位移。</p>
+<p>在<span class="math inline">\(t=\SI{1}{s}\)</span>和<span class="math inline">\(t=\SI{2}{s}\)</span>时刻，位矢<span class="math inline">\(\vec{r}_1=\hat{i}+\hat{j},~\vec{r}_2=2\hat{i}+4\hat{j}\)</span>，位移<span class="math inline">\(\Delta \vec{r}=\hat{i}+3\hat{j}\)</span></p>
+<p>所以做功<span class="math inline">\(W=\vec{F}\cdot \Delta \vec{r}=(5,5)\cdot (1,3)=\SI{20}{J}\)</span>，平均功率<span class="math inline">\(\bar{P}=\dfrac{W}{t}=\SI{20}{W}\)</span></p>
+<p>要求瞬时功率，需要先求出速度。用运动方程求导可得<span class="math inline">\(\vec{v}=\dfrac{d\vec{r}}{dt}=\hat{i}+2t\hat{j}\)</span></p>
+<p>所以<span class="math inline">\(t=\SI{2}{s}\)</span>时速度为<span class="math inline">\(\vec{v}=\hat{i}+4\hat{j}\)</span>，瞬时功率<span class="math inline">\(P=\vec{F}\cdot \vec{v}=(5,5)\cdot (1,4)=\SI{25}{W}\)</span></p>
+<p>(2) 上一问已求出质点位置从<span class="math inline">\((1,1)\)</span>运动到<span class="math inline">\((2,4)\)</span>，所以<span class="math inline">\(x,y\)</span>的变化范围分别是<span class="math inline">\(1\rightarrow 2\)</span>和<span class="math inline">\(2\rightarrow 4\)</span>。</p>
+<p>做功<span class="math inline">\(W=\displaystyle\int_1^2{F_xdx}+\displaystyle\int_1^4{F_ydy}=\displaystyle\int_1^2{5xdx}+\displaystyle\int_1^4{5ydy}=\SI{45}{J}\)</span></p>
+<p>(3) 根据<span class="math inline">\(x=t,y=t^2\)</span>，可求出轨迹方程<span class="math inline">\(y=x^2\)</span>，也可得到<span class="math inline">\(x=\sqrt{y}\)</span></p>
+<p>做功<span class="math inline">\(W=\displaystyle\int_1^2{F_xdx}+\displaystyle\int_1^4{F_ydy}=\displaystyle\int_1^2{5ydx}+\displaystyle\int_1^4{5xdx}=\int_1^2{5x^2dx}+\displaystyle\int_1^4{5\sqrt{y}dy}=\SI{35}{J}\)</span></p>
+<p>【补充练习】质点在几个力的作用下从原点运动到<span class="math inline">\(\vec{r}=2\hat{i}-3\hat{j}\)</span>的位置，其中一个力是<span class="math inline">\(\vec{F}_1=-5\hat{i}+2\hat{j}\)</span>，还有一个力是<span class="math inline">\(\vec{F}=2x\hat{i}-4y\hat{j}\)</span>，求这两个力所做的功。</p>
+</div>
+<h3 id="动能定理">动能定理</h3>
+<p>对于质点而言，合力对质点做的功，等于质点的动能变化。</p>
+<p>对于质点系而言，所有内力和外力做的总功，等于质点系动能的变化。</p>
+<div class="formula">
+<p>质点：<span class="math inline">\(W=\Delta E_k\)</span>；质点系：<span class="math inline">\(W_{\text{内}}+W_{\text{外}}=\Delta E_k\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>动能定理</span> 质量为<span class="math inline">\(m=\SI{2}{kg}\)</span>的质点沿<span class="math inline">\(x\)</span>轴正方向运动，合外力<span class="math inline">\(F=8+8x\)</span>（SI），若物体从原点出发，初速度为<span class="math inline">\(\SI{2}{m/s}\)</span>，求：(1) 运动到位置<span class="math inline">\(x\)</span>时的速度；(2) <span class="math inline">\(x\)</span>与<span class="math inline">\(t\)</span>的关系。</p>
+<p>(1) 在从原点运动到位置<span class="math inline">\(x\)</span>的过程中，做功<span class="math inline">\(W=\displaystyle\int_0^x{(8+8x^2)dx}=8x+4x^2\)</span></p>
+<p>根据动能定理，<span class="math inline">\(W=8x+4x^2=\dfrac{1}{2}mv^2-\dfrac{1}{2}mv_0^2\)</span>，代入<span class="math inline">\(v_0=2\)</span>，得<span class="math inline">\(v=2(x+1)\)</span></p>
+<p>(2) 根据上一问结果，<span class="math inline">\(v=\dfrac{dx}{dt}=2(x+1)\)</span>，分离变量得<span class="math inline">\(\dfrac{dx}{x+1}=2dt\)</span></p>
+<p>两边同时积分<span class="math inline">\(\displaystyle\int{\dfrac{dx}{x+1}}=\int{2dt}\)</span>，得<span class="math inline">\(\ln{(x+1)}=2t+C\)</span></p>
+<p>初始条件为<span class="math inline">\(t=0\)</span>时，<span class="math inline">\(x=0\)</span>，代入求得<span class="math inline">\(C=0\)</span>. 整理得<span class="math inline">\(x=e^{2t}-1\)</span></p>
+<p>【补充练习】质量为<span class="math inline">\(m=\SI{2}{kg}\)</span>的质点沿<span class="math inline">\(x\)</span>轴运动，合外力<span class="math inline">\(F=10+6x^2\)</span>，若物体从原点静止出发，求运动到<span class="math inline">\(x=\SI{4}{m}\)</span>时的速度大小。</p>
+</div>
+<h3 id="保守力与势能">保守力与势能</h3>
+<h4 id="保守力">保守力</h4>
+<p>做功与路径无关的力称为<strong>保守力</strong>。沿任意路径转一圈，保守力的做功为零。</p>
+<h4 id="势能">势能</h4>
+<p>保守力可定义势能<span class="math inline">\(E_p\)</span>，保守内力做功等于势能的减少量。</p>
+<div class="formula">
+<p><span class="math inline">\(W_{\text{保}}=-\Delta E_p=E_{p\text{初}}-E_{p\text{末}}\)</span></p>
+</div>
+<h4 id="常见保守力的势能">常见保守力的势能</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">保守力</th>
+<th style="text-align: center;">表达式</th>
+<th style="text-align: center;">默认势能零点</th>
+<th style="text-align: center;">势能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">重力</td>
+<td style="text-align: center;"><span class="math inline">\(F=-mg\)</span></td>
+<td style="text-align: center;">地面</td>
+<td style="text-align: center;"><span class="math inline">\(E_p=mgh\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">万有引力</td>
+<td style="text-align: center;"><span class="math inline">\(F=\dfrac{GMm}{r^2}\)</span></td>
+<td style="text-align: center;">无穷远处</td>
+<td style="text-align: center;"><span class="math inline">\(E_p=-\dfrac{GMm}{r}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">弹簧弹力</td>
+<td style="text-align: center;"><span class="math inline">\(F=-kx\)</span></td>
+<td style="text-align: center;">原长</td>
+<td style="text-align: center;"><span class="math inline">\(E_p=\dfrac{1}{2}kx^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="example"><div class="example-title">例题</div>
+<p><span>保守力做功</span> 设地球质量为<span class="math inline">\(M\)</span>，半径为<span class="math inline">\(R\)</span>。(1) 推导万有引力势能的表达式；(2) 若质量为<span class="math inline">\(m\)</span>的飞船仅在万有引力的作用下，从距地心<span class="math inline">\(r_1\)</span>处下落到<span class="math inline">\(r_2\)</span>处，求飞船动能增量；(3) 若地球从地面发射一个飞船，速度多大时能脱离地球？（即第二宇宙速度）</p>
+<p>(1) 从无穷远处到距离为<span class="math inline">\(r\)</span>处，万有引力做功<span class="math inline">\(W=\displaystyle\int_\infty^r{-\dfrac{GMm}{x^2}dx}=\left.\dfrac{GMm}{x}\right|_\infty^r=\dfrac{GMm}{r}\)</span></p>
+<p>万有引力势能等于万有引力做功的相反数，<span class="math inline">\(E_p=-\dfrac{GMm}{r}\)</span></p>
+<p>(2) <span class="math inline">\(\Delta E_k=W_{\text{保}}=E_{p\text{初}}-E_{p\text{末}}=-\Delta E_p=\left(-\dfrac{GMm}{r_1}\right)-\left(-\dfrac{GMm}{r_2}\right)=GMm\left(\dfrac{1}{r_2}-\dfrac{1}{r_1}\right)\)</span></p>
+<p>(3) 要想脱离地球，则需要能运动到无穷远处。因为<span class="math inline">\(E_k\geq 0\)</span>，所以满足条件的最小速度应使<span class="math inline">\(E_k=0\)</span>.</p>
+<p>由能量守恒，<span class="math inline">\(\dfrac{1}{2}mv^2+\left(-\dfrac{GMm}{R}\right)=E_k\)</span>，令<span class="math inline">\(E_k=0\)</span>，解得<span class="math inline">\(v=\sqrt{\dfrac{2GM}{R}}\)</span>。</p>
+<p>【补充练习】判断下列说法是否正确：</p>
+<p>(1) 若保守力做正功，则相应的势能增加；(2) 若质点经过一闭合路径运动一周，则保守力做功为零；</p>
+<p>(3) 作用力与反作用力的做功之和一定为零；(4) 质点系动能的变化等于外力所做的功。</p>
+</div>
+<h3 id="功能原理与机械能守恒定律">功能原理与机械能守恒定律</h3>
+<h4 id="功能原理">功能原理</h4>
+<p>质点系所受外力和非保守内力做的功，等于系统机械能的变化量。</p>
+<div class="formula">
+<p><span class="math inline">\(W_{\text{内非}}+W_{\text{外}}=\Delta E\)</span></p>
+</div>
+<h4 id="机械能守恒定律">机械能守恒定律</h4>
+<p>若只有保守内力做功，则质点系的机械能守恒。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>功能原理与机械能守恒</span> 均匀链条总长为<span class="math inline">\(L\)</span>，质量为<span class="math inline">\(M\)</span>，放在桌面上并使一部分下垂，下垂的长度为<span class="math inline">\(a\)</span>. 链条由静止开始运动，直至刚好离开桌面。(1) 若桌面光滑，求刚离开桌面时的速率；(2) 若滑动摩擦因数为<span class="math inline">\(\mu\)</span>，求刚离开桌面时的速率。</p>
+<div class="minipage">
+<p>(1) 对比初末状态，只有桌面上<span class="math inline">\(L-a\)</span>长度的链条发生变化</p>
+<p>这一段链条的质量为<span class="math inline">\(\dfrac{L-a}{L}M\)</span>，重心位置下降了<span class="math inline">\(a+\dfrac{L-a}{2}=\dfrac{L+a}{2}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch2/T10.png" alt="image" /></p>
+</div>
+<p>若忽略摩擦，则只有重力做功，机械能守恒，<span class="math inline">\(\dfrac{L-a}{L}Mg\dfrac{L+a}{2}=\dfrac{1}{2}Mv^2\)</span>，整理得<span class="math inline">\(v=\sqrt{\dfrac{(L^2-a^2)g}{L}}\)</span></p>
+<p>(2) 当下垂长度为<span class="math inline">\(x\)</span>时，留在桌面上的长度为<span class="math inline">\(L-x\)</span>，质量为<span class="math inline">\(\dfrac{L-x}{L}M\)</span>，所受摩擦力大小为<span class="math inline">\(\mu\dfrac{L-x}{L}Mg\)</span></p>
+<p>因此摩擦力做的功为<span class="math inline">\(W_f=-\displaystyle\int_a^L{\mu\dfrac{L-x}{L}Mgdx}=-\left.\dfrac{\mu Mg}{L}(Lx-\dfrac{1}{2}x^2)\right|_a^L=-\dfrac{\mu Mg}{2L}(L-a)^2\)</span></p>
+<p>根据功能关系，<span class="math inline">\(\dfrac{L-a}{L}Mg\dfrac{L+a}{2}-\dfrac{\mu Mg}{2L}(L-a)^2=\dfrac{1}{2}Mv^2\)</span>，整理得<span class="math inline">\(v=\sqrt{\dfrac{[L^2-a^2-\mu(L-a)^2]g}{L}}\)</span></p>
+<div class="minipage">
+<p>【补充练习】质量为<span class="math inline">\(m\)</span>的物体放在倾角为<span class="math inline">\(\theta\)</span>的粗糙斜面上，物体与斜面的滑动摩擦因数为<span class="math inline">\(\mu\)</span>。物体被劲度系数为<span class="math inline">\(k\)</span>的弹簧连接在斜面底端，初始位置弹簧为原长。物体在沿斜面向上的恒定外力<span class="math inline">\(F\)</span>作用下沿斜面向上移动，求最远位置的位移。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch2/T9.png" alt="image" /></p>
+</div>
+</div>
+<h2 id="拓展内容">拓展内容</h2>
+<h3 id="惯性力">惯性力</h3>
+<p>若想在非惯性系中仍然运用牛顿第二定律，则需要在每个物体上附加一个假想力，称为<strong>惯性力</strong>。</p>
+<p>若非惯性系相对大地做平动的，则惯性力<span class="math inline">\(\vec{F}_{\text{惯}}=-m\vec{a}\)</span></p>
+<h3 id="质心与质心运动定理">质心与质心运动定理</h3>
+<h4 id="质心">质心</h4>
+<p>对于多个质点组成的质点系，<strong>质心</strong>就是质量的“中心”，等于各质点位置按质量的加权平均。</p>
+<div class="formula">
+<p><span class="math inline">\(x_C=\dfrac{\sum{m_ix_i}}{m}\text{或}\dfrac{\int{xdm}}{m}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>求质心的位置*</span> 求以下物体的质心坐标：(1) 一块均匀薄板，尺寸如图所示；(2) 半径为<span class="math inline">\(R\)</span>的均匀半圆弧。</p>
+<div class="center">
+<p><img src="asset/ch2/T2.png" style="width:45.0%" alt="image" /> <img src="asset/ch2/T3.png" style="width:50.0%" alt="image" /></p>
+</div>
+<p>(1) 这个薄板可以认为是两个矩形组成的，各自的面积和质心坐标如图。因为薄板均匀，所以面积比等于质量比。代入公式可得</p>
+<p><span class="math inline">\(x_C=\dfrac{1\times 6+3.5\times 4.5}{6+4.5}\approx 2.07\)</span>，<span class="math inline">\(y_C=\dfrac{1.5\times 6+0.75\times 4.5}{6+4.5}\approx 1.18\)</span>，因此质心坐标约为<span class="math inline">\((2.07,1.18)\)</span></p>
+<p>(2) 整个物体关于<span class="math inline">\(y\)</span>轴对称，所以质心的<span class="math inline">\(x\)</span>坐标一定为<span class="math inline">\(0\)</span>，只需求<span class="math inline">\(y\)</span>坐标。</p>
+<p>将铁丝切分成圆心角为<span class="math inline">\(d\theta\)</span>的小段，设总质量为<span class="math inline">\(m\)</span>，则每段质量为<span class="math inline">\(\dfrac{md\theta}{\pi}\)</span></p>
+<p><span class="math inline">\(y_C=\dfrac{\displaystyle\int_0^\pi{R\sin\theta\dfrac{md\theta}{\pi}}}{m}=\left.\dfrac{R}{\pi}(-\cos \theta)\right|_0^\pi=\dfrac{2R}{\pi}\)</span>，所以质心坐标为<span class="math inline">\(\left(0,\dfrac{2R}{\pi}\right)\)</span></p>
+<p>【补充练习】求下列物体的质心位置：(1) 在一个半径为<span class="math inline">\(R\)</span>的均匀圆盘中，挖掉一个半径为<span class="math inline">\(r\)</span>的圆洞，圆洞的圆心与圆盘圆心距离为<span class="math inline">\(d\)</span>；(2) 半径为<span class="math inline">\(R\)</span>的均匀半圆面，位于<span class="math inline">\(x\)</span>轴上方，圆心位于原点。</p>
+<div class="center">
+<p><img src="asset/ch2/T7.png" style="width:45.0%" alt="image" /></p>
+</div>
+</div>
+<section id="质心运动定理" class="minipage">
+<h4>质心运动定理</h4>
+<p>质心的运动与质点系所受的合外力满足牛顿第二定律，与质点系的内力无关。</p>
+<div class="formula">
+<p><span class="math inline">\(\vec{F}_{\text{外}}=m\vec{a}_C\)</span></p>
+</div>
+</section>
+<div class="minipage">
+<p><img src="asset/ch2/T4.png" alt="image" /></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>质心运动定理*</span> 水平桌面上铺一张纸，纸上放一个<span class="math inline">\(M=\SI{0.5}{kg}\)</span>的均匀球，向右拉纸张，球受到<span class="math inline">\(f=\SI{0.1}{N}\)</span>的摩擦力。求静止开始的<span class="math inline">\(\SI{2}{s}\)</span>内，球心相对于桌面移动的距离。</p>
+<div class="minipage">
+<p>把整个球体看作一个系统，所受合外力只有摩擦力<span class="math inline">\(f\)</span></p>
+<p>根据质心运动定理，球心的加速度满足<span class="math inline">\(f=Ma_C\)</span>，求得<span class="math inline">\(a_C=\SI{0.2}{m/s}\)</span></p>
+<p>所以最初<span class="math inline">\(\SI{2}{s}\)</span>内移动的距离为<span class="math inline">\(x_C=\dfrac{1}{2}a_Ct^2=\SI{0.4}{m}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch2/T5.png" alt="image" /></p>
+</div>
+<div class="minipage">
+<p>【补充练习】一枚炮弹以初速度<span class="math inline">\(v_0\)</span>、发射角<span class="math inline">\(\theta\)</span>从地面向上抛出，在最高点炸裂成质量相等的两块。在炸裂后，一块垂直下落，另一块继续向前飞行。利用质心运动定理求两块落点的距离。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch2/T6.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="一对力的功">一对力的功</h3>
+<p>“一对力”是指分别作用在两个物体上的大小相等、方向相反的力，例如作用力与反作用力。</p>
+<p>一对力的功等于力乘以二者的相对位移，与参考系无关。</p>
+<div class="formula">
+<p><span class="math inline">\(W_{12}+W_{21}=\vec{F}_2\cdot \Delta \vec{r}_{21}\)</span></p>
+</div>
+<h3 id="势能函数">势能函数</h3>
+<p>若<span class="math inline">\(E_p\)</span>是几个坐标的函数，则保守力等于势能函数梯度的相反数。</p>
+<div class="formula">
+<p><span class="math inline">\(F=-\nabla E=-\left(\dfrac{\partial E_p}{\partial x},\dfrac{\partial E_p}{\partial y},\dfrac{\partial E_p}{\partial z}\right)\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>一维势能函数*</span> 若两个质点相互作用的势能函数为<span class="math inline">\(U=4x^3−6x^2~(x&gt;0)\)</span>（SI），求在<span class="math inline">\(x=\SI{2}{m}\)</span>处，两质点的相互作用力，并求出平衡位置。</p>
+<p>根据势能函数与保守力的关系，<span class="math inline">\(F=-\dfrac{dU}{dx}=-12x^2+12x\)</span>，在<span class="math inline">\(x=\SI{2}{m}\)</span>处，<span class="math inline">\(F=-\SI{24}{N}\)</span></p>
+<p>令<span class="math inline">\(F=0\)</span>，结合已知条件<span class="math inline">\(x&gt;0\)</span>，可得平衡位置为<span class="math inline">\(x=\SI{1}{m}\)</span></p>
+<div class="minipage">
+<p>【补充练习】双原子分子的势能曲线如图所示。</p>
+<p>(1) 两个原子间距<span class="math inline">\(r\)</span>取不同值时，作用力是引力还是斥力；</p>
+<p>(2) 若势能可近似表示为<span class="math inline">\(E_p=\dfrac{A}{r^{12}}-\dfrac{B}{r^{6}}\)</span>（<span class="math inline">\(A,B\)</span>为参数），求作用力与原子间距<span class="math inline">\(r\)</span>的关系，并求出<span class="math inline">\(r_0\)</span>的值。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch2/T8.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="流体的稳定流动">流体的稳定流动</h3>
+<h4 id="流体的连续性方程">流体的连续性方程</h4>
+<p><strong>理想流体</strong>是指不可压缩、完全没有黏性的流体，是一种理想化模型。</p>
+<p>因为理想流体不可压缩，所以截面面积<span class="math inline">\(S\)</span>与流速<span class="math inline">\(v\)</span>的乘积为定值，称为流量<span class="math inline">\(Q\)</span>.</p>
+<div class="formula">
+<p><span class="math inline">\(S_1v_1=S_2v_2=Q\)</span></p>
+</div>
+<h4 id="伯努利方程">伯努利方程</h4>
+<p>因为理想流体没有黏性，所以流动中没有能量损失，单位体积流体的能量不变。</p>
+<div class="formula">
+<p><span class="math inline">\(\dfrac{1}{2}\rho v^2+\rho gh+p=\text{常数}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>流体的稳定流动*</span> 有一大蓄水池，底部有一小孔，水位高度<span class="math inline">\(\SI{10}{m}\)</span>，小孔截面积为<span class="math inline">\(\SI{1e-6}{m^2}\)</span>，设水流为稳定流动，求每分钟从小孔流出的水的体积。（<span class="math inline">\(g=\SI{9.8}{m/s^2}\)</span>）</p>
+<p>水面和小孔都通向大气，压强<span class="math inline">\(p\)</span>都是大气压强，二者相等，在伯努利方程两侧可抵消。</p>
+<p>蓄水池足够大，水面下降的速率可忽略，<span class="math inline">\(v_1=0\)</span>。</p>
+<p>利用伯努利方程，在水面和小孔处，<span class="math inline">\(\rho gh=\dfrac{1}{2}\rho v_2^2\)</span>，得<span class="math inline">\(v_2=\SI{14}{m/s}\)</span></p>
+<p>根据流体的连续性方程，<span class="math inline">\(Q=v_2S_2=\SI{1.4e-5}{m^3/s}=\SI{8.4e-4}{m^3/min}\)</span></p>
+<div class="minipage">
+<p>【补充练习】喷药车加压罐内液面上的压强为<span class="math inline">\(\SI{21}{atm}\)</span>，喷嘴直径为<span class="math inline">\(\SI{0.8}{cm}\)</span>，若喷嘴与液面位于同一高度，求每分钟喷出液体的体积。（药液的密度取<span class="math inline">\(\rho=\SI{1e3}{kg/m^3}\)</span>）</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch2/T20.png" alt="image" /></p>
+</div>
+</div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

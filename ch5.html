@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第5章 机械振动</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>目录</h2>
+    <ul>
+      <li><a href="index.html">封面</a></li>
+      <li><a href="ch1.html">第1章 质点运动学</a></li>
+      <li><a href="ch2.html">第2章 运动定律</a></li>
+      <li><a href="ch3.html">第3章 动量与角动量</a></li>
+      <li><a href="ch4.html">第4章 功和能</a></li>
+      <li><a href="ch5.html">第5章 机械振动</a></li>
+      <li><a href="ch6.html">第6章 机械波</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content purple">
+    <h1 id="机械振动">机械振动</h1>
+<h2 id="简谐振动的描述">简谐振动的描述</h2>
+<h3 id="简谐振动的表达式">简谐振动的表达式</h3>
+<h4 id="位移">位移</h4>
+<div class="minipage">
+<p><strong>简谐振动</strong>：离开平衡位置的位移<span class="math inline">\(x\)</span>按余弦规律随时间变化。</p>
+<p>以平衡位置为基准，简谐振动位移的通式为</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T1.png" alt="image" /></p>
+</div>
+<div class="formula">
+<p><span class="math inline">\(x=A\cos (\omega t+ \varphi)\)</span></p>
+</div>
+<ul>
+<li><p><span class="math inline">\(A\)</span>称为振幅，<span class="math inline">\(\omega\)</span>称为角频率（或圆频率）</p></li>
+<li><p>周期<span class="math inline">\(T=\dfrac{2\pi}{\omega}\)</span>，频率<span class="math inline">\(\nu=\dfrac{1}{T}=\dfrac{\omega}{2\pi}\)</span></p></li>
+<li><p><span class="math inline">\(\omega t+ \varphi\)</span>称为相位，<span class="math inline">\(t=0\)</span>时的相位<span class="math inline">\(\varphi\)</span>称为初相位</p></li>
+</ul>
+<h4 id="速度与加速度">速度与加速度</h4>
+<p>将<span class="math inline">\(x\)</span>对<span class="math inline">\(t\)</span>求导，可得速度<span class="math inline">\(v\)</span>，再求导可得加速度<span class="math inline">\(a\)</span>.</p>
+<div class="formula">
+<p><span class="math inline">\(v=-A\omega \sin(\omega t+ \varphi),~a=-A\omega^2 \cos (\omega t+ \varphi)\)</span></p>
+</div>
+<p>从表达式可以看出，加速度与位移成正比且反向，这是简谐振动的运动学特征。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>简谐振动的运动学</span> 某简谐振动的表达式为<span class="math inline">\(x=A\cos ⁡(\omega t+\varphi)\)</span> (SI)，已知<span class="math inline">\(t=0\)</span>时的位移为<span class="math inline">\(\SI{0.04}{m}\)</span>，速度为<span class="math inline">\(\SI{0.12}{m/s}\)</span>，加速度为<span class="math inline">\(\SI{-0.36}{m/s^2}\)</span>，求<span class="math inline">\(A,\omega,\varphi\)</span>的值（<span class="math inline">\(A,\omega&gt;0,~|\varphi|&lt;\pi\)</span>）。</p>
+<p>将简谐振动表达式对<span class="math inline">\(t\)</span>两次求导，得速度<span class="math inline">\(v=-\omega A\sin{(\omega t+\varphi)}\)</span>，加速度<span class="math inline">\(a=-A\omega^2 \cos (\omega t+ \varphi)\)</span></p>
+<p>在<span class="math inline">\(t=0\)</span>时，<span class="math inline">\(x=A\cos\varphi=0.04,~v=-A\omega\sin\varphi=0.12,~a=-A\omega^2 \cos\varphi=0.36\)</span></p>
+<p>两两相除得<span class="math inline">\(\omega=3,~\tan\varphi=-1\)</span>，结合<span class="math inline">\(\cos\varphi&gt;0,~\sin\varphi&lt;0\)</span>的要求，<span class="math inline">\(\varphi=-\dfrac{\pi}{4}\)</span>符合题意。</p>
+<p>将<span class="math inline">\(\cos\varphi=\dfrac{\sqrt{2}}{2}\)</span>代入<span class="math inline">\(x=A\cos\varphi=0.04\)</span>，可得<span class="math inline">\(A=0.04\sqrt{2}\)</span></p>
+<p>【补充练习】已知简谐振动的表达式为<span class="math inline">\(x=0.1\cos{\left(8\pi t+\dfrac{2\pi}{3}\right)}\)</span>（SI），求最大速度、加速度，并求首次回到平衡位置的时间。</p>
+</div>
+<h3 id="旋转矢量法">旋转矢量法</h3>
+<p>一个匀速圆周运动质点，其在<span class="math inline">\(x\)</span>轴上的投影就是简谐振动，而且速度和加速度在<span class="math inline">\(x\)</span>方向上的分量，也与简谐振动相同。利用这一关系，可以用逆时针旋转的矢量表示振动。</p>
+<p>利用逆时针旋转、长度等于振幅<span class="math inline">\(A\)</span>的矢量表示简谐振动，这种方法称为<strong>旋转矢量法</strong>。初始角度就是初相位<span class="math inline">\(\varphi\)</span>，只画出初始矢量的位置，称为<strong>相量图</strong>，非常适合确定初相位。</p>
+<figure data-latex-placement="htb">
+<img src="asset/ch5/T2.png" style="width:70.0%" />
+</figure>
+<div class="example"><div class="example-title">例题</div>
+<p><span>简谐振动的表达式：旋转矢量法</span> 已知简谐振动的振幅为<span class="math inline">\(4\)</span>，周期为<span class="math inline">\(2\)</span>. 当<span class="math inline">\(t=0\)</span>时第一次通过<span class="math inline">\(x=−2\)</span>处，且速度为正方向。求简谐振动的表达式（<span class="math inline">\(A,\omega&gt;0,~|\varphi|&lt;\pi\)</span>），并求下一次通过<span class="math inline">\(x=-2\)</span>位置的时间。</p>
+<p>根据题意，<span class="math inline">\(A=4,~T=2\)</span>，所以<span class="math inline">\(\omega=\dfrac{2\pi}{T}=\pi\)</span>，简谐振动表达式为<span class="math inline">\(x=4\cos{(\pi t+\varphi)}\)</span></p>
+<p>如果直接将<span class="math inline">\(t=0,~x=-2\)</span>代入表达式，会得到<span class="math inline">\(\varphi=\pm\dfrac{2\pi}{3}\)</span>，还需根据速度方向进一步判断。</p>
+<div class="minipage">
+<p>而画出相量图，则可清楚看出初相位应该是第三象限角，应取<span class="math inline">\(\varphi=-\dfrac{2\pi}{3}\)</span></p>
+<p>可快速得出振动表达式为<span class="math inline">\(x=4\cos{\left(\pi t-\dfrac{2\pi}{3}\right)}\)</span></p>
+<p>根据向量图可知，下一次通过<span class="math inline">\(x=-2\)</span>位置的相位是<span class="math inline">\(\dfrac{2\pi}{3}\)</span></p>
+<p>结合初相位，可知需要再等<span class="math inline">\(\dfrac{4\pi}{3}\)</span>个相位。</p>
+<p>这相当于<span class="math inline">\(\dfrac{4\pi/3}{2\pi}=\dfrac{2}{3}\)</span>个周期，因此再次通过<span class="math inline">\(x=-2\)</span>的时间为<span class="math inline">\(t=\dfrac{2}{3}T=\dfrac{4}{3}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T4.png" alt="image" /></p>
+</div>
+<p>【补充练习】已知简谐振动的图像如下图所示，求简谐振动的表达式。</p>
+<div class="center">
+<p><img src="asset/ch5/T3.png" style="width:35.0%" alt="image" /></p>
+</div>
+</div>
+<h3 id="相位关系">相位关系</h3>
+<p>若两个振动的频率相同，则相位差<span class="math inline">\(\Delta \varphi=\varphi_2−\varphi_1\)</span>不变，习惯上：</p>
+<ul>
+<li><p>若<span class="math inline">\(\Delta\varphi=0\)</span>（或<span class="math inline">\(2k\pi\)</span>），则称两个振动<strong>同相</strong>；若<span class="math inline">\(\Delta\varphi=\pi\)</span>（或<span class="math inline">\((2k+1)\pi\)</span>），则称两个振动<strong>反相</strong></p></li>
+<li><p>若<span class="math inline">\(\Delta\varphi&gt;0\)</span>，一般说振动2<strong>领先</strong><span class="math inline">\(\Delta\varphi\)</span>的相位；若<span class="math inline">\(\Delta\varphi&lt;0\)</span>，一般说振动2<strong>落后</strong><span class="math inline">\(\Delta\varphi\)</span>的相位</p></li>
+</ul>
+<figure data-latex-placement="htb">
+<img src="asset/ch5/T8.png" style="width:50.0%" />
+</figure>
+<div class="example"><div class="example-title">例题</div>
+<p><span>简谐振动的表达式：相位关系</span> 已知简谐振动的速度最大值为<span class="math inline">\(4\)</span>，振幅为<span class="math inline">\(2\)</span>，<span class="math inline">\(t=0\)</span>时为速度最大值，且为正方向。</p>
+<p>(1) 求简谐振动的表达式。(2) 另一个振动与之反相，求其表达式。</p>
+<div class="minipage">
+<p>(1) 根据题意，<span class="math inline">\(A=2,~A\omega=4\)</span>，可得<span class="math inline">\(\omega=2\)</span></p>
+<p>根据<span class="math inline">\(t=0\)</span>时取速度最大值，可画出右图所示的相量图，看出<span class="math inline">\(\varphi=-\dfrac{\pi}{2}\)</span></p>
+<p>因此简谐振动表达式为<span class="math inline">\(x=2\cos{(2t-\dfrac{\pi}{2})}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T6.png" alt="image" /></p>
+</div>
+<p>(2) 两个振动反相，则相位差为<span class="math inline">\(\pi\)</span>，可得<span class="math inline">\(\varphi_2=\dfrac{\pi}{2}\)</span>，因此表达式为<span class="math inline">\(x=A\cos{(2t+\dfrac{\pi}{2})}\)</span></p>
+<p>【补充练习】两个质点做同振幅、同频率的简谐振动，在振动过程中，它们总在经过振幅一半的地方相遇，且运动方向相反。求他们的相位差。</p>
+</div>
+<h2 id="简谐振动的力与能量">简谐振动的力与能量</h2>
+<h3 id="简谐振动的动力学">简谐振动的动力学</h3>
+<p>根据简谐运动的表达式，可知<span class="math inline">\(a=-\omega^2 x\)</span>，加速度与位移正比且反向，这是简谐振动的的动力学特征。</p>
+<p>结合牛顿第二定律，可知简谐振动的回复力与位移正比且反向。</p>
+<div class="formula">
+<p><span class="math inline">\(F=-kx~~~\text{或}~~~m\dfrac{dx^2}{dt^2}=-kx\)</span></p>
+</div>
+<p>结合牛顿第二定律，<span class="math inline">\(F=ma\)</span>，其中<span class="math inline">\(a=-\omega^2 x\)</span>，可得简谐振动的角频率和周期为</p>
+<div class="formula">
+<p><span class="math inline">\(\omega=\sqrt{\dfrac{k}{m}},~~T=2\pi\sqrt{\dfrac{m}{k}}\)</span></p>
+</div>
+<h3 id="简谐振动的能量">简谐振动的能量</h3>
+<div class="minipage">
+<p>在简谐振动的过程中，动能和势能相互转化，转化的过程中总能量不变。</p>
+<ul>
+<li><p>在平衡位置，动能最大而势能为零</p></li>
+<li><p>在位移最大处，动能为零而势能最大</p></li>
+</ul>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T18.png" alt="image" /></p>
+</div>
+<div class="formula">
+<p><span class="math inline">\(E=E_k+E_p=\dfrac{1}{2}mv^2+\dfrac{1}{2}kx^2=\dfrac{1}{2}kA^2=\dfrac{1}{2}m\omega^2 A^2\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>简谐振动的能量</span> 有一弹簧振子，弹簧劲度系数为<span class="math inline">\(k=\SI{25}{N/m}\)</span>，振子振动的初动能为<span class="math inline">\(\SI{2}{J}\)</span>，初势能为<span class="math inline">\(\SI{6}{J}\)</span>.</p>
+<p>求：(1) 振幅；(2) 当位移是多大时，势能与动能相等。</p>
+<p>(1) 总能量<span class="math inline">\(E=E_k+E_p=\SI{8}{J}\)</span>，当振幅最大时，全为势能，<span class="math inline">\(E=\dfrac{1}{2}kA^2\)</span>，得<span class="math inline">\(A=\SI{0.8}{m}\)</span></p>
+<p>(2) 势能与动能相等时，<span class="math inline">\(E_p=\dfrac{1}{2}E=\SI{4}{J}\)</span>，利用<span class="math inline">\(E_p=\dfrac{1}{2}kx^2\)</span>，得<span class="math inline">\(x=0.4\sqrt{2}\unit{m}\)</span></p>
+<p>【补充练习】某弹簧振子重物的质量为<span class="math inline">\(\SI{0.01}{kg}\)</span>，振动表达式<span class="math inline">\(x=0.1\cos\left(8\pi t+\dfrac{2\pi}{3}\right)\)</span>（SI）. 求：(1) 弹簧的劲度系数；(2) 通过平衡位置时的速率；(3) 动能等于势能3倍时的位移。</p>
+</div>
+<h3 id="简谐振动的实例">简谐振动的实例</h3>
+<h4 id="弹簧振子">弹簧振子</h4>
+<p>弹簧振子的<span class="math inline">\(A,\varphi\)</span>由初始条件确定，但角频率和周期只由系统本身决定。</p>
+<div class="minipage">
+<p>弹簧振子的回复力是弹簧的弹力，满足<span class="math inline">\(F=-kx\)</span>，所以是简谐振动。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T1.png" alt="image" /></p>
+</div>
+<div class="formula">
+<p><span class="math inline">\(\dfrac{d^2x}{dt^2}=-\dfrac{k}{m}x,~~\omega=\sqrt{\dfrac{k}{m}},~~T=\dfrac{2\pi}{\omega}=2\pi\sqrt{\dfrac{m}{k}}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>弹簧振子</span></p>
+<div class="minipage">
+<p>光滑水平面上的弹簧振子有质量为<span class="math inline">\(M\)</span>的木块和劲度系数为<span class="math inline">\(k\)</span>的弹簧构成。弹簧处于原长，一个质量为<span class="math inline">\(m\)</span>的子弹以速度<span class="math inline">\(u\)</span>射入木块并留在其中，系统开始振动。求振动方程（向右为正）。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T10.png" alt="image" /></p>
+</div>
+<p>在射入后瞬间，由动量守恒，<span class="math inline">\(mu=(m+M)v\)</span>，此时系统能量为<span class="math inline">\(E=E_k=\dfrac{1}{2}(M+m)v^2\)</span></p>
+<p>振动过程中总能量不变，因此在振幅最大处，<span class="math inline">\(E=E_p=\dfrac{1}{2}kA^2\)</span>，解得<span class="math inline">\(A=\dfrac{mu}{\sqrt{k(M+m)}}\)</span></p>
+<p>利用简谐运动的动力学公式，可得<span class="math inline">\(\omega=\sqrt{\dfrac{k}{M+m}}\)</span>，利用旋转矢量法可知初相位<span class="math inline">\(\varphi=-\dfrac{\pi}{2}\)</span></p>
+<p>因此振动方程为<span class="math inline">\(x=\dfrac{mu}{\sqrt{k(M+m)}}\cos\left(\sqrt{\dfrac{k}{M+m}}t-\dfrac{\pi}{2}\right)\)</span></p>
+<div class="minipage">
+<p>【补充练习】劲度系数<span class="math inline">\(\SI{10}{N/m}\)</span>的轻弹簧下端挂有质量为<span class="math inline">\(\SI{1}{kg}\)</span>的盘子。现有质量也为<span class="math inline">\(\SI{1}{kg}\)</span>的物体在高为<span class="math inline">\(\SI{1}{m}\)</span>处自由下落，并与盘子粘在一起，系统开始振动。求振动方程。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T11.png" alt="image" /></p>
+</div>
+</div>
+<h4 id="单摆">单摆</h4>
+<div class="minipage">
+<p>单摆的回复力是重力在切线方向的分力<span class="math inline">\(mg\sin \theta\)</span>，若摆动幅度很小，可用小角近似<span class="math inline">\(\sin \theta \sim \theta\)</span>，因此可认为回复力<span class="math inline">\(F=-mg\theta\)</span>，与<span class="math inline">\(\theta\)</span>正比且反向。这说明在摆角很小的情况下，单摆的运动是简谐振动。</p>
+<p>摆球的切向加速度<span class="math inline">\(a_t=l\alpha=l\dfrac{d^2\theta}{dt^2}\)</span>，所以动力学方程为<span class="math inline">\(ml\dfrac{d^2\theta}{dt^2}=-mg\theta\)</span>，据此可得</p>
+<div class="formula">
+<p><span class="math inline">\(\dfrac{d^2\theta}{dt^2}=-\dfrac{g}{l}\theta,~~\omega=\sqrt{\dfrac{g}{l}},~~T=2\pi\sqrt{\dfrac{l}{g}}\)</span></p>
+</div>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T12.png" alt="image" /></p>
+</div>
+<p>注意不要把单摆振动的相位与摆角混淆。</p>
+<ul>
+<li><p>最大摆角对应最大位移，相位为0和<span class="math inline">\(\pi\)</span></p></li>
+<li><p>摆角为0对应平衡位置，相位为<span class="math inline">\(、pm\dfrac{\pi}{2}\)</span></p></li>
+</ul>
+<h4 id="复摆">复摆</h4>
+<div class="minipage">
+<p>绕不过质心的水平固定轴转动的刚体，称为复摆，需要用转动定律进行分析。</p>
+<p>在摆角很小的情况下，回复力矩<span class="math inline">\(M=-mgl\sin\theta\sim -mgl\theta\)</span>，其中<span class="math inline">\(l\)</span>表示质心到转轴的距离。回复力矩与<span class="math inline">\(\theta\)</span>正比且反向，说明复摆的运动是简谐振动。</p>
+<p>利用转动定律，可列出振动的动力学方程<span class="math inline">\(J\dfrac{d^2\theta}{dt^2}=-mgl\theta\)</span>，据此可得</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T13.png" alt="image" /></p>
+</div>
+<div class="formula">
+<p><span class="math inline">\(\dfrac{d^2\theta}{dt^2}=-\dfrac{mgl}{J}\theta,~~\omega=\sqrt{\dfrac{mgl}{J}},~T=\dfrac{2\pi}{\omega}=2\pi\sqrt{\dfrac{J}{mgl}}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>单摆与复摆</span></p>
+<div class="minipage">
+<p>一均匀细圆环质量为<span class="math inline">\(m\)</span>，半径为<span class="math inline">\(R\)</span>，挂在墙上的钉子上。求微小摆动的周期。</p>
+<p>提示：圆环相对于钉子的转动惯量<span class="math inline">\(J=2mR^2\)</span>.</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T19.png" alt="image" /></p>
+</div>
+<p>圆环若偏离很小的<span class="math inline">\(\theta\)</span>角度，则回复力矩<span class="math inline">\(M=-mgR\sin\theta \approx -mgR\theta\)</span></p>
+<p>振动方程为<span class="math inline">\(J\dfrac{d^2\theta}{dt^2}=-mgR\theta\)</span>，整理得<span class="math inline">\(\dfrac{d^2\theta}{dt^2}=-\dfrac{g}{2R}\theta\)</span>. 因此<span class="math inline">\(\omega=\sqrt{\dfrac{g}{2R}}\)</span>，<span class="math inline">\(T=\dfrac{2\pi}{\omega}=2\pi \sqrt{\dfrac{2R}{g}}\)</span> 【补充练习】将一个单摆的摆球向负方向拉开很小的<span class="math inline">\(\theta\)</span>角并放手，使之自由运动。它的初相位是多少？摆球首次来到平衡位置时的相位是多少？</p>
+</div>
+<h2 id="同方向简谐振动的合成">同方向简谐振动的合成</h2>
+<h3 id="同方向同频率">同方向同频率</h3>
+<div class="minipage">
+<p>同方向、同频率的两个振动<span class="math inline">\(x_1=A_1\cos{(\omega t+\varphi_1)},~x_2=A_2\cos{(\omega t+\varphi_2)}\)</span>，合成的结果仍然是同频率的简谐振动，参数可根据旋转矢量法进行确定。</p>
+<ul>
+<li><p>若两个振动同相（<span class="math inline">\(Δ\varphi=0\)</span>），则振幅最大，<span class="math inline">\(A=A_1+A_2\)</span></p></li>
+<li><p>若两个振动反相（<span class="math inline">\(Δ\varphi=\pi\)</span>），则振幅最小，<span class="math inline">\(A=|A_1-A_2|\)</span></p></li>
+<li><p>其余情况，振幅<span class="math inline">\(A\)</span>介于二者之间</p></li>
+</ul>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T14.png" alt="image" /></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>同方向同频率的振动合成</span> 有两个同方向的振动<span class="math inline">\(x_1=4\cos⁡{(2t+\dfrac{\pi}{4})},~x_2=4\cos{⁡(2t+\dfrac{3\pi}{4})}\)</span>进行合成。 (1) 求合振动的方程；(2) 若还有第三个振动<span class="math inline">\(x_3=3\cos⁡(2t+\varphi)\)</span>也参与合成，<span class="math inline">\(\varphi\)</span>取何值时，合振动的振幅取得最大值和最小值，最大、最小值分别是多少？</p>
+<div class="minipage">
+<p>(1) 画出相量图可看出，合振动的振幅为<span class="math inline">\(4\sqrt{2}\)</span>，初相位为<span class="math inline">\(\dfrac{\pi}{2}\)</span>，频率不变。</p>
+<p>因此合振动方程为<span class="math inline">\(x=4\sqrt{2}\cos{(2t+\dfrac{\pi}{2}})\)</span></p>
+<p>(2) 要使合振动的振幅最大，应使振动同相，<span class="math inline">\(\varphi=\dfrac{\pi}{2}\)</span>，最大振幅<span class="math inline">\(A=4+3=7\)</span></p>
+<p>要使合振动的振幅最小，应使振动反相，<span class="math inline">\(\varphi=-\dfrac{\pi}{2}\)</span>，最大振幅<span class="math inline">\(A=4-3=1\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T15.png" alt="image" /></p>
+</div>
+<p>【补充练习】设有两个同方向简谐振动<span class="math inline">\(x_1=A\cos(\omega t+\dfrac{\pi}{4}),~x_2=\sqrt{3}A\cos(\omega t+\dfrac{3\pi}{4})\)</span>. (1) 求合振动的表达式；(2) 再与第三个振动合成，使合振动的振幅达到<span class="math inline">\(4A\)</span>，并让第三个振动的振幅尽可能小。</p>
+</div>
+<h3 id="同方向不同频率">同方向不同频率</h3>
+<p>若两个振动的频率略有差异，合振动的振幅出现周期性变化，称为<strong>拍</strong>，拍频就是两个振动的频率之差。</p>
+<div class="formula">
+<p><span class="math inline">\(\nu=|\nu_2-\nu_1|=\left|\dfrac{\omega_1}{2\pi}-\dfrac{\omega_2}{2\pi}\right|\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>拍现象</span> 音叉A与频率<span class="math inline">\(\SI{415}{Hz}\)</span>的音叉B同时振动时，可在每秒内听到<span class="math inline">\(2\)</span>拍。则音叉A与频率<span class="math inline">\(\SI{420}{Hz}\)</span>的音叉C同时振动时，每秒内能听到几拍？ 根据音叉A、B的振动可知，<span class="math inline">\(|\nu_A-\nu_B|=\SI{2}{Hz}\)</span>，得<span class="math inline">\(\nu_A=\SI{417}{Hz}\)</span>或<span class="math inline">\(\SI{413}{Hz}\)</span>.</p>
+<p>因此音叉A、C振动时，拍频<span class="math inline">\(\nu^\prime=|\nu_A-\nu_B|=\SI{3}{Hz}\)</span>或<span class="math inline">\(\SI{7}{Hz}\)</span>. 【补充练习】一个<span class="math inline">\(\SI{256}{Hz}\)</span>的音叉和待测音叉同时鸣响，若在<span class="math inline">\(\SI{20}{s}\)</span>内听到<span class="math inline">\(10\)</span>拍，求待测音叉的频率。</p>
+</div>
+<h2 id="拓展内容">拓展内容</h2>
+<h3 id="简谐振动的判定">简谐振动的判定</h3>
+<p>要想判定一个运动是简谐振动，有以下三种等价的方法：</p>
+<ul>
+<li><p>受力特征：回复力与位移正比且反向，<span class="math inline">\(F=-kx\)</span></p></li>
+<li><p>振动方程：<span class="math inline">\(\dfrac{d^2x}{dt^2}+\omega^2x=0\)</span>（即<span class="math inline">\(a=-\omega^2 x\)</span>）</p></li>
+<li><p>能量特征：总能量不变，且势能<span class="math inline">\(E_p=\dfrac{1}{2}kx^2\)</span></p></li>
+</ul>
+<div class="example"><div class="example-title">例题</div>
+<p><span>简谐振动的判定*</span></p>
+<div class="minipage">
+<p>长为<span class="math inline">\(l\)</span>、横截面积为<span class="math inline">\(S\)</span>的木块浮在水面上，静止时浸没深度为<span class="math inline">\(h\)</span>。将其稍向下压后松手，证明其之后的运动是简谐振动，并求振动周期。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T7.png" alt="image" /></p>
+</div>
+<p>在平衡位置，浮力等于重力，<span class="math inline">\(\rho_{\text{水}} gSh=\rho_{\text{木}}Slg\)</span>，得<span class="math inline">\(\rho_{\text{水}}h=\rho_{\text{木}}l\)</span></p>
+<p>以平衡位置为原点，向下为正。若向下压<span class="math inline">\(x\)</span>的距离，则合力<span class="math inline">\(F\)</span>等于重力减浮力。</p>
+<p><span class="math inline">\(F=\rho_{\text{木}}Slg-\rho_{\text{水}} gS(h+x)=-\rho_{\text{水}}gSx\)</span>，这说明回复力与位移成正比且反向，木块做简谐振动。</p>
+<p>对照简谐振动的动力学表达式，<span class="math inline">\(k=\rho_{\text{水}}gS\)</span>，木块<span class="math inline">\(m=\rho_{\text{木}}Sl\)</span></p>
+<p>代入公式可得<span class="math inline">\(\omega=\sqrt{\dfrac{k}{m}}=\sqrt{\dfrac{\rho_{\text{水}}gS}{\rho_{\text{木}}Sl}}=\sqrt{\dfrac{g}{h}}\)</span>，周期<span class="math inline">\(T=\dfrac{2\pi}{\omega}=2\pi \sqrt{\dfrac{h}{g}}\)</span></p>
+<div class="minipage">
+<p>【补充练习】横截面均匀的光滑U形管中有适量液体，液体的总长度为<span class="math inline">\(L\)</span>，忽略摩擦和液体黏性。证明液面的小幅上下振动是简谐振动，并求出振动周期。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T9.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="阻尼振动与受迫振动">阻尼振动与受迫振动</h3>
+<h4 id="阻尼振动">阻尼振动</h4>
+<p>设自振频率<span class="math inline">\(\omega_0\)</span>的系统在振动过程中，受到<span class="math inline">\(f=-\gamma v\)</span>的阻力，记阻尼系数<span class="math inline">\(\beta=\dfrac{\gamma}{2m}\)</span></p>
+<ul>
+<li><p>若<span class="math inline">\(\beta&gt;\omega_0\)</span>，称为<strong>过阻尼</strong>，不能振动</p></li>
+<li><p>若<span class="math inline">\(\beta=\omega_0\)</span>，称为<strong>临界阻尼</strong>，恰好不能振动</p></li>
+<li><p>若<span class="math inline">\(\beta&lt;\omega_0\)</span>，称为<strong>欠阻尼</strong>，可以振动</p></li>
+</ul>
+<p>在欠阻尼的情况下，振动周期变长<span class="math inline">\(T=\dfrac{2\pi}{\sqrt{\omega_0^2-\beta^2}}\)</span>，振幅和能量逐渐减小，<span class="math inline">\(A=A_0 e^{-\beta t},~E=E_0 e^{-2\beta t}\)</span>.</p>
+<p>振幅减小到<span class="math inline">\(\dfrac{1}{e}\)</span>的时间称为时间常量（鸣响时间）<span class="math inline">\(\tau=\dfrac{1}{2\beta}\)</span></p>
+<p>在鸣响时间内振动的次数的<span class="math inline">\(2\pi\)</span>倍称为品质因数（Q值），<span class="math inline">\(Q=2\pi\dfrac{\tau}{T}=\omega \tau\)</span></p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>阻尼振动*</span> 一单摆在空气中摆动，初始振幅为<span class="math inline">\(5^\circ\)</span>. 若经过<span class="math inline">\(\SI{100}{s}\)</span>，振幅减为<span class="math inline">\(4^\circ\)</span>. 求：再经过多长时间，振幅减为<span class="math inline">\(2^\circ\)</span>，并求出鸣响时间。 根据<span class="math inline">\(A=A_0 e^{-\beta t}\)</span>，可得<span class="math inline">\(t=\dfrac{1}{\beta}\ln{\dfrac{A_0}{A}}\)</span>. 代入<span class="math inline">\(A_0=5^\circ,~A=4^\circ,~t=\SI{100}{s}\)</span>，可求出<span class="math inline">\(\beta\approx \SI{2.2e-3}{s^{-1}}\)</span></p>
+<p>再代入<span class="math inline">\(A_0=4^\circ,~A=2^\circ\)</span>的数据，可得<span class="math inline">\(t\approx \SI{310.7}{s}\)</span>. 进而鸣响时间<span class="math inline">\(\tau=\dfrac{1}{2\beta}\approx \SI{448}{s}\)</span> 【补充练习】阻尼振动的起始振幅为<span class="math inline">\(\SI{3.0}{cm}\)</span>，<span class="math inline">\(\SI{10}{s}\)</span>后变为<span class="math inline">\(\SI{1.0}{cm}\)</span>，再经过多长时间振幅变为<span class="math inline">\(\SI{0.3}{cm}\)</span>.</p>
+</div>
+<h4 id="受迫振动">受迫振动</h4>
+<p>在周期性驱动力的作用下，系统振动的频率等于驱动力的频率，而不是自振频率。</p>
+<p>驱动力的频率与自振频率越接近，振幅越大。当二者相等时，振幅都达到最大值，称为<strong>共振</strong>现象。</p>
+<h3 id="相互垂直的简谐振动合成">相互垂直的简谐振动合成</h3>
+<div class="minipage">
+<p>若质点在<span class="math inline">\(x,y\)</span>方向的运动都是简谐运动，且频率相等，则合运动的轨迹是直线或椭圆，取决于相位差。</p>
+<ul>
+<li><p>若相位差为<span class="math inline">\(0\)</span>或<span class="math inline">\(\pi\)</span>，则轨迹为直线</p></li>
+<li><p>若<span class="math inline">\(y\)</span>的相位比<span class="math inline">\(x\)</span>领先，则为右旋的椭圆（顺时针转动）</p></li>
+<li><p>若<span class="math inline">\(y\)</span>的相位比<span class="math inline">\(x\)</span>落后，则为左旋的椭圆（逆时针转动）</p></li>
+</ul>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T20.png" alt="image" /></p>
+</div>
+<div class="minipage">
+<p>若质点在<span class="math inline">\(x,y\)</span>方向的运动都是简谐运动，且频率是简单的整数比，则质点合运动的轨迹是一个闭合曲线，称为<strong>李萨如图形</strong>。</p>
+<p>沿着闭合曲线，两个方向振动的频率之比，等于到达<span class="math inline">\(x,y\)</span>最大位移的次数之比。若到达角点，则各算半次。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T17.png" alt="image" /></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>李萨如图形*</span></p>
+<div class="minipage">
+<p>示波器的水平和垂直输入端分别加上余弦式交变电压，荧光屏上出现如图所示的曲线。已知水平方向振动频率为<span class="math inline">\(\SI{2.7e4}{Hz}\)</span>，求垂直方向的振动频率。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch5/T21.png" alt="image" /></p>
+</div>
+<p>假想沿着曲线行走一圈，可以到达6次<span class="math inline">\(x\)</span>最大位移和4次<span class="math inline">\(y\)</span>最大位移，这说明在相同时间内，<span class="math inline">\(x\)</span>方向振动了3个周期，而<span class="math inline">\(y\)</span>方向只振动了2个周期，所以<span class="math inline">\(\dfrac{\nu_x}{\nu_y}=\dfrac{6}{4}\)</span>，可得<span class="math inline">\(\nu_y=\SI{1.8e4}{Hz}\)</span></p>
+<p>【补充练习】写出下列李萨如图形两个方向振动的频率之比。</p>
+<div class="center">
+<p><img src="asset/ch5/T22.png" style="width:60.0%" alt="image" /></p>
+</div>
+</div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -25,16 +25,6 @@ CHAPTERS = [
     ("ch6", "ch6.tex", "第6章 机械波", "purple"),
 ]
 
-# 章节配色映射
-CHAPTER_COLORS = {
-    "ch1": "green",
-    "ch2": "green",
-    "ch3": "green",
-    "ch4": "green",
-    "ch5": "purple",
-    "ch6": "purple",
-}
-
 
 def check_pandoc():
     """检查 pandoc 是否安装"""
@@ -89,23 +79,24 @@ def latex_to_html(latex_file, chapter_class):
                 str(latex_file),
                 "-f", "latex",
                 "-t", "html",
-                "--standalone",
                 "--mathjax",
                 "--wrap=none",
             ],
             capture_output=True,
-            text=True,
-            check=True,
+            encoding="utf-8",
+            errors="replace",
         )
-        content = result.stdout
+        content = result.stdout or ""
 
-        # 后处理：添加章节类名
-        if chapter_class:
-            content = re.sub(
-                r'<main class="main-content"',
-                f'<main class="main-content {chapter_class}"',
-                content
-            )
+        if not content:
+            print(f"警告: {latex_file} 转换结果为空")
+            return ""
+
+        # 提取 body 内容
+        if "<body>" in content:
+            body_match = re.search(r'<body>(.*?)</body>', content, re.DOTALL)
+            if body_match:
+                content = body_match.group(1)
 
         # 处理公式样式
         content = process_formulas(content)
@@ -120,12 +111,13 @@ def latex_to_html(latex_file, chapter_class):
 
     except subprocess.CalledProcessError as e:
         print(f"转换 {latex_file} 失败: {e.stderr}")
-        return None
+        return ""
 
 
 def process_formulas(content):
     """处理公式样式 - 为公式添加高亮类"""
-    # 匹配 LaTeX 的 formula 环境
+    if not content:
+        return content
     formula_pattern = r'<div class="formula">(.+?)</div>'
     content = re.sub(
         formula_pattern,
@@ -138,7 +130,8 @@ def process_formulas(content):
 
 def process_examples(content):
     """处理例题样式"""
-    # 匹配 example 环境
+    if not content:
+        return content
     example_pattern = r'<div class="example">'
     content = re.sub(
         example_pattern,
@@ -150,8 +143,8 @@ def process_examples(content):
 
 def process_answers(content):
     """处理答案 - 添加折叠功能"""
-    # 查找答案部分并添加折叠类
-    # 这里需要根据 LaTeX 的实际输出调整
+    if not content:
+        return content
     return content
 
 
@@ -160,7 +153,7 @@ def generate_page(title, content, chapter_class=""):
     template = read_template()
     template = template.replace("$title$", title)
     template = template.replace("$content$", content or "")
-    template = template.replace("$chapter_class$", chapter_class)
+    template = template.replace("$chapter_class$", chapter_class or "")
     return template
 
 
@@ -170,9 +163,6 @@ def build():
         sys.exit(1)
 
     print("开始构建网页...")
-
-    # 确保输出目录存在
-    OUTPUT_DIR.mkdir(exist_ok=True)
 
     # 转换每个章节
     for chapter_id, filename, title, chapter_class in CHAPTERS:
@@ -185,7 +175,7 @@ def build():
 
         # LaTeX 转 HTML
         content = latex_to_html(latex_path, chapter_class)
-        if content is None:
+        if not content:
             continue
 
         # 生成完整页面

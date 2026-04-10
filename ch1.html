@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第1章 质点运动学</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>目录</h2>
+    <ul>
+      <li><a href="index.html">封面</a></li>
+      <li><a href="ch1.html">第1章 质点运动学</a></li>
+      <li><a href="ch2.html">第2章 运动定律</a></li>
+      <li><a href="ch3.html">第3章 动量与角动量</a></li>
+      <li><a href="ch4.html">第4章 功和能</a></li>
+      <li><a href="ch5.html">第5章 机械振动</a></li>
+      <li><a href="ch6.html">第6章 机械波</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content ">
+    <h1 id="质点运动学">质点运动学</h1>
+<h2 id="运动学的物理量">运动学的物理量</h2>
+<h3 id="位置矢量轨道">位置矢量、轨道</h3>
+<h4 id="位置矢量">位置矢量</h4>
+<div class="minipage">
+<p><strong>位置矢量</strong>:从原点O指向质点位置P的矢量，用<span class="math inline">\(\vec{r}\)</span>表示，简称“位矢”。</p>
+<p>在直角坐标中，可用三个坐标值<span class="math inline">\(x,y,z\)</span>随时间<span class="math inline">\(t\)</span>的变化表示质点的运动。</p>
+<p>记<span class="math inline">\(\hat{i},\hat{j},\hat{k}\)</span>表示<span class="math inline">\(x,y,z\)</span>方向的单位向量，则坐标为<span class="math inline">\((x,y,z)\)</span>的质点，位置矢量可表示为</p>
+<div class="formula">
+<p><span class="math inline">\(\vec{r}=x\hat{i}+y\hat{j}+z\hat{k}\)</span></p>
+</div>
+</div>
+<div class="minipage">
+<p><img src="asset/ch1/T1.png" alt="image" /></p>
+</div>
+<h4 id="轨道">轨道</h4>
+<p><strong>轨道</strong>：质点运动时所经过的路线。只需将<span class="math inline">\(t\)</span>消掉，求出<span class="math inline">\(x,y,z\)</span>之间的关系。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>求轨道方程</span></p>
+<p>根据运动函数求轨道方程：(1) <span class="math inline">\(\vec{r}=t^2\hat{i}+(2t+3)\hat{j}\)</span> (SI)；(2) <span class="math inline">\(\vec{r}=\cos^3{t}\hat{i}+\sin^3{t}\hat{j}\)</span> (SI)。</p>
+<p>(1) 根据运动函数，对照<span class="math inline">\(\vec{r}=x\hat{i}+y\hat{j}+z\hat{k}\)</span>，可以写出<span class="math inline">\(x=t^2,~y=2t+3\)</span></p>
+<p>根据<span class="math inline">\(y=2t+3\)</span>，可以解出<span class="math inline">\(t=\dfrac{(y-3)}{2}\)</span>，再代入<span class="math inline">\(x=t^2\)</span>，得<span class="math inline">\(x=\dfrac{(y-3)^2}{4}\)</span></p>
+<p>整理得<span class="math inline">\(4x=(y-3)^2\)</span>，这就是质点的轨道方程。注：若只考虑<span class="math inline">\(t\geq 0\)</span>的运动，则还应有<span class="math inline">\(y\geq 3\)</span>.</p>
+<p>(2) 根据运动函数，可写出<span class="math inline">\(x=\cos^3{t},~y=\sin^3{t}\)</span></p>
+<p>利用<span class="math inline">\(\cos^2{t}+\sin^2{t}=1\)</span>，可配凑出<span class="math inline">\(x^{\frac{2}{3}}+y^{\frac{2}{3}}=1\)</span>，这就是质点的轨道方程。</p>
+<div class="minipage">
+<p>【补充练习】质点做初速度斜向上<span class="math inline">\(45^\circ\)</span>的斜抛运动，坐标系如图所示。根据斜抛运动规律，写出<span class="math inline">\(x,y\)</span>随<span class="math inline">\(t\)</span>的变化关系，并求质点的轨道方程。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch1/T2.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="位移与路程">位移与路程</h3>
+<div class="minipage">
+<p><strong>路程</strong>：质点运动的路径长，记为<span class="math inline">\(\Delta s\)</span>，路程是标量，只有大小，没有方向。</p>
+<p><strong>位移</strong>：质点位置的改变量，记为<span class="math inline">\(\Delta \vec{r}\)</span>，位移是矢量，既有大小，也有方向。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch1/T3.png" alt="image" /></p>
+</div>
+<p>因为两点之间，直线段最短，所以路程不小于位移的大小。<span class="math inline">\(\Delta s \geq |\Delta \vec{r}|\)</span></p>
+<p>但时间<span class="math inline">\(\Delta t \rightarrow 0\)</span>时，任意曲线运动可近似为直线运动，<span class="math inline">\(ds = |d \vec{r}|\)</span></p>
+<h3 id="速度与速率">速度与速率</h3>
+<h4 id="速度">速度</h4>
+<p>速度是位置的变化率，是单位时间内的位移，是矢量，既有大小，也有方向。</p>
+<p>平均速度等于位移除以时间，<span class="math inline">\(\bar{\vec{v}}=\dfrac{\Delta \vec{r}}{\Delta t}\)</span>，<span class="math inline">\(\Delta t \rightarrow 0\)</span>时的极限，即为瞬时速度<span class="math inline">\(\vec{v}=\dfrac{d\vec{r}}{dt}\)</span></p>
+<p>在直角坐标中，可以对三个坐标分别求导，得到速度在三个方向上的分量。</p>
+<div class="formula">
+<p><span class="math inline">\(\vec{v}=\dfrac{d\vec{r}}{dt}=\dfrac{dx}{dt}\hat{i}+\dfrac{dy}{dt}\hat{j}+\dfrac{dz}{dt}\hat{k}\)</span></p>
+</div>
+<h4 id="速率">速率</h4>
+<p>速率是单位时间内的路程，是标量，只有大小，没有方向。</p>
+<p>平均速率等于路程除以时间，<span class="math inline">\(\bar{v}=\dfrac{\Delta s}{\Delta t}\)</span>，<span class="math inline">\(\Delta t \rightarrow 0\)</span>时的极限称为瞬时速率<span class="math inline">\(v=\dfrac{ds}{dt}\)</span></p>
+<h4 id="速度与速率的关系">速度与速率的关系</h4>
+<p>因为<span class="math inline">\(\Delta s \geq |\Delta \vec{r}|\)</span>，所以平均速率不小于平均速度的大小。</p>
+<p>但是<span class="math inline">\(ds = |d \vec{r}|\)</span>，所以瞬时速率等于瞬时速度的大小。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>速度与速率的定义</span> 质点在<span class="math inline">\(xy\)</span>平面上运动。下列写法中，哪些表示瞬时速度，哪些表示瞬时速率？</p>
+<p>A. <span class="math inline">\(\dfrac{d \vec{r}}{dt}\)</span>   B. <span class="math inline">\(\dfrac{d |\vec{r}|}{dt}\)</span>   C. <span class="math inline">\(\dfrac{dr}{dt}\)</span>   D. <span class="math inline">\(\left|\dfrac{d\vec{r}}{dt}\right|\)</span>   E. <span class="math inline">\(\dfrac{ds}{dt}\)</span>   F. <span class="math inline">\(\dfrac{dx}{dt}+\dfrac{dy}{dt}\)</span>   G. <span class="math inline">\(\sqrt{\left(\dfrac{dx}{dt}\right)^2+\left(\dfrac{dy}{dt}\right)^2}\)</span></p>
+<p>A是瞬时速度的定义，E是瞬时速率的定义，D是瞬时速度的大小，表示瞬时速率。</p>
+<p>B和C出现了<span class="math inline">\(d |\vec{r}|\)</span>、<span class="math inline">\(dr\)</span>的错误写法，无物理意义。</p>
+<p><span class="math inline">\(\dfrac{dx}{dt}\)</span>、<span class="math inline">\(\dfrac{dy}{dt}\)</span>分别表示速度在<span class="math inline">\(x,y\)</span>方向的分量<span class="math inline">\(v_x,v_y\)</span>，合成时应采用勾股定理，而非直接相加。</p>
+<p>因此G选项表示瞬时速率，F选项无物理意义。</p>
+<p>【补充练习】质点做半径为<span class="math inline">\(R\)</span>的匀速圆周运动，周期为<span class="math inline">\(T\)</span>，求<span class="math inline">\(t=2T\)</span>时间内的位移、路程、平均速度、平均速率。</p>
+</div>
+<h3 id="加速度">加速度</h3>
+<p>加速度是速度的变化率，也可分为平均加速度和瞬时加速度。</p>
+<p>平均加速度等于速度的变化量除以时间，<span class="math inline">\(\overline{\vec{a}}=\dfrac{\Delta \vec{v}}{\Delta t}\)</span>，<span class="math inline">\(\Delta t \rightarrow 0\)</span>时的极限称为瞬时加速度<span class="math inline">\(\vec{a}=\dfrac{d\vec{v}}{dt}\)</span></p>
+<p>在直角坐标系中，分别对<span class="math inline">\(x,y,z\)</span>求二阶导（即两次求导），得到的就是加速度在三个方向上的分量。</p>
+<div class="formula">
+<p><span class="math inline">\(\vec{a}=\dfrac{d\vec{v}}{dt}=\dfrac{d^2\vec{r}}{dt^2}=\dfrac{d^2x}{dt^2}\hat{i}+\dfrac{d^2y}{dt^2}\hat{j}+\dfrac{d^2z}{dt^2}\hat{k}\)</span></p>
+</div>
+<ul>
+<li><p>对于直线运动而言，速度与加速度同向时加速，反向时减速。不是加速度为正时加速，为负时减速。</p></li>
+<li><p>对于曲线运动，速度与加速度夹角小于<span class="math inline">\(90^\circ\)</span>时加速，大于<span class="math inline">\(90^\circ\)</span>时减速。</p></li>
+</ul>
+<h3 id="运动学的两类基本问题">运动学的两类基本问题</h3>
+<p>位置矢量<span class="math inline">\(\vec{r}\)</span>、速度<span class="math inline">\(\vec{v}\)</span>、加速度<span class="math inline">\(\vec{a}\)</span>的关系如下。知道一个物理量随时间的关系，即可求出另外两个。</p>
+<figure data-latex-placement="htb">
+<img src="asset/ch1/T4.png" style="width:65.0%" />
+</figure>
+<div class="example"><div class="example-title">例题</div>
+<p><span>运动学第一类问题</span> 运动函数为<span class="math inline">\(\vec{r}=(3t+5)\hat{i}+(t^2+3t−4)\hat{j}\)</span>(SI)，求：<span class="math inline">\(t=\SI{4}{s}\)</span>时的速度和加速度，前<span class="math inline">\(\SI{4}{s}\)</span>的平均速度。</p>
+<p>根据质点运动函数，可写出<span class="math inline">\(x=3t+5,~y=t^2+3t−4\)</span></p>
+<p>求导可得<span class="math inline">\(v_x=\dfrac{dx}{dt}=3,~v_y=\dfrac{dy}{dt}=2t+3\)</span>，再次求导可得<span class="math inline">\(a_x=\dfrac{d^2x}{dt^2}=0,~a_y=\dfrac{d^2y}{dt^2}=2\)</span></p>
+<p>将<span class="math inline">\(t=\SI{4}{s}\)</span>，代入，可得<span class="math inline">\(v_x=3,~v_y=11,a_x=0,~a_y=2\)</span>，可写成<span class="math inline">\(\vec{v}=3\hat{i}+11\hat{j},~\vec{a}=2\hat{j}\)</span></p>
+<p>要求平均速度，需要先求位移。当<span class="math inline">\(t=0,\SI{4}{s}\)</span>时，<span class="math inline">\(\vec{r}_1=5\hat{i}-4\hat{j},~\vec{r}_2=17\hat{i}+24\hat{j}\)</span></p>
+<p>所以位移<span class="math inline">\(\Delta \vec{r}=\vec{r}_2-\vec{r}_1=12\hat{i}+28\hat{j}\)</span>，平均速度<span class="math inline">\(\bar{\vec{v}}=\dfrac{\Delta \vec{r}}{\Delta t}=3\hat{i}+7\hat{j}\)</span></p>
+<p>【补充练习】已知质点运动方程为<span class="math inline">\(x=2t,~y=2-t^2\)</span>，求：(1) 前<span class="math inline">\(\SI{2}{s}\)</span>内的平均速度、第<span class="math inline">\(\SI{2}{s}\)</span>末的速度；(2) 前<span class="math inline">\(\SI{2}{s}\)</span>内的平均加速度、第<span class="math inline">\(\SI{2}{s}\)</span>末的加速度。</p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>运动学第二类问题</span> 质点沿<span class="math inline">\(x\)</span>轴运动，加速度<span class="math inline">\(a=-6t\)</span> (SI)。已知<span class="math inline">\(t=\SI{3}{s}\)</span>时，<span class="math inline">\(x=\SI{-12}{m},~v=\SI{-24}{m/s}\)</span>，求： (1) 求任意时刻的速度和位置；(2) 判断什么时候向正方向运动，什么时候向负方向运动（只考虑<span class="math inline">\(t\geq 0\)</span>）；(3) 判断什么时候加速、什么时候减速；(4) 求前<span class="math inline">\(\SI{2}{s}\)</span>内的路程、位移、平均速度、平均速率。</p>
+<p>(1)  将<span class="math inline">\(a\)</span>对<span class="math inline">\(t\)</span>求积分，可得<span class="math inline">\(v=v_0+\displaystyle \int_0^t{(-6t)dt}=v_0-3t^2\)</span></p>
+<p>代入<span class="math inline">\(t=3\)</span>时<span class="math inline">\(v=-24\)</span>，得<span class="math inline">\(v_0=3\)</span>，因此<span class="math inline">\(v=3-3t^2\)</span></p>
+<p>再将<span class="math inline">\(v\)</span>对<span class="math inline">\(t\)</span>求积分，可得<span class="math inline">\(x=x_0+\displaystyle \int_0^t{(3-3t^2)dt}=x_0+3t-t^3\)</span></p>
+<p>代入<span class="math inline">\(t=3\)</span>时<span class="math inline">\(x=-12\)</span>，得<span class="math inline">\(x_0=6\)</span>，因此<span class="math inline">\(x=3t-t^3+6\)</span></p>
+<p>(2)  当<span class="math inline">\(v&gt;0\)</span>时，即<span class="math inline">\(0\leq t&lt;\SI{1}{s}\)</span>时，向正方向运动；而<span class="math inline">\(v&lt;0\)</span>时，即<span class="math inline">\(t&gt;\SI{1}{s}\)</span>时，向负方向运动。</p>
+<p>(3)  因为<span class="math inline">\(a=-6t&lt;0\)</span>，因此当<span class="math inline">\(0\leq t&lt;\SI{1}{s}\)</span>时，<span class="math inline">\(v&gt;0\)</span>，加速度与速度反向，为减速；</p>
+<p>而<span class="math inline">\(t&gt;\SI{1}{s}\)</span>时，<span class="math inline">\(v&lt;0\)</span>，加速度与速度同向，为加速。</p>
+<p>(4)  当<span class="math inline">\(t=0,\SI{1}{s},\SI{2}{s}\)</span>时，代入表达式可求出<span class="math inline">\(x=\SI{6}{m},\SI{8}{m},\SI{4}{m}\)</span></p>
+<p>位移就是位置变化量，只看初末状态即可，<span class="math inline">\(\Delta x=\SI{4}{m}-\SI{6}{m}=\SI{-2}{m}\)</span></p>
+<p>路程需要按转向时刻分段求解，第<span class="math inline">\(\SI{1}{s}\)</span>路程为<span class="math inline">\(\SI{2}{m}\)</span>，第<span class="math inline">\(\SI{2}{s}\)</span>路程为<span class="math inline">\(\SI{4}{m}\)</span>，因此总路程为<span class="math inline">\(\SI{6}{m}\)</span></p>
+<p>平均速度等于位移除以时间，等于<span class="math inline">\(\SI{-1}{m/s}\)</span>；平均速率等于路程除以时间，等于<span class="math inline">\(\SI{3}{m/s}\)</span>.</p>
+<p>【补充练习】质点从<span class="math inline">\(\vec{r}=−5\hat{j}\)</span>处出发，初速度<span class="math inline">\(\vec{v}=2\hat{i}\)</span>。加速度与时间的关系为<span class="math inline">\(\vec{a}=t^2\hat{i}+(2t+3)\hat{j}\)</span>(SI)，求：质点在<span class="math inline">\(t=\SI{2}{s}\)</span>时的速度和位置矢量。</p>
+</div>
+<h2 id="圆周运动">圆周运动</h2>
+<h3 id="圆周运动的描述">圆周运动的描述</h3>
+<p>在圆周运动中，我们更关心转过角度的变化，因此可以将位置、速度、加速度推广为角位置<span class="math inline">\(\theta\)</span>、角速度<span class="math inline">\(\omega\)</span>、角加速度<span class="math inline">\(\alpha\)</span>，它们之间的微分、积分关系完全相同。</p>
+<figure data-latex-placement="htb">
+<img src="asset/ch1/T8.png" style="width:65.0%" />
+</figure>
+<h3 id="线量与角量的关系">线量与角量的关系</h3>
+<p>路程<span class="math inline">\(s\)</span>与角位移<span class="math inline">\(\theta\)</span>、线速度<span class="math inline">\(v\)</span>与角速度<span class="math inline">\(\omega\)</span>的换算只需乘除一个半径<span class="math inline">\(R\)</span>，速度的方向为切线方向。</p>
+<div class="formula">
+<p><span class="math inline">\(s=\theta R,~v=\dfrac{ds}{dt}=\omega R\)</span></p>
+</div>
+<p>但加速度<span class="math inline">\(a\)</span>需要分解为切向和法向分别计算：</p>
+<ul>
+<li><p>切向加速度<span class="math inline">\(a_t\)</span>：控制速度大小的变化，是速率的变化率，与速度同向时加速，反向时减速</p></li>
+<li><p>法向加速度<span class="math inline">\(a_n\)</span>：控制速度方向的变化，指向圆心，即向心加速度</p></li>
+</ul>
+<div class="formula">
+<p><span class="math inline">\(a_t=\dfrac{dv}{dt}=\alpha R,~a_n=\dfrac{v^2}{R},~a=\sqrt{a_t^2+a_n^2}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>圆周运动</span> 质点做<span class="math inline">\(R=2\)</span>的圆周运动，静止出发，角加速度与时间的关系为<span class="math inline">\(\alpha=12t^2−6t\)</span>（SI）</p>
+<p>(1) 求任意时刻的角速度、角位移；(2) 求<span class="math inline">\(t=2\)</span>时刻的线速度和加速度的大小。</p>
+<p>(1) 静止出发可知初始<span class="math inline">\(\omega_0=0\)</span>，对角加速度积分可得角速度，<span class="math inline">\(\omega=0+\displaystyle\int_0^t{(12t^2-6t)dt}=4t^3-3t^2\)</span></p>
+<p>再求一次积分，即可得到角位移 <span class="math inline">\(\theta=0+\displaystyle\int_0^t{(4t^3-3t^2)dt}=t^4-t^3\)</span></p>
+<p>(2) 代入<span class="math inline">\(t=2\)</span>，可得<span class="math inline">\(\alpha=36,~\omega=20\)</span>，根据线量与角量的关系，<span class="math inline">\(v=\omega R=40\)</span></p>
+<p>加速度需要分别求切向和法向，<span class="math inline">\(a_t=\alpha R=72,~a_n=\dfrac{v^2}{R}=800\)</span>，合成可得<span class="math inline">\(a=\sqrt{a_t^2+a_n^2}\approx 803\)</span> 【补充练习】质点做<span class="math inline">\(R=3\)</span>的圆周运动，路程与时间的关系为<span class="math inline">\(s=3t+3t^2\)</span>，始终逆时针运动。(1) 求<span class="math inline">\(t=2\)</span>时刻的线速度、角速度、加速度、角加速度的大小；(2) 在哪一时刻，加速度与速度方向的夹角为<span class="math inline">\(45^\circ\)</span>？</p>
+</div>
+<h2 id="相对运动">相对运动</h2>
+<p>仅考虑参考系相对于大地平动的情况，变换参考系前后，可定义三种速度：</p>
+<ul>
+<li><p><strong>绝对速度</strong>：质点相对于大地的速度</p></li>
+<li><p><strong>相对速度</strong>：质点相对于选定参考系的速度</p></li>
+<li><p><strong>牵连速度</strong>：选定参考系相对于大地的速度</p></li>
+</ul>
+<p>这三种速度之间的关系是</p>
+<div class="formula">
+<p><span class="math inline">\(\text{绝对}=\text{相对}+\text{牵连}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>相对运动</span> 某人以速度<span class="math inline">\(v\)</span>向西匀速骑车，有风从北偏东<span class="math inline">\(30^\circ\)</span>方向以相同速率吹来，这个人感受到的风来自什么方向，风速如何？</p>
+<p>空气流动产生了风，以空气为研究对象，风的速度是空气相对于大地的速度，是绝对速度。</p>
+<div class="minipage">
+<p>而人感受到的风，应是空气相对于人的速度，是相对速度。</p>
+<p>此时，参考系应变换到人的身上，因此人相对于大地的速度是牵连速度。</p>
+<p>根据题意，结合绝对=相对+牵连的关系，可画出三者之间的关系如右图所示。因此人感受到的风，即相对速度，为北偏西<span class="math inline">\(30^\circ\)</span>方向，大小为<span class="math inline">\(v\)</span>.</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch1/T10.png" alt="image" /></p>
+</div>
+<p>【补充练习】以正东、正北为<span class="math inline">\(x,y\)</span>轴正方向。甲乙两船以<span class="math inline">\(\SI{2}{m/s}\)</span>的速率匀速行驶，甲向正东方向运动，乙向北偏东<span class="math inline">\(30^\circ\)</span>方向运动。求乙相对于甲的速度。</p>
+</div>
+<h2 id="拓展内容">拓展内容</h2>
+<h3 id="运动学的实际问题">运动学的实际问题</h3>
+<p>在一个实际场景中，要求某点的速度或加速度，可建立坐标系，利用该点的坐标建立几何关系，再对等号两边同时求导，即可得到未知点与已知点之间的速度、加速度关系。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>运动学实际问题*</span> 一人通过岸边的定滑轮（大小可忽略）用绳子拉船，使船靠岸，假定绳子不可伸长且始终绷紧，拉绳的速率恒为<span class="math inline">\(u\)</span>，水面与滑轮的高度差为<span class="math inline">\(H\)</span>. 求当绳与水平面夹角为<span class="math inline">\(\theta\)</span>时，船运动的速度和加速度。</p>
+<div class="minipage">
+<p>建立如图所示的坐标系，设船的横坐标为<span class="math inline">\(x\)</span>，滑轮到船之间的绳长为<span class="math inline">\(L\)</span></p>
+<p>则根据勾股定理，<span class="math inline">\(x^2+H^2=L^2\)</span>，根据题意，绳缩短的速率<span class="math inline">\(\dfrac{dL}{dt}=-u\)</span></p>
+<p><span>注：<span class="math inline">\(\dfrac{dL}{dt}=-u\)</span>并不表示某一质点的速度，而是绳长对时间的变化率</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch1/T12.png" alt="image" /></p>
+</div>
+<p>对两边分别求导得<span class="math inline">\(2x\dfrac{dx}{dt}+0=2L\dfrac{dL}{dt}\)</span>，解得<span class="math inline">\(v=\dfrac{dx}{dt}=-\dfrac{L}{x}u=-\dfrac{u}{\cos{\theta}}\)</span></p>
+<p>对<span class="math inline">\(x\dfrac{dx}{dt}=L\dfrac{dL}{dt}\)</span>两边再求导，得<span class="math inline">\(\left(\dfrac{dx}{dt}\right)^2+x\dfrac{d^2x}{dt^2}=\left(\dfrac{dL}{dt}\right)^2+L\dfrac{d^2L}{dt^2}\)</span></p>
+<p>而其中<span class="math inline">\(\dfrac{d^2L}{dt^2}=0\)</span>，代入整理得<span class="math inline">\(a=\dfrac{d^2x}{dt^2}=\dfrac{u^2-v^2}{x}=\dfrac{u^2(1-1/\cos^2\theta)}{H/\tan\theta}=-\dfrac{u^2\tan^3{\theta}}{H}\)</span></p>
+<div class="minipage">
+<p>【补充练习】长为<span class="math inline">\(L\)</span>的木棍靠在墙上，慢慢滑落。记木棍下端为A点、上端为B点，假设A点的移动速度恒为<span class="math inline">\(v\)</span>。某一时刻，木棍与水平方向夹角为<span class="math inline">\(\theta\)</span>。求B点此时的速度和加速度。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch1/T6.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="曲线运动与自然坐标系">曲线运动与自然坐标系</h3>
+<section id="自然坐标系" class="minipage">
+<h4>自然坐标系</h4>
+<p>若质点做曲线运动，可沿轨道建立坐标系，选定原点O后，用曲线长度<span class="math inline">\(s\)</span>表示质点的位置，这种坐标系称为<strong>自然坐标系</strong>。</p>
+</section>
+<div class="minipage">
+<p><img src="asset/ch1/T7.png" alt="image" /></p>
+</div>
+<p>在任意时刻，速度方向为曲线的切线方向，大小（即速率）等于<span class="math inline">\(v=\dfrac{ds}{dt}\)</span></p>
+<h4 id="曲线运动的加速度">曲线运动的加速度</h4>
+<p>在曲线运动中，曲线上各点都可以找到一个贴合最好的圆，称为“曲率圆”，其半径称为“曲率半径”，用<span class="math inline">\(\rho\)</span>表示。因此，曲线运动的每一小段都可近似为一个圆周运动，从而求出切向和法向加速度。</p>
+<ul>
+<li><p>切向加速度：控制速度大小的变化，是速率的变化率，<span class="math inline">\(a_t=\dfrac{dv}{dt}\)</span></p></li>
+<li><p>法向加速度：控制速度方向的变化，指向曲线凹侧，<span class="math inline">\(a_n=\dfrac{v^2}{\rho}\)</span></p></li>
+</ul>
+<p>在自然坐标系下，曲线运动的速度和加速度的定量表达式总结如下。</p>
+<div class="formula">
+<p><span class="math inline">\(v=\dfrac{ds}{dt},~a_t=\dfrac{dv}{dt},~a_n=\dfrac{v}{\rho^2}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>自然坐标系*</span> 质点以<span class="math inline">\(\SI{10}{m/s}\)</span>的速度水平抛出，做平抛运动。当速度方向与水平方向成<span class="math inline">\(60^\circ\)</span>角时，求瞬时速率、速度变化率、速率的变化率、曲率半径。（取<span class="math inline">\(g=\SI{10}{m/s^2}\)</span>）</p>
+<div class="minipage">
+<p>根据平抛运动的规律，水平方向做匀速直线运动，因此<span class="math inline">\(v=\dfrac{v_x}{\cos{60^\circ}}=\SI{20}{m/s}\)</span></p>
+<p>速度的变化率就是瞬时加速度，而平抛运动的加速度是重力加速度，大小为<span class="math inline">\(a=g=\SI{10}{m/s^2}\)</span>，方向竖直向下，这就是速度的变化率。</p>
+<p>加速度可在平行和垂直速度的方向上进行分解。</p>
+<p>切向加速度<span class="math inline">\(a_t=a\sin{30^\circ}=5\sqrt{3}\unit{m/s^2}\)</span>，这就是速率的变化率。</p>
+<p>法向加速度<span class="math inline">\(a_n=a\cos{30^\circ}=\SI{5}{m/s^2}\)</span>，利用<span class="math inline">\(a_n=\dfrac{v^2}{\rho}\)</span>，得曲率半径<span class="math inline">\(\rho=\SI{80}{m}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch1/T11.png" alt="image" /></p>
+</div>
+<p>【补充练习】质点运动方程为<span class="math inline">\(x=3t, y=12−3t^2\)</span>(SI)，求<span class="math inline">\(t=\SI{1}{s}\)</span>时的瞬时速度、速度的变化率、速率的变化率和曲率半径。</p>
+</div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

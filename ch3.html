@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第3章 动量与角动量</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>目录</h2>
+    <ul>
+      <li><a href="index.html">封面</a></li>
+      <li><a href="ch1.html">第1章 质点运动学</a></li>
+      <li><a href="ch2.html">第2章 运动定律</a></li>
+      <li><a href="ch3.html">第3章 动量与角动量</a></li>
+      <li><a href="ch4.html">第4章 功和能</a></li>
+      <li><a href="ch5.html">第5章 机械振动</a></li>
+      <li><a href="ch6.html">第6章 机械波</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content ">
+    <h1 id="质点动力学下">质点动力学（下）</h1>
+<h2 id="动量守恒">动量守恒</h2>
+<h3 id="动量定理">动量定理</h3>
+<h4 id="质点的动量定理">质点的动量定理</h4>
+<p>质点的动量<span class="math inline">\(\vec{p}=m\vec{v}\)</span>，力<span class="math inline">\(\vec{F}\)</span>对质点的冲量为<span class="math inline">\(\vec{I}=\displaystyle\int_{t_1}^{t_2}\vec{F}dt\)</span>. 特别地，恒力的冲量<span class="math inline">\(\vec{I}=\vec{F}\Delta t\)</span>.</p>
+<p>质点所受合外力的冲量等于其动量的变化。</p>
+<div class="formula">
+<p><span class="math inline">\(d\vec{I}=\vec{F}dt=d\vec{p},~~\vec{I}=\displaystyle\int_{t_1}^{t_2}\vec{F}dt=\Delta \vec{p}\)</span></p>
+</div>
+<h4 id="质点系的动量定理">质点系的动量定理</h4>
+<p>对于多个质点组成的系统，合外力的冲量等于动量的变化，与内力无关。</p>
+<div class="formula">
+<p><span class="math inline">\(\vec{I}_{\text{外}}=\Delta \vec{P}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>质点的动量定理</span> 粗糙水平面上放一个质量为<span class="math inline">\(\SI{1}{kg}\)</span>的物体，静摩擦因数<span class="math inline">\(\mu_s=0.20\)</span>，滑动摩擦因数<span class="math inline">\(\mu=0.16\)</span>，现用一水平力推该物体，大小<span class="math inline">\(F=t+1\)</span>(SI)，<span class="math inline">\(g=\SI{10}{m/s^2}\)</span>. 求：(1) 物体所受合外力与<span class="math inline">\(t\)</span>的关系；(2) 第<span class="math inline">\(\SI{2}{s}\)</span>末的速度；(3) 前两秒内的位移；(4) <span class="math inline">\(F\)</span>在前两秒内做的功。</p>
+<p>(1) 最大静摩擦力<span class="math inline">\(f_m=\mu_s mg=\SI{2}{N}\)</span>，当<span class="math inline">\(F=t+1\leq \SI{2}{N}\)</span>，即<span class="math inline">\(t\leq \SI{1}{s}\)</span>时，推不动物体，合力为零。</p>
+<p>而当<span class="math inline">\(t&gt;\SI{1}{s}\)</span>时，已超过静摩擦力，能推动物体，所受合外力为<span class="math inline">\(F-\mu mg=t+1-1.6=t-0.6\)</span>(SI)</p>
+<p>(2) 力<span class="math inline">\(F\)</span>在<span class="math inline">\(t~(t&gt;1)\)</span>时间前的冲量为<span class="math inline">\(\displaystyle\int_1^t{(t-0.6)dt}=\left.\left(\dfrac{1}{2}t^2-0.6t\right)\right|_1^t=0.5t^2-0.6t+0.1\)</span></p>
+<p>利用动量定理，可得<span class="math inline">\(0.5t^2-0.6t+0.1=mv\)</span>，求得<span class="math inline">\(v=0.5t^2-0.6t+0.1\)</span>，代入<span class="math inline">\(t=2\)</span>得<span class="math inline">\(v=\SI{0.9}{m/s}\)</span></p>
+<p>(3) 对<span class="math inline">\(v\)</span>进行积分可得位移，<span class="math inline">\(x=\displaystyle\int_1^2{(0.5t^2-0.6t+0.1)dt}=\left.\left(\dfrac{1}{6}t^3-0.3t^2+0.1t\right)\right|_1^2=\dfrac{11}{30}~\unit{m}\)</span></p>
+<p>(4) 利用动能定理，<span class="math inline">\(W-\mu mgx=\dfrac{1}{2}mv^2\)</span>，得<span class="math inline">\(W=\dfrac{119}{120}\unit{J}\)</span></p>
+<div class="minipage">
+<p>【补充练习】质量为<span class="math inline">\(m\)</span>的小球被轻绳挂在天花板上，做圆锥摆运动，角速度为<span class="math inline">\(\omega\)</span>. 求转动一周过程中，重力和绳子的拉力对小球的冲量大小。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch3/T1.png" alt="image" /></p>
+</div>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>连续体的动量定理</span> 水平放置的均匀水管弯曲成<span class="math inline">\(90^\circ\)</span>，水流量为<span class="math inline">\(\SI{3}{kg/s}\)</span>，流速为<span class="math inline">\(\SI{10}{m/s}\)</span>，求水流在转角处对弯管的压力大小。（水的密度<span class="math inline">\(\rho=\SI{1e3}{kg/m^3}\)</span>）</p>
+<div class="minipage">
+<p>设水管横截面积为<span class="math inline">\(S\)</span>，选择包含弯折部分在内的一段液体作为研究对象。</p>
+<p>在<span class="math inline">\(dt\)</span>的时间内，发生变化的部分的水的质量<span class="math inline">\(m=Qdt\)</span></p>
+<p>它的初末速度可记为<span class="math inline">\(\vec{v}_1=-v\hat{j},~\vec{v}_2=v\hat{i}\)</span></p>
+<p>根据动量定理，<span class="math inline">\(\vec{F}dt=m(\vec{v}_2-\vec{v}_1)\)</span>，代入数据得<span class="math inline">\(\vec{F}=\SI{30}(\hat{i}+\hat{j})\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch3/T2.png" alt="image" /></p>
+</div>
+<p>这说明水管对水的压力大小为<span class="math inline">\(30\sqrt{2}~\unit{N}\)</span>，根据牛顿第三定律，水对水管的压力大小也为此值。</p>
+<div class="minipage">
+<p>【补充练习】装煤车以<span class="math inline">\(v=\SI{3}{m/s}\)</span>的速率在煤斗下方通过，每秒钟落入车厢的煤是<span class="math inline">\(\Delta m=\SI{500}{kg}\)</span>，若要使车厢速率不变，忽略摩擦，要用多大的牵引力拉车厢？</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch3/T4.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="动量守恒定律">动量守恒定律</h3>
+<h4 id="动量守恒的条件">动量守恒的条件</h4>
+<p>若质点系所受合外力为零，质点系的总动量不变。质点系的内力对总动量不产生影响。</p>
+<div class="formula">
+<p>若<span class="math inline">\(\vec{F}_{\text{外}}=\vec{0}\)</span>，则<span class="math inline">\(\vec{P}=\mathrm{const.}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>动量守恒定律</span></p>
+<div class="minipage">
+<p>质量为<span class="math inline">\(m_A=\SI{2}{kg},~m_B=\SI{3}{kg}\)</span>的长方形物体A、B并排放在光滑桌面上，现有质量为<span class="math inline">\(m=\SI{100}{g}\)</span>的子弹以速率<span class="math inline">\(v_0=\SI{800}{m/s}\)</span>水平射入物体A，经<span class="math inline">\(\SI{0.01}{s}\)</span>进入物体B，最后留在物体B内部。若子弹射入A的过程中，所受摩擦力恒</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch3/T3.png" alt="image" /></p>
+</div>
+<p>为<span class="math inline">\(\SI{3e3}{N}\)</span>，求：(1) 子弹射入A的过程中，A对B的作用力大小；(2) 最后A、B的速度大小。</p>
+<p>(1) 在子弹射入A的过程中，A和B是一起运动的，将A、B视为一个整体，<span class="math inline">\(f=(m_A+m_B)a\)</span></p>
+<p>而采用隔离法，只分析B物体，可得<span class="math inline">\(F_{AB}=ma\)</span>，代入数据可得<span class="math inline">\(F_{AB}=\SI{1.8e3}{N}\)</span></p>
+<p>(2) 在子弹射入A的过程中，对A、B构成的系统，<span class="math inline">\(ft=(m_A+m_B)v_A\)</span>，得<span class="math inline">\(v_A=\SI{6}{m/s}\)</span></p>
+<p>在子弹射入B之后，A与B脱离，A就保持这个速度，而子弹会和B一起继续加速到<span class="math inline">\(v_B\)</span></p>
+<p>对所有物体构成的系统，在整个过程中动量守恒，<span class="math inline">\(mv_0=m_Av_A+(m_B+m)v_B\)</span>，解得<span class="math inline">\(v_B\approx \SI{21.9}{m/s}\)</span></p>
+<p>【补充练习】判断下列说法是否正确：</p>
+<p>(1) 作用力与反作用力的冲量之和一定为零；(2) 系统的内力不改变系统的总动量；</p>
+<p>(3) 合外力冲量的方向与系统总动量的变化相同；(4) 恒力作用于质点，则时间越长，质点动量越大。</p>
+</div>
+<h4 id="碰撞">碰撞</h4>
+<p>在碰撞、爆炸等问题中，因为力的作用时间极短，可近似认为动量守恒。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>碰撞</span> 在一次粒子散射实验中，质量为<span class="math inline">\(m\)</span>的粒子A撞向质量为<span class="math inline">\(M\)</span>的静止粒子B。碰撞后A、B的运动方向与A原运动方向的夹角分别为<span class="math inline">\(60^\circ, 30^\circ\)</span>，求A粒子碰撞后与碰撞前的速率之比。</p>
+<div class="minipage">
+<p>以A原运动方向为<span class="math inline">\(x\)</span>正方向</p>
+<p>设A粒子碰撞前速率为<span class="math inline">\(v_0\)</span>，碰撞后两粒子速率为<span class="math inline">\(v_A,v_B\)</span></p>
+<p>根据<span class="math inline">\(y\)</span>方向动量守恒，<span class="math inline">\(0=\dfrac{\sqrt{3}}{2}mv_A+\dfrac{1}{2}Mv_B\)</span>，即<span class="math inline">\(Mv_B=\sqrt{3}mv_A\)</span></p>
+<p>根据<span class="math inline">\(x\)</span>方向动量守恒，<span class="math inline">\(mv_0=\dfrac{1}{2}mv_A+\dfrac{\sqrt{3}}{2}Mv_B\)</span>，代入可解得<span class="math inline">\(\dfrac{v_A}{v_0}=\dfrac{1}{2}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch3/T21.png" alt="image" /></p>
+</div>
+<p>【补充练习】 小球A的质量是B的<span class="math inline">\(4\)</span>倍，二者发生碰撞。碰撞前<span class="math inline">\(\vec{v}_A=3\hat{i}+4\hat{j},~\vec{v}_B=2\hat{i}-7\hat{j}\)</span>，分别在以下情况下求碰撞后速度: (1) 碰撞后<span class="math inline">\(\vec{v}_B^\prime=7\hat{i}-4\hat{j}\)</span>；(2) 碰撞后粘在一起。</p>
+</div>
+<h4 id="人船模型">人船模型</h4>
+<p>人船模型也可以视为“类碰撞”的情形，在水平方向动量守恒。</p>
+<div class="example"><div class="example-title">例题</div>
+<p><span>人船模型</span> 带有1/4圆弧光滑圆槽的大物体质量为<span class="math inline">\(M\)</span>，停在光滑的水平面上，滑槽半径为<span class="math inline">\(R\)</span>，质量为<span class="math inline">\(m\)</span>的小物体自顶点下滑，求小物体滑到底时，大物体在水平面上移动的距离，大物体相对于地面的速度。</p>
+<div class="minipage">
+<p>(1) 两物体构成的系统在水平方向不受外力，动量守恒</p>
+<p>在任意时刻，<span class="math inline">\(0=-MV+mv_x\)</span></p>
+<p>两边同时积分，可得<span class="math inline">\(M\displaystyle\int{Vdt}=m\int{v_xdt}\)</span>，即<span class="math inline">\(MS=ms\)</span></p>
+<p>结合几何关系，<span class="math inline">\(S+s=R\)</span>，可得<span class="math inline">\(S=\dfrac{m}{M+m}R\)</span></p>
+<p>(2) 小物体滑到底端时，小物体速度为水平方向</p>
+<p>根据动量守恒定律，仍有<span class="math inline">\(0=-MV+mv\)</span></p>
+<p>根据机械能守恒定律，<span class="math inline">\(mgR=\dfrac{1}{2}MV^2+\dfrac{1}{2}mv^2\)</span></p>
+<p>联立两式解得<span class="math inline">\(V=\sqrt{\dfrac{2m^2gR}{M(M+m)}}\)</span></p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch3/T5.png" alt="image" /></p>
+</div>
+<div class="minipage">
+<p>【补充练习】质量为<span class="math inline">\(m\)</span>的小物体从质量为<span class="math inline">\(M\)</span>、倾角为<span class="math inline">\(\theta\)</span>、长为<span class="math inline">\(L\)</span>的斜面顶端静止滑落，不计摩擦，求小物体滑落到斜面底端时，斜面的位移和速度。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch3/T6.png" alt="image" /></p>
+</div>
+</div>
+<h2 id="角动量守恒">角动量守恒</h2>
+<h3 id="角动量定理">角动量定理</h3>
+<h4 id="力矩">力矩</h4>
+<p>对固定点O而言，若质点的位置矢量为<span class="math inline">\(\vec{r}\)</span>，则力<span class="math inline">\(\vec{F}\)</span>的力矩定义为<span class="math inline">\(\vec{M}=\vec{r}\times \vec{F}\)</span></p>
+<p>力矩的大小其实就是杠杆原理中的力乘以力臂，方向可简化区分顺时针/逆时针转动。</p>
+<h4 id="角动量">角动量</h4>
+<p>对固定点O而言，质点的角动量定义为<span class="math inline">\(\vec{L}=\vec{r}\times \vec{p}=\vec{r}\times (m\vec{v})\)</span></p>
+<p>角动量的大小与力矩计算方法类似，等于动量乘以动量臂，方向也可简化区分顺时针/逆时针转动。</p>
+<figure data-latex-placement="htb">
+<p><img src="asset/ch3/T7.png" style="width:45.0%" alt="image" /> <img src="asset/ch3/T8.png" style="width:45.0%" alt="image" /></p>
+</figure>
+<div class="formula">
+<p><span class="math inline">\(\text{力矩}M\text{的大小}=\text{力}F\times \text{力臂}\)</span>，<span class="math inline">\(\text{角动量}L\text{的大小}=\text{动量}mv\times \text{动量臂}\)</span></p>
+</div>
+<h4 id="角动量定理-1">角动量定理</h4>
+<p>对一个固定点O，合外力矩等于角动量的变化率。</p>
+<div class="formula">
+<p><span class="math inline">\(\vec{M}=\dfrac{d\vec{L}}{dt},~~\displaystyle\int_0^t{\vec{M}dt}=\Delta \vec{L}\)</span></p>
+</div>
+<h3 id="角动量守恒定律">角动量守恒定律</h3>
+<p>对一个固定点O，若合外力矩为零，则系统的角动量守恒。</p>
+<div class="formula">
+<p>若<span class="math inline">\(\vec{M}=\vec{0}\)</span>，则<span class="math inline">\(\vec{L}=\mathrm{const.}\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>角动量守恒定律</span> 人造卫星绕地球沿椭圆轨道运动，地球半径为<span class="math inline">\(R\)</span>，卫星到地面的最近、最远距离为<span class="math inline">\(h_1,h_2\)</span>，(1) 若已知近地点速率为<span class="math inline">\(v_1\)</span>，求远地点速率；(2) 若已知地球质量为<span class="math inline">\(M\)</span>，求近地点和远地点速率。</p>
+<p>(1) 根据角动量守恒定律，<span class="math inline">\(mv_1(R+h_1)=mv_2(R+h_2)\)</span>，可得<span class="math inline">\(v_2=v_1\dfrac{R+h_1}{R+h_2}\)</span></p>
+<p>(2) 根据机械能守恒定律，<span class="math inline">\(\dfrac{1}{2}mv_1^2+\left(-\dfrac{GMm}{R+h_1}\right)=\dfrac{1}{2}mv_2^2+\left(-\dfrac{GMm}{R+h_2}\right)\)</span></p>
+<p><span>注：此处不能用重力势能，而要用万有引力势能，注意万有引力势能的表达式自带负号。</span></p>
+<p>结合角动量守恒定律<span class="math inline">\(mv_1(R+h_1)=mv_2(R+h_2)\)</span></p>
+<p>可联立解得<span class="math inline">\(v_1=\sqrt{\dfrac{2GM(R+h_2)}{(R+h_1)(2R+h_1+h_2)}},~v_2=\sqrt{\dfrac{2GM(R+h_1)}{(R+h_2)(2R+h_1+h_2)}}\)</span></p>
+<div class="minipage">
+<p>【补充练习】质量为<span class="math inline">\(m\)</span>的小球系于轻绳一端，另一端穿过桌面上的小孔并用手拉住。先使小球做半径为<span class="math inline">\(r_0\)</span>的圆周运动，角速度为<span class="math inline">\(\omega_0\)</span>；若拉动轻绳，使运动半径变为<span class="math inline">\(r\)</span>。求：此时的角速度和拉力，拉力在这一过程中所做的功。</p>
+</div>
+<div class="minipage">
+<p><img src="asset/ch3/T9.png" alt="image" /></p>
+</div>
+</div>
+<h3 id="三大守恒的对比">三大守恒的对比</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">守恒定律</th>
+<th style="text-align: center;">条件</th>
+<th style="text-align: center;">是否与内力有关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">动量守恒</td>
+<td style="text-align: center;">合外力为零</td>
+<td style="text-align: center;">无关</td>
+</tr>
+<tr>
+<td style="text-align: center;">角动量守恒</td>
+<td style="text-align: center;">合外力矩为零</td>
+<td style="text-align: center;">无关</td>
+</tr>
+<tr>
+<td style="text-align: center;">机械能守恒</td>
+<td style="text-align: center;">只有保守内力做功</td>
+<td style="text-align: center;">有关</td>
+</tr>
+</tbody>
+</table>
+<div class="example"><div class="example-title">例题</div>
+<p><span>三大守恒的对比</span> 判断在以下情境中，动量、机械能、对圆心的角动量是否守恒。</p>
+<p>(1) 竖直平面内由绳牵引的圆周运动；(2) 竖直平面内由杆控制的匀速圆周运动</p>
+<p>判断是否守恒可以从条件上判断，也可以从结果上判断。</p>
+<p>(1) 只有重力做功，机械能守恒；速度的大小和方向时刻变化，所以动量、角动量不守恒。</p>
+<p>(2) 速度大小不变，半径不变，所以角动量守恒；速度方向改变，所以动量不守恒；动能不变，势能改变，机械能不守恒。</p>
+<p>【补充练习】一质点在几个外力同时作用下运动时，判断下列叙述是否正确。</p>
+<p>(1) 若质点的动量改变，动能一定改变；(2) 若动量守恒，则机械能守恒；</p>
+<p>(3) 若动量守恒，则对任意点的角动量守恒；(4) 若外力做功为零，外力的冲量一定为零；</p>
+<p>(5) 若机械能守恒，则动量守恒；(6) 若对一点的角动量守恒，则对其他任意点的角动量也守恒</p>
+</div>
+<h2 id="拓展内容">拓展内容</h2>
+<h3 id="变质量系统的动量守恒">变质量系统的动量守恒</h3>
+<p>如果系统质量发生变化，则不能贸然使用牛顿第二定律，动量的变化需要同时考虑质量和速度的变化。</p>
+<p>使用数学上的全微分，可知</p>
+<div class="formula">
+<p><span class="math inline">\(d\vec{p}=m\cdot d\vec{v}+\vec{v}\cdot dm\)</span></p>
+</div>
+<div class="example"><div class="example-title">例题</div>
+<p><span>变质量系统的动量守恒*</span> (1) 质量为<span class="math inline">\(M\)</span>的火箭以速度<span class="math inline">\(v\)</span>运动，以相对速率<span class="math inline">\(u\)</span>向后扔出一个质量为<span class="math inline">\(m\)</span>的球，求火箭的速度。</p>
+<p>(2) 质量为<span class="math inline">\(M\)</span>的火箭以速度<span class="math inline">\(v\)</span>运动，以相对速率<span class="math inline">\(u\)</span>持续向后喷出气体，求质量减小<span class="math inline">\(m\)</span>时的速度。</p>
+<p>(1) 飞船的初动量为<span class="math inline">\(Mv\)</span>，且动量守恒，<span class="math inline">\(Mv=(M-m)v^\prime+m(v^\prime-u)\)</span>，解得<span class="math inline">\(v^\prime=v+\dfrac{m}{M}u\)</span></p>
+<p>(2) 在<span class="math inline">\(dt\)</span>时间内，假设喷出气体质量为<span class="math inline">\(dm\)</span>，速度增加<span class="math inline">\(dv\)</span></p>
+<p>则飞船的动量变为<span class="math inline">\((M-dm)(v+dv)\)</span>，而喷出气体的动量为<span class="math inline">\(dm(v+dv-u)\)</span>（注意速度方向）</p>
+<p>根据动量守恒定律，<span class="math inline">\(Mv=(M-dm)(v+dv)+(v+dv-u)dm\)</span>，整理得<span class="math inline">\(dv=\dfrac{u}{M}dm\)</span></p>
+<p>结合<span class="math inline">\(dm=-dM\)</span>，两边积分得<span class="math inline">\(\displaystyle\int{dv}=-\int\dfrac{u}{M}dM\)</span>，即<span class="math inline">\(v^\prime-v=u[\ln{M}-\ln{(M-m)}]\)</span></p>
+<p>整理得<span class="math inline">\(v^\prime=v+u\ln{\dfrac{M}{M-m}}\)</span></p>
+<p>【补充练习】均匀竖直链条长度为<span class="math inline">\(l\)</span>，质量为<span class="math inline">\(m\)</span>，下端刚触地，求自由下落<span class="math inline">\(h\)</span>时对地面的作用力。</p>
+</div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
