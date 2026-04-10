@@ -166,6 +166,31 @@ def process_answers(content):
     """处理答案 - 添加折叠功能"""
     if not content:
         return content
+
+    # 匹配 \tcblower 后面的答案内容（到下一个标题或结束之前）
+    # 例题答案：默认展开，不需要处理
+
+    # 匹配补充练习答案：从 【补充练习】 到例题结束或下一节
+    # 补充练习答案默认折叠
+
+    # 处理 \tcbline 后的补充练习（需要折叠）
+    # 匹配 【补充练习】 标记
+    supplement_pattern = r'(【补充练习】.+?)(<h[1-6]|$)'
+    content = re.sub(
+        supplement_pattern,
+        r'<div class="supplement answer collapsed">\1<div class="answer-content">',
+        content,
+        flags=re.DOTALL
+    )
+
+    # 修复：给补充练习答案添加结束标签
+    content = re.sub(
+        r'(<div class="supplement answer collapsed">.+?)(\n<h[1-6]>|$)',
+        r'\1</div>\2',
+        content,
+        flags=re.DOTALL
+    )
+
     return content
 
 
