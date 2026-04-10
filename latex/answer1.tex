@@ -1,0 +1,623 @@
+%\appendix 
+
+\chapter*{补充练习答案}
+
+\section*{第1章}
+
+\noindent 1.~~~根据斜抛运动规律，质点在水平方向做匀速直线运动，竖直方向做竖直上抛运动。
+
+在$x$方向上，初速度为$v_x=\dfrac{\sqrt{2}}{2}v$，因此$x=\dfrac{\sqrt{2}}{2}vt$
+
+在$y$方向上，初速度为$v_y=\dfrac{\sqrt{2}}{2}v$，加速度为$a_y=-g$，因此$y=\dfrac{\sqrt{2}}{2}vt-\dfrac{1}{2}gt^2$
+
+根据$x$的表达式可解得$t=\dfrac{\sqrt{2}x}{v}$，代入$y$的表达式可得$y=x-\dfrac{x^2}{v^2}g$
+
+%\vspace{0.5em}
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 2.~~~在$t=2T$时间内，质点回到原来位置，位移为$0$，但运动两周，所以路程为$4\pi R$
+
+将位移和路程除以时间，可得平均速度为$0$，平均速率为$\dfrac{2\pi R}{T}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 3.~~~(1)~在$t=0,\SI{2}{s}$时刻，代入质点运动方程可得质点的位置分别为$(0,2),~(4,-2)$
+
+因此位移为$\Delta \vec{r}=4\hat{i}-4\hat{j}$，平均速度$\bar{\vec{v}}=\dfrac{\Delta \vec{r}}{\Delta t}=2\hat{i}-2\hat{j}$
+
+将$x,y$对$t$求导，可得$v_x=\dfrac{dx}{dt}=2,~v_y=\dfrac{dy}{dt}=-2t$，代入$t=2$可得瞬时速度$\vec{v}=2\hat{i}-4\hat{j}$
+
+(2)~代入$t=0$可得$\vec{v}_0=2\hat{i}$，速度变化量$\Delta \vec{v}=\vec{v}-\vec{v}_0=-4\hat{j}$，平均加速度$\bar{\vec{a}}=\dfrac{\Delta \vec{v}}{\Delta t}=-2\hat{j}$
+
+将$v_x,v_y$对$t$求导，可得$a_x=\dfrac{dv_x}{dt}=0,~v_y=\dfrac{dv_y}{dt}=-2$，因此$t=2$时的瞬时加速度$\vec{a}=-2\hat{j}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 4.~~~根据题意，可写出$a_x=t^2,a_y=2t+3$. 初始条件$v_x=2,~v_y=0,~x=0~,y=-5$
+
+\vspace{0.25em}
+
+积分一次可得$v_x=2+\displaystyle \int_0^t{t^2dt}=\dfrac{1}{3}t^3+2,~v_y=0+\displaystyle \int_0^t{(2t+3)dt}=t^2+3t$
+
+\vspace{0.5em}
+
+再积分一次可得$x=0+\displaystyle \int_0^t{\left(\dfrac{1}{3}t^3+2\right)dt}=\dfrac{1}{12}t^4+2t,~y=-5+\displaystyle \int_0^t{(t^2+3t)dt}=\dfrac{1}{3}t^3+\dfrac{3}{2}t^2-5$
+
+\vspace{0.5em}
+
+将$t=\SI{2}{s}$代入，得$v_x=\dfrac{14}{3},~v_y=10,~x=\dfrac{16}{3},~y=\dfrac{11}{3}$. 可写为$\vec{v}=\dfrac{14}{3}\hat{i}+10\hat{j},~\vec{r}=\dfrac{16}{3}\hat{i}+\dfrac{11}{3}\hat{j}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 5.~~~(1)~线速度$v=\dfrac{ds}{dt}=3+6t$，角速度$\omega=\dfrac{v}{R}=1+2t$.~在$t=2$时刻，$v=15,~\omega=5$
+
+角加速度$\alpha=\dfrac{d\omega}{dt}=2$，切向加速度$a_t=\alpha R=6$，法向加速度$a_n=\dfrac{v^2}{R}=75$
+
+总加速度的大小$a=\sqrt{a_t^2+a_n^2}\approx 75.24$
+
+(2)~此时应有$a_t=a_n$，即$2R=(1+2t)^2 R$，解得$t=\dfrac{\sqrt{2}-1}{2}$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 6.~~~要求乙相对于甲的速度，就是选甲作为参考系，而乙是研究对象。
+
+乙相对于大地的速度是绝对速度，甲相对于大地的速度是牵连速度，乙相对于甲的速度是相对速度。
+
+根据题意，$\vec{v}_{\text{绝对}}=\hat{i}+\sqrt{3}\hat{j},~\vec{v}_{\text{牵连}}=2\hat{i}$，因此相对速度$\vec{v}_{\text{相对}}=\vec{v}_{\text{绝对}}-\vec{v}_{\text{牵连}}=-\hat{i}+\sqrt{3}\hat{j}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 7.~~~(1)~以墙角为原点，向右、向上为$x,y$轴建立坐标系，设A,B坐标为$(x,0),(0,y)$
+
+由勾股定理可知$x^2+y^2=L^2$，两边分别对$t$求导得$2x\dfrac{dx}{dt}+2y\dfrac{dy}{dt}=0$
+
+整理得$v_y=-\dfrac{x}{y}v_x$，而根据题意，$v_x=v$，$\tan{\theta}=\dfrac{y}{x}$，因此B点速度$v_y=-\dfrac{v}{\tan{\theta}}$，
+
+(2)~对$x\dfrac{dx}{dt}+y\dfrac{dy}{dt}=0$两边再求导，得$\left(\dfrac{dx}{dt}\right)^2+x\dfrac{d^2x}{dt^2}+\left(\dfrac{dy}{dt}\right)^2+y\dfrac{d^2y}{dt^2}=0$
+
+即$v_x^2+xa_x+v_y^2+ya_y=0$，根据题意，$a_x=0,~y=L\sin{\theta}$，代入得$a_y=-\dfrac{v^2+v_y^2}{y}=-\dfrac{v^2}{L\sin^3{\theta}}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 8.~~~先将$x,y$对$t$求导，得到$v_x=\dfrac{dx}{dt}=3,~v_y=\dfrac{dy}{dt}=-6t$，代入$t=\SI{1}{s}$，可得瞬时速度$\vec{v}=3\hat{i}-6\hat{j}$
+
+再求一次导，得$a_x=\dfrac{d^2x}{dt^2}=0,~a_y=\dfrac{d^2y}{dt^2}=-6$，即瞬时加速度$\vec{a}=-6\hat{j}$，这就是速度的变化率
+
+速率的变化率就是切向加速度，可将加速度在平行于垂直速度方向进行分解。
+
+加速度在速度方向上的投影为$a_t=\dfrac{\vec{a}\cdot \vec{v}}{|\vec{v}|}=\dfrac{12\sqrt{5}}{5}$，这就是速率的变化率。
+
+加速度在法向上的分量为$a_n=\sqrt{a^2-a_t^2}=\dfrac{6\sqrt{5}}{5}$，利用$a_n=\dfrac{v^2}{\rho}$，可得曲率半径$\rho=\dfrac{15\sqrt{5}}{2}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\section*{第2章}
+
+\noindent 1.~~~根据牛顿第二定律，$mg-kv=ma=m\dfrac{dv}{dt}$，分离变量得$\dfrac{dv}{\frac{mg}{k}-v}=\dfrac{k}{m}dt$
+
+两边分别积分$\displaystyle\int\dfrac{dv}{\frac{mg}{k}-v}=\int\dfrac{k}{m}dt$，得$-\ln{(\frac{mg}{k}-v)}=\dfrac{k}{m}t+C$
+
+初始条件为$t=0$时，$v=0$，代入得$C=-\ln{(\frac{mg}{k})}$，代回整理得$-\dfrac{k}{m}t=\ln{(1-\frac{kv}{mg})}$
+
+进一步整理得$v=\dfrac{mg}{k}(1-e^{-\frac{k}{m}t})$，当$t\rightarrow \infty$时，$v\rightarrow \dfrac{mg}{k}$，这就是收尾速度。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 2.~~~恒力做功直接用力与位移的点积计算，$W_1=\vec{F}_1\cdot \Delta \vec{r}=(-5,2)\cdot (2,-3)=\SI{-16}{J}$
+
+$W_2=\displaystyle\int_0^2{F_xdx}+\int_0^{-3}{F_ydy}=\int_0^2{2xdx}+\int_0^{-3}{(-4y)dy}=4-18=\SI{-14}{J}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 3.~~~先求合外力所做的功，$W=\displaystyle\int_0^4{(10+6x^2)dx}=\left.(10x+2x^3)\right|_0^4=\SI{168}{J}$
+
+根据动能定理，$W=\dfrac{1}{2}mv^2-0$，代入数据得$v\approx\SI{12.96}{m/s}$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 4.~~~~(1)~错误，保守力做正功则相应的势能减小；
+
+(2)~正确，这就是保守力的定义；
+
+(3)~错误，一堆力的功等于其中一个力乘以相对位移；
+
+(4)~错误，应等于内力和外力做的总功。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 5.~~~以当前位置为原点，当物体向上移动$x$距离时，力$F$做功$Fx$，克服摩擦力做功$\mu mgx\cos{\theta}$
+
+物体的重力势能增加$mgx\sin{\theta}$，弹簧的弹性势能增加$\dfrac{1}{2}kx^2$
+
+在初始状态物体静止，到最远位置速度为零，即初末状态的动能都是零
+
+根据功能原理，$Fx-\mu mgx\cos{\theta}=mgx\sin{\theta}+\dfrac{1}{2}kx^2$，解得$x=\dfrac{2(F-\mu mg\cos\theta-mg\sin\theta)}{k}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 6.~~~整个物体关于$y$轴对称，所以质心的$x$坐标一定为$0$，只需求$y$坐标。
+
+将半圆盘切分成若干宽度为$dy$的横条，在坐标$y$处，横条的长度为$2\sqrt{R^2-y^2}$
+
+设半圆盘的面密度为$\sigma$，则这个横条的质量为$2\sigma\sqrt{R^2-y^2}dy$，而整个半圆盘的质量为$\dfrac{1}{2}\sigma \pi R^2$
+
+因此$y_C=\dfrac{\displaystyle\int_0^R{y\cdot 2\sigma\sqrt{R^2-y^2}dy}}{\dfrac{1}{2}\sigma \pi R^2}$
+
+其中，分子$=\displaystyle\int_0^R{y\cdot 2\sigma\sqrt{R^2-y^2}dy}=\int_0^R{\sigma\sqrt{R^2-y^2}dy^2}=\left.-\dfrac{2\sigma}{3}(R^2-y^2)^{\frac{3}{2}}\right|_0^R=\dfrac{2}{3}\sigma R^3$
+
+因此$y_C=\left(\dfrac{2}{3}\sigma R^3\right)\div \left(\dfrac{1}{2}\sigma \pi R^2\right)=\dfrac{4R}{3\pi}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 7.~~~若以两个碎块为系统，则其质心的运动轨迹，等同于假设炮弹不破碎时的轨迹。
+
+设质心的射程为$x_C$，根据斜抛运动规律，在水平和竖直方向上$x_C=v_0t\cos\theta,~0=v_0t\sin\theta-\dfrac{1}{2}gt^2$
+
+解得$x_C=\dfrac{v_0^2\sin{2\theta}}{g}$.~根据对称性，竖直下落的碎块射程为$x_1=\dfrac{1}{2}x_C$
+
+根据质心位置公式，$x_C=\dfrac{x_1+x_2}{2}$，整理得$x_2-x_1=x_C=\dfrac{v_0^2\sin{2\theta}}{g}$.
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 8.~~~(1)~根据图像，可知当$r<r_0$时，斜率为负，说明力的方向为正方向，是斥力；
+
+当$r>r_0$时，斜率为正，说明力的方向为负方向，是引力；当$r=r_0$时，斜率水平，此时为平衡位置。
+
+(2)~$F=-\dfrac{dE_p}{dr}=12Ar^{-13}-6Br^{-7}$，令$F=0$，可解得平衡位置为$r=\left(\dfrac{2A}{B}\right)^{\frac{1}{6}}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 9.~~~对罐内液面和喷嘴处的水，根据伯努利定理，$p_0+\dfrac{1}{2}\rho v_0^2=p_1+\dfrac{1}{2}\rho v_1^2$
+
+将$v_0=0,~p_1=\SI{21e5}{Pa},~p_2=\SI{1e5}{Pa}$代入得$v_1=\SI{63.6}{m/s}$
+
+因此流量$Q=v_1\pi r^2=\SI{0.19}{m^3/min}$
+
+\section*{第3章}
+
+\noindent 1.~~~~首先求出转动一周的时间$t=\dfrac{2\pi}{\omega}$，重力冲量大小$I_G=mgt=\dfrac{2\pi mg}{\omega}$
+
+拉力的大小虽然不变，但方向时刻改变，变力的冲量不能用公式直接计算。
+
+但可以知道转动一周之后，小球回到原来的运动状态，初末动量相等，根据动量定理可知$I_{\text{合}}=0$
+
+因此拉力的冲量与重力冲量必然大小相等，方向相反，$I_T=I_G=mgt=\dfrac{2\pi mg}{\omega}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 2.~~~~取$dt$的时间进行研究，落入车厢的煤质量为$\Delta m dt$，只分析水平方向即可
+
+实际发生变化的部分只有落入车厢这部分煤要产生速度$v$
+
+在$x$方向上由动量守恒，$F dt=\Delta mv dt$，即$F=\Delta mv=\SI{1.5e3}{N}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 3.~~~~(1)~正确，因为作用力与反作用力等大反向，且作用时间相同；
+
+(2)~正确，系统动量与内力无关；
+
+(3)~正确，合外力的冲量就等于系统总动量的变化量，方向和大小都相同；
+
+(4)~错误，冲量大只说明动量的变化量大，不能说明动量大
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 4.~~~~(1)~根据动量守恒定律，$m_A\vec{v}_A+m_B\vec{v}_B=m_A\vec{v}^\prime_A+m_B\vec{v}^\prime_B$，代入数据解得$\vec{v}^\prime_A=1.75\hat{i}-3.25\hat{j}$
+
+(2)~根据动量守恒定律，$m_A\vec{v}_A+m_B\vec{v}_B=(m_A+m_B)\vec{v}^\prime$，代入数据解得$\vec{v}^\prime_B=2.8\hat{i}-1.8\hat{j}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 5.~~~~(1)~设斜面的速度为$V$，小物体在水平方向上的速度为$u_x$
+
+两物体构成的系统在水平方向不受外力，动量守恒，在任意时刻的水平方向，$MV+mu_x=0$
+
+两边同时积分，得$\displaystyle M\int Vdt=m\int u_xdt$，即$MS=ms_x$
+
+结合几何关系，$S+s_x=L\cos\theta$，解得$S=\dfrac{mL\cos\theta}{M+m}$
+
+(2)~设小物体在竖直方向的速度为$u_y$
+
+小物体相对于斜面的速度是沿斜面的，所以$u_y=(u_x+V)\tan \theta$
+
+由水平方向动量守恒，$MV-mu_x=0$，由机械能守恒定律，$mgL\sin\theta=\dfrac{1}{2}MV^2+\dfrac{1}{2}m(u_x^2+u_y^2)$
+
+联立以上各式解得$V=\dfrac{m\cos\theta \sqrt{2gl\sin\theta}}{\sqrt{(M+m)(M+m\sin^2\theta)}}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 6.~~~~小球受力始终过圆心这个定点，所以对圆心的角动量守恒，$m\omega_0r_0^2=m\omega r^2$
+
+解得$\omega=\omega_0 \dfrac{r_0^2}{r^2}$，拉力$F=m\omega^2r=m\omega_0^3\dfrac{r_0^4}{r^3}$
+
+利用动能定理，拉力做的功$W=\dfrac{1}{2}m(\omega r)^2-\dfrac{1}{2}m(\omega_0 r_0)^2=\dfrac{1}{2}m\omega_0^2 r_0^2\left(\dfrac{r_0^2}{r^2}-1\right)$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 7.~~~~(1)~错误，速度方向改变但大小不变时，动量改变而动能不变；
+
+(2)~错误，动量不变则动能不变，但势能可能改变；
+
+(3)~正确，对于质点而言，合外力为零，合外力矩就为零；
+
+(4)~错误，若外力与位移垂直，则做功为零，但冲量不为零；
+
+(5)~错误，机械能分为动能和势能，机械能守恒，速度的大小和方向都可能改变，动量就会改变
+
+(6)~错误，例如匀速圆周运动，对圆心的角动量守恒，但对其他点的角动量不守恒
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 8.~~~~设单位长度链条的质量为$\lambda$，根据已知条件，$\lambda l=m$，已落地部分的质量为$\lambda h$
+
+根据自由落体规律，自由下落$h$时，链条下落的速度$v=\sqrt{2gh}$
+
+这说明在$dt$时间内，有质量为$dm=\lambda vdt$的链条落地，即$\dfrac{dm}{dt}=\lambda v$
+
+取落地部分的链条为研究对象，由动量定理，$(F-\lambda hg)dt=vdm$，解得$F=\dfrac{3mgh}{l}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\section*{第4章}
+
+\noindent 1.~~~~首先进行单位换算，$\SI{200}{r/min}$表示每分钟$200$转，即$\SI{60}{s}$转过$200\times 2\pi=400\pi~\unit{rad}$ 
+
+因此$\omega_0=\dfrac{400\pi~\unit{rad}}{\SI{60}{s}}=\dfrac{20\pi}{3}~\unit{rad/s}$，同理$\omega=\dfrac{6000\pi~\unit{rad}}{\SI{60}{s}}=100\pi~\unit{rad/s}$
+
+由$\omega=\omega_0+\alpha t$，解得$\alpha=\dfrac{\omega-\omega_0}{t}=\dfrac{100\pi~\unit{rad/s}-\dfrac{20\pi}{3}~\unit{rad/s}}{\SI{7.0}{s}}=\dfrac{40\pi}{3}~\unit{rad/s^2}$
+
+由$\theta=\omega_0+\dfrac{1}{2}\alpha t^2$或$\omega^2-\omega_0^2=2\alpha \theta$，可求得$\theta=\dfrac{1120}{3}\pi~\unit{rad}$
+
+每$2\pi~\unit{rad}$是一圈，所以转了$\dfrac{560}{3}$圈。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 2.~~~~AO部分与转轴重合，到转轴的距离为零，因此对转动惯量没有贡献。
+
+OB部分需要切小段再用微积分求解。
+
+将其切分为长度为$dx$的小段，每段质量为$\dfrac{mdx}{L}$，到O点距离为$x$的小段，到转轴的距离为$\dfrac{\sqrt{3}}{2}x$
+
+因此该小段的转动惯量为$\dfrac{mdx}{L}\cdot \dfrac{3x^2}{4}$，整体的转动惯量$J=\displaystyle\int_0^L{\dfrac{3mx^2}{4L}dx}=\dfrac{1}{4}mL^2$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 3.~~~~(1)~圆盘对转轴的转动惯量为$J=\dfrac{1}{2}MR^2\alpha$，两个力产生力矩的方向相反
+
+利用转动定律，$FR-F\dfrac{R}{2}=\dfrac{1}{2}MR^2\alpha$，得$\alpha=\dfrac{F}{MR}$
+
+(2)~角加速度是顺时针方向，与现在的角速度方向相同，因此圆盘在加速；
+
+(3)~由$\omega=\omega_0+\alpha t$，得$t=\dfrac{MR}{F}(\omega-\omega_0)$；由$\omega^2-\omega_0^2=2\alpha \theta$，得$\theta=\dfrac{MR}{2F}(\omega^2-\omega_0^2)$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\newpage
+
+\noindent 4.~~~~本题需要使用隔离法分析
+
+对A、B物体，由牛顿第二定律，有$mg-T_A=ma_A,~T_B-mg=ma_B$
+
+根据线量与角量的关系，$a_A=\alpha \cdot 2R,~a_B=\alpha \cdot R$
+
+对于圆盘来说，总转动惯量$J=\dfrac{1}{2}mR^2+\dfrac{1}{2}\cdot 4m(2R)^2$
+
+根据转动定律，$T_A R-T_B\dfrac{R}{2}=J\alpha$
+
+联立以上各式解得$\alpha=\dfrac{2g}{27R},~a_A=\dfrac{4g}{27},~a_B=\dfrac{2g}{27}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 5.~~~~(1)~均匀细杆的重心位于中点，因此重心位置下降了$\dfrac{1}{2}L(1-\cos{\theta})$
+
+    根据机械能守恒定律，$mg\dfrac{1}{2}L(1-\cos{\theta})=\dfrac{1}{2}J\omega^2$，其中转动惯量$J=\dfrac{1}{3}mL^2$
+
+    解得$\omega=\sqrt{\dfrac{3g(1-\cos{\theta})}{L}}$
+
+    (2)~细杆受到重力和转轴给的力，转轴的力对于转动没有贡献。
+
+    重力的力臂为$\dfrac{L}{2}\sin{\theta}$，根据转动定律，$mg\dfrac{L}{2}\sin{\theta}=J\alpha$，求得$\alpha=\dfrac{3g\sin{\theta}}{2L}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 6.~~~~(1)~正确，因为作用力与反作用力必然等大、反向、共线，力臂相等，力矩之和为零；
+
+(2)~错误，这两个力不一定共线，力臂可能不相等，所以合力矩不一定为零；
+
+(3)~正确，合外力矩等于角动量的变化量，内力矩不产生影响；
+
+(4)~错误，子弹射入之后，改变了盘子整体的转动惯量，盘子的角速度减小。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 7.~~~~(1)~在碰撞瞬间，圆盘对转轴的角动量守恒，$mvR=J\omega_0$
+
+其中，碰撞后的转动惯量$J=\left(\dfrac{1}{2}\cdot 2mR^2+mR^2\right)=2mR^2$，求得$\omega_0=\dfrac{v}{2R}$
+
+(2)~在碰撞后转动的过程中，由机械能守恒
+
+$mgR=\dfrac{1}{2}J(\omega^2-\omega_0^2)$，求得$\omega=\sqrt{\dfrac{g}{R}+\dfrac{v^2}{4R^2}}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 8.~~~~对于转轴对面的细杆，它到转轴的距离为$\dfrac{\sqrt{3}}{2}L$
+
+利用平行轴定理，它对转轴的转动惯量为$\dfrac{1}{12}mL^2+m\left(\dfrac{\sqrt{3}}{2}L\right)^2=\dfrac{5}{6}mL^2$
+
+对于另外两个细杆，对转轴的转动惯量都是$\dfrac{1}{3}mL^2$
+
+因此整体对转轴的转动惯量是$J=\dfrac{5}{6}mL^2+2\times \dfrac{1}{3}mL^2=\dfrac{3}{2}mL^2$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\newpage
+
+\noindent 9.~~~~(1)~圆盘的重力过转轴，对转动不产生影响，只有黏土块的重力产生力矩。
+
+由$mgR=J\alpha$，得$\alpha=\dfrac{g}{2R}$
+
+(2)~根据质心运动定理，在水平方向和竖直方向分别计算。整体的质心到圆心的距离是$\dfrac{R}{3}$
+
+在水平方向，$F_x=3m\omega^2\dfrac{R}{3}=mg+\dfrac{mv^2}{4R}$，方向向左
+
+在竖直方向，$2mg+mg-F_y=3m\alpha \dfrac{R}{3}$，解得$F_y=\dfrac{5}{2}mg$，方向向上
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 10.~~在滚动过程中，因为无滑动，因此在任意瞬间，与斜面接触点的速度为0
+
+设此时质心的速度为$v$，则可知球滚动的角速度$\omega=\dfrac{v}{R}$
+
+利用机械能守恒定律定律，可知$mgh=\dfrac{1}{2}mv^2+\dfrac{1}{2}J\omega^2$
+
+其中，实心球的转动惯量$J=\dfrac{2}{5}mR^2$，代入可求得$v=\sqrt{\dfrac{10}{7}gh}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 11.~~将圆盘分割为宽度为$dr$的圆盘，对于半径为$r$的圆盘而言，圆盘的质量为$m\dfrac{2\pi rdr}{\pi R^2}$
+
+它所受的摩擦力为$\mu mg\dfrac{2rdr}{R^2}$，力矩为$\mu mg\dfrac{2r^2dr}{R^2}$
+
+因此整个圆盘所受摩擦力矩为$\displaystyle\int_0^R{\mu mg\dfrac{2r^2dr}{R^2}}=\dfrac{2}{3}\mu mgR$
+
+圆盘相对于圆心的转动惯量为$J=\dfrac{1}{2}mR^2$，根据$M=J\alpha$，可得$\alpha=\dfrac{4\mu g}{3R}$
+
+由$\omega^2=2\alpha \theta$，得$\theta=\dfrac{3\omega^2R}{8\mu g}$
+
+\section*{第5章}
+
+\noindent 1.~~~~将$x$对$t$求导得$v=-0.8\pi\sin\left(8\pi t+\dfrac{2\pi}{3}\right)$，所以最大速度是$0.8\pi$
+
+再求导得$a=-6.4\pi^2\cos \left(8\pi t+\dfrac{2\pi}{3}\right)$，所以最大加速度是$6.4\pi^2$
+
+令$x=0$得$8\pi t+\dfrac{2\pi}{3}=\dfrac{\pi}{2}+k\pi~(k\in \mathbb{Z})$
+
+当$k=1$时，$t=\dfrac{5}{48}$，这是首次回到平衡位置的时间
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 2.~~~~通过图像可看出周期$T=2.4$，振幅$x=0.05$，因此$\omega=\dfrac{2\pi}{T}=\dfrac{5\pi}{6}$
+
+由旋转矢量法，可知$\varphi=-\dfrac{\pi}{3}$，从而可写出表达式$x=0.05\cos\left(\dfrac{5\pi}{6}t-\dfrac{\pi}{3}\right)$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 3.~~~~在相遇时，根据旋转矢量法，可判断二者相位分别为$\pm\dfrac{\pi}{3}$，因此相位差是$\dfrac{2\pi}{3}$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 4.~~~~(1)~根据公式$\omega=\sqrt{\dfrac{k}{m}}$，代入数据得$k=\omega^2 m=0.64\pi^2$
+
+(2)~从能量的角度，通过平衡位置的动能，就等于最远处的势能
+
+根据振幅$A=0.1$，可得$E=\dfrac{1}{2}kA^2=\dfrac{1}{2}mv^2$，得$v=0.8\pi$
+
+(3)~利用上一小问，可求出$E=0.0032\pi^2$，若动能等于势能的3倍，则势能是总能量的1/4
+
+$E_p=\dfrac{1}{4}E=\dfrac{1}{2}kx^2$，求得$x=\pm\SI{0.05}{m}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 5.~~~~根据自由落体规律，在落到盘子前瞬间，物体的速率为$\sqrt{2gh}=2\sqrt{5}\unit{m/s}$
+
+在碰撞前后，动量守恒，$m\sqrt{2gh}=(m+M)v_0$，得初速度$v_0=\sqrt{5}\unit{m/s}$
+
+在振动的平衡位置，弹簧的伸长量应满足$kx_1=(m+M)g$，但初始状态的伸长量$kx_2=Mg$
+
+这说明，相对于平衡位置，初始状态的位移为$x_0=-mg/k=-\SI{1}{m}$（向下为正）
+
+利用弹簧振子的公式可得$\omega=\sqrt{\dfrac{M+m}{k}}=\sqrt{5}\unit{rad/s}$
+
+设振幅为$A$，则$\dfrac{1}{2}kA^2=\dfrac{1}{2}kx_0^2+\dfrac{1}{2}(M+m)v_0^2$，得$A=\sqrt{2}\unit{m}$
+
+利用旋转矢量法，可知初相位$\varphi=-\dfrac{3\pi}{4}$
+
+因此振动方程为$x=\sqrt{2}\cos\left(\sqrt{5}t-\dfrac{3\pi}{4}\right)$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 6.~~~~需要特别注意，相位与摆角并没有直接关系，应使用旋转矢量法判断。
+
+它的初相位是$\pi$，来到平衡位置的相位是$\pm\dfrac{\pm}{2}\pi$.
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 7.~~~~(1)~画出相位图，将两个分振动合成，利用三角函数知识可知，合振动的振幅为$2A$，初相位为$\dfrac{7\pi}{12}$
+
+因此合振动的表达式为$x=2A\cos(\omega t+\dfrac{\pi}{2})$
+
+(2)~第三个振动应与这个合振动同相，则第三个振动的表达式为$x_3=2A\cos(\omega t+\dfrac{7\pi}{12})$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 8.~~~~拍频为$\SI{0.5}{Hz}$，这就是两个音叉的频率之差，因此待测音叉的频率为$\SI{255.5}{Hz}$或$\SI{256.5}{Hz}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 9.~~~~设振动过程中，左端液面高于平衡位置的高度为$x$，此时两侧液面的高度差为$2x$
+
+由此产生的回复力，就是这部分液柱的重力，$F=-2\rho gSx$
+
+可以看出回复力与位移成正比且反向，说明这是简谐振动
+
+利用牛顿第二定律，$-2\rho gSx=\rho SLa$，整理得$a+\dfrac{2g}{L}x=0$
+
+对照振动方程可知，$\omega^2=\dfrac{2g}{L}$，由此可得振动周期$T=\dfrac{2\pi}{\omega}=2\pi\sqrt{\dfrac{L}{2g}}$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\newpage
+
+\noindent 10.~~根据$A=A_0 e^{-\beta t}$，将$A_0=0.03,~A=0.01,~t=10$代入可得$\beta\approx 0.110$
+
+再代入$A_0=0.01,~A=0.003$，可得$t=10.96$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 11.~~一个周期内，根据到达$x$和$y$最大位移的次数
+
+可知两个方向振动频率之比$\nu_x:\nu_y$分别为$1:2,~2:3,~3:4,~2:3,~1:3,~1:3$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\section*{第6章}
+
+\noindent 1.~~~(1)~频率$\nu=\dfrac{1}{T}=\SI{10}{Hz}$，由$u=\lambda \nu$得$\lambda=\SI{0.6}{m}$
+
+(2)~只知道A、B的相位差，但不知道谁领先谁落后。所以相位差可能为$\Delta \varphi=\varphi_B-\varphi_A=\pm\dfrac{5\pi}{6}$
+
+三角函数$\pm 2\pi$实质等同，所以$-\dfrac{5\pi}{6}$就等同于$\dfrac{7\pi}{6}$
+
+根据比例关系，每相差一个波长，相位落后$2\pi$，因此$\dfrac{\Delta x}{\lambda}=\dfrac{\Delta \varphi}{2\pi}$，得$\Delta x=\SI{0.25}{m}$或$\SI{0.35}{m}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 2.~~~(1)~比照波函数$y=A\cos{\left(\omega t+\varphi_0\mp \dfrac{2\pi}{\lambda}x\right)}$，可知$\omega=10\pi$，$\dfrac{2\pi}{\lambda}=4\pi$
+
+可知周期$T=\dfrac{2\pi}{\omega}=\SI{0.2}{s}$，频率$\nu=\dfrac{1}{T}=\SI{5}{Hz}$，波长$\lambda=\SI{0.5}{m}$
+
+波速$u=\nu \lambda=\SI{2.5}{m/s}$，$x$的系数为负，说明波向正方向传播。
+
+(2)~最大速度为$A\omega=0.5\pi$，最大加速度为$A\omega^2=5\pi^2$
+
+(3)~令$x=1$，得$y=0.05\cos{(10\pi t-4\pi)}$.
+
+平衡状态令$y=0$，即$10\pi t-4\pi=\dfrac{\pi}{2}+k\pi$，得$t=\dfrac{1+2k}{20}~(k\in\mathbb{Z})$
+
+(4)~令$t=0.2$，得$y=0.05\cos{(2\pi-4\pi x)}$，波峰应有$2\pi-4\pi x=2k\pi$，得$x=\dfrac{k}{2}~(k\in\mathbb{Z})$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 3.~~~先根据波形图看出波长$\lambda=\SI{4}{m}$，振幅$A=\SI{0.1}{m}$
+
+但题目没有给出波的传播方向，需要分情况讨论。
+
+若波沿$+x$方向传播，则在$\SI{0.5}{s}$内传播了$\SI{1}m$，波速为$u=\SI{2}{m/s}$
+
+由$u=\lambda \nu$，得$\nu=\SI{0.5}{Hz}$，周期$T=\dfrac{1}{\nu}=\SI{2}{s}$，圆频率$\omega=\dfrac{2\pi}{T}=\pi$
+
+原点位于平衡位置，向负向振动，振动方程为$y=0.1\cos{\left(\omega t+\dfrac{\pi}{2}\right)}$
+
+对振动方程调整可得波函数$y=0.1\cos{\left(\pi t+\dfrac{\pi}{2}-2\pi\cdot \dfrac{x}{4}\right)}=0.1\cos{\left(\pi t-\dfrac{\pi}{2}x+\dfrac{\pi}{2}\right)}$
+
+若波沿$-x$方向传播，则在$\SI{0.5}{s}$内传播了$\SI{3}m$，波速为$u=\SI{6}{m/s}$，同理可得圆频率$\omega=3\pi$
+
+原点位于平衡位置，向正向振动，振动方程为$y=0.1\cos{\left(\omega t-\dfrac{\pi}{2}\right)}$
+
+对振动方程调整可得波函数$y=0.1\cos{\left(3\pi t-\dfrac{\pi}{2}+2\pi\cdot \dfrac{x}{4}\right)}=0.1\cos{\left(3\pi t+\dfrac{\pi}{2}x-\dfrac{\pi}{2}\right)}$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 4.~~~(1)~先看出振幅$A=\SI{2}{m}$，初相位$\varphi_0=\dfrac{\pi}{4}$，可得周期$T=\SI{8}{s}$
+
+进而圆频率$\omega=\dfrac{2\pi}{T}=\dfrac{\pi}{4}$，频率$\nu=\dfrac{1}{T}=\dfrac{1}{8}\unit{Hz}$，由$u=\lambda \nu$得$\lambda=\SI{32}{m}$
+
+由此可写出振动方程$y=2\cos{\left(\dfrac{\pi}{4}t+\dfrac{\pi}{4}\right)}$，因此波函数$y=2\cos{\left(\dfrac{\pi}{4}t-\dfrac{\pi}{16}x+\dfrac{\pi}{4}\right)}$
+
+(2)~仿照上题过程，可知波长$\lambda=\SI{8}{m}$，由$u=\lambda \nu$得$\nu=\SI{0.5}{Hz}$，即圆频率$\omega=\pi$
+
+关注$x=3$处的质点，利用旋转矢量法可知初相位为$\pi$，振动方程为$y=2\cos{(\pi t+\pi)}$
+
+利用波长进行调整，可得波动方程为$y=2\cos{\left[\pi t+\pi-2\pi\dfrac{(x-3)}{8}\right]}=2\cos{\left(\pi t-\dfrac{\pi}{4}x-\dfrac{\pi}{4}\right)}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 5.~~~(1)~错误，机械波中各个质元的机械能不守恒。
+
+(2)~正确，机械波中的质元，动能与势能大小相等，同增同减。
+
+(3)~错误，处于平衡位置的质元，动能和势能都最大。
+
+(4)~错误，理想简谐波的能量在传播过程中保持不变。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 6.~~~(1)~$S_1S_2$中垂线上的点，到$S_1,S_2$距离相等，因此距离差$\Delta r=0$
+
+相位差$\Delta \varphi=\Delta \varphi_0=\varphi_2-\dfrac{\pi}{2}$
+
+若为相消干涉，应有$\Delta \varphi=(2k+1)\pi$，得$\varphi_2=2k\pi-\dfrac{\pi}{2}~(k\in\mathbb{Z})$，可取$\varphi_2=-\dfrac{\pi}{2}$
+
+(2)~$S_1S_2$延长线上的点，距离差就是两点间距，$\Delta r=-\SI{3}{m}$
+
+相位差$\Delta \varphi=\Delta \varphi_0-2\pi\dfrac{\Delta r}{\lambda}=\varphi_2-\dfrac{\pi}{2}+3\pi$
+
+令$\Delta \varphi=(2k+1)\pi$，得$\varphi_2=\dfrac{\pi}{2}+2k\pi~(k\in \mathbb{Z})$，可取$\varphi_2=\dfrac{\pi}{2}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 7.~~~对于坐标为$x_0~(0<x_0<30)$的点，距离差$\Delta r=r_2-r_1=(30-x_0)-x_0=30-2x_0$
+
+相位差$\Delta \varphi=\Delta \varphi_0-2\pi\dfrac{30-2x_0}{\lambda}$，令$\Delta \varphi=(2k+1)\pi$
+
+得$x_0=15-\dfrac{\lambda}{4}\left(\dfrac{\Delta \varphi_0}{\pi}-2k-1\right)~(k\in \mathbb{Z})$
+
+当$k$增加$1$，$x_0$增加$\dfrac{\lambda}{2}$，这就是相邻减弱点的距离。根据题意可得$\lambda=\SI{6}{m}$.
+
+将$x_0=\SI{9}{m}$代入，得$\Delta \varphi_0=(2k+4)\pi$，令$k=-2$，可知$\Delta \varphi_0=0$，二者同相。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 8.~~~观察者首先会听到直接来自声源的声音，频率$\nu_{R1}=\dfrac{u-v_R}{u}\nu_S\approx \SI{245.4}{Hz}$
+
+同理，墙壁也会接收到来自声源的声音，频率$\nu_{R2}=\dfrac{u-v}{u}\nu_S\approx \SI{209.1}{Hz}$
+
+然后观察者会接收到来自墙壁的声音，频率$\nu_{R3}=\dfrac{u+v_R}{u+v}\nu_{R2}\approx \SI{189.6}{Hz}$
+
+因此拍频$\nu=|\nu_{R1}-\nu_{R3}|\approx \SI{56}{Hz}$
+
+%\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\newpage
+
+\noindent 9.~~~(1)~利用和差化积公式，合振动方程为
+
+$y=A[\cos 2\pi(t-x)+\cos 2\pi (t+x)]=2A\cos(2\pi x)\cos(2\pi t)$
+
+波节的振幅为零，$\cos(2\pi x)=0$，即$2\pi x=\dfrac{\pi}{2}+k\pi~(k\in\mathbb{Z})$，解得$x=\dfrac{1}{4}+\dfrac{k}{2}~(k\in\mathbb{Z})$
+
+(2)~波腹是振幅最大处，$\cos(2\pi x)=1$，因此振幅为$2A$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 10.~~(1)~根据题意，两端均为固定端，且有3个波腹，说明全场相当于$\dfrac{3}{2}$个波长，可得$\lambda=\SI{2}{m}$
+
+利用$u=\lambda \nu$，可得$\nu=\SI{50}{Hz}$
+
+(2)~波腹的振幅是入射波的二倍，$A=\SI{0.005}{m}$，圆频率$\omega=2\pi\nu=100\pi$
+
+可写出入射波和反射波在原点的振动方程$y=0.005 \cos{(100\pi t)}$，他们的传播方向相反
+
+波动方程为$y_1=0.005 \cos{(100\pi t-\pi x)}$和$y_2=0.005 \cos{(100\pi t+\pi x)}$
+
+利用和差化积公式，可得驻波方程$y=y_1+y_2=0.01\cos(100\pi t)\cos(\pi x)$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 11.~~两端开口说明两端都是自由端，细管的长度$L$要等于$k$个“段”
+
+每个“段”的长度是$\dfrac{\lambda}{2}$，结合题意可知$\dfrac{\lambda}{2}=\SI{0.05}{m}$，因此$\lambda=\SI{0.1}{m}$
+
+结合声速，$u=\lambda \nu$，可得振动频率为$\nu=\SI{3400}{Hz}$

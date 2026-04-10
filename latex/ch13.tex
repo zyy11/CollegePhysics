@@ -1,0 +1,525 @@
+\chapter{气体动理论}
+\setcounter{example_counter}{1}
+
+\section{理想气体}
+
+\subsection{热学研究对象}
+
+\vspace{-0.5em}
+
+\subsubsection{系统}
+
+热学的研究对象是大量微观粒子（分子、原子）构成的体积有限的物体，称为\textbf{热力学系统}，简称\textbf{系统}。
+
+\note{在热学中，不区分物质是由分子、原子还是离子构成的，构成物质的最小微粒统称为分子。}
+
+%\begin{itemize}
+%    \item 孤立系统：与外界没有任何相互作用，既无能量、也无物质交换
+%    \item 封闭系统：与外界有能量、但无物质交换
+%    \item 开放系统：与外界既有能量又有物质交换
+%\end{itemize}
+
+\subsubsection{气体动理论基本观点}
+
+\noindent
+\begin{minipage}{0.73\textwidth}
+    \setlength{\parskip}{0.5em}
+    \setlength{\parindent}{2em}
+    \linespread{1.3}
+
+    \vspace{0.5em}
+
+\begin{itemize}
+    \item 宏观物体由大量分子构成，分子之间存在空隙
+    \item 分子永不停息地作无规则运动
+    \item 分子间有一定相互作用力
+\end{itemize}
+    
+\end{minipage}
+\hfill
+\begin{minipage}{0.25\textwidth}
+    \centering \includegraphics[width=\textwidth]{asset/ch6/T1.png}
+\end{minipage}
+
+\subsubsection{理想气体的微观假设}
+
+\begin{itemize}
+    \item 忽略分子本身的形状和大小
+    \item 不考虑分子间除碰撞外的其他相互作用
+    \item 分子行为服从牛顿运动定律，所有碰撞均为弹性碰撞
+\end{itemize}
+
+\subsection{理想气体物态方程}
+
+\begin{itemize}
+    \item 形式1：$pV=\nu RT$，其中$\nu$表示物质的量，气体常数$R=\SI{8.314}{J/(mol\cdot K)}$
+    \item 形式2：$p=nkT$，其中$n=\dfrac{N}{V}$表示分子数密度，玻尔兹曼常数$k=\SI{1.38e-23}{J/K}$
+\end{itemize}
+
+\begin{formula}
+    \centering $pV=\nu RT$ 或 $p=nkT$
+\end{formula}
+
+\note{物质的量$\nu=\dfrac{m}{M}$，阿伏伽德罗常数$N_A=\SI{6.02e23}{mol^{-1}}$，玻尔兹曼常数$k=\dfrac{R}{N_A}$}
+
+\warn{需要特别小心$n,\nu$的含义，两个常数的值不需要记忆。}
+
+在热学中，温度$T$都要采用热力学温标，它与摄氏温标$t$的关系为
+
+\begin{formula}
+    \centering $T=t+273.15$
+\end{formula}
+
+\note{温度是有下限的，热力学第三定律指出，绝对零度（$\SI{0}{K}$）不可达到。}
+
+\begin{example}{理想气体物态方程}
+    已知一容器中理想气体在$\SI{0}{\degreeCelsius}$、$\SI{1.0e-2}{atm}$条件下的密度为$\SI{12.4}{g/m^3}$，气体常数取$R=\SI{8.31}{J/(mol\cdot K)}$，求该气体的摩尔质量$M$。
+    \tcblower  
+    {\fangsong 思路：直接代入理想气体状态方程即可，注意各个量的含义和单位。}
+    \tcbline
+    理想气体状态方程$pV=\nu RT$，已知条件中的密度$\rho=\dfrac{m}{V}$
+    
+    结合物质的量$\nu=\dfrac{m}{M}$，联立解得$M=\dfrac{\rho RT}{p}$
+    
+    温度$T=\SI{273.15}{K}$，压强$p=\SI{1e3}{Pa}$，代入求得$M\approx \SI{28.13}{g/mol}$
+    \tcbline
+    【补充练习】一封闭容器中间有可自由移动的导热活塞，一侧装有$\SI{0.1}{kg}$氢气，另一侧装有一定量氧气。若要使平衡状态下，活塞位于正中间，求应充入氧气的质量。
+\end{example}
+
+\subsection{气体的无规则运动}
+
+\subsubsection{分子运动的无规则性}
+
+\begin{itemize}
+    \item 气体分子无时无刻不在做无规则运动，达到平衡态时，气体的性质与方向无关
+    \item 分子出现在各处的概率相等
+    \item 各个方向上的速度分布完全相同，因此各个方向上的平均速度都是零
+    \item 各个方向上速率的平方平均值相等，都等于总平均值的$\dfrac{1}{3}$
+\end{itemize}
+
+\begin{formula}
+    $\overline{v_x}=\overline{v_y}=\overline{v_z}=0,~~~\overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2}=\dfrac{1}{3}\overline{v^2}$
+\end{formula}
+
+这里$\overline{v^2}$是取各分子速率平方的平均值，其算术平方根$\sqrt{\overline{v^2}}$称为方均根速率。
+
+\subsubsection{平均碰撞频率与自由程}
+
+若将气体分子视为直径为$d$的球体，推导可得平均碰撞频率$\bar{z}=\sqrt{2}\pi d^2 \bar{v} n$.
+
+平均自由程$\bar{\lambda}$是指一个气体分子在两次碰撞之间运动的平均距离，等于平均速率除以平均碰撞频率。
+
+\begin{formula}
+    $\bar{z}=\sqrt{2}\pi d^2 \bar{v} n,~~~\bar{\lambda}=\dfrac{\bar{v}}{\bar{z}}=\dfrac{1}{\sqrt{2}\pi d^2 n}$
+\end{formula}
+
+\note{气体分子越大、越密、运动越快，则碰撞频率越大，但平均自由程与运动速率无关。}
+
+结合$p=nkT$，可得$\bar{\lambda}=\dfrac{kT}{\sqrt{2}\pi d^2 p} \propto \dfrac{T}{p}$，与体积$V$无直接关系。
+
+碰撞截面$\sigma=\pi d^2$，则
+\begin{formula}
+    $\bar{z}=\sqrt{2}\sigma \bar{v} n,~~~\bar{\lambda}=\dfrac{\bar{v}}{\bar{z}}=\dfrac{1}{\sqrt{2}\sigma n}$
+\end{formula}
+
+\begin{example}{碰撞频率与自由程}
+    一定量理想气体，若温度和体积都变为原来的$2$倍，则平均自由程、平均碰撞频率如何变化？
+    \tcblower  
+    (1)~根据$\bar{v}=\sqrt{\dfrac{8RT}{\pi M}}$，可知温度变为$2$倍，则平均速率变为原来的$\sqrt{2}$倍
+
+    根据公式$\bar{\lambda}=\dfrac{\bar{v}}{\bar{z}}=\dfrac{1}{\sqrt{2}\pi d^2 n}$，可知平均自由程变为原来的$2$倍。
+
+    (2)~体积变为$2$倍，则分子数密度$n$变为一半，结合$\bar{z}=\sqrt{2}\pi d^2 \bar{v} n$，可知平均碰撞频率变为$\dfrac{\sqrt{2}}{2}$倍。
+
+    \tcbline
+    【补充练习】气缸内有一定量的氢气，若温度不变，而压强变为原来的2倍，则平均碰撞频率、平均自由程变为原来的几倍？
+\end{example}
+
+\section{温度与压强的微观含义}
+
+\subsection{压强}
+
+\noindent
+\begin{minipage}{0.78\textwidth}
+    \setlength{\parskip}{0.5em}
+    \setlength{\parindent}{2em}
+    \linespread{1.3}
+
+气体的压强是由于气体分子持续撞击容器壁而形成的。
+
+记$\overline{\varepsilon_t}$表示气体分子的平均平动动能，$n$表示分子数密度，则理想气体的压强
+
+\begin{formula}
+    $p=\dfrac{2}{3}n\overline{\varepsilon_t}$
+\end{formula}
+    
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+    \centering \includegraphics[width=\textwidth]{asset/ch6/T3.png}
+\end{minipage}
+
+其中，分子的平均平动动能可用每个分子的质量$m_0$表示为$\overline{\varepsilon_t}=\dfrac{1}{2}m_0\overline{v^2}$.
+
+\subsection{温度}
+
+\subsubsection{热平衡定律}
+
+一个系统的各种性质不随时间改变的状态称为\textbf{平衡态}，热学中的平衡态应理解为动态平衡。
+
+如果物体A和B能分别与物体C的同一状态处于平衡态，则将此时的A和B放到一起，它们也必定处于平衡态，这就是\textbf{热平衡定律}，也称为\textbf{热力学第零定律}。
+
+\subsubsection{温度的微观含义}
+
+\noindent
+\begin{minipage}{0.78\textwidth}
+    \setlength{\parskip}{0.5em}
+    \setlength{\parindent}{2em}
+    \linespread{1.3}
+
+两个处于平衡态的系统，应有某个参量是相等的，这个参量就定义为\textbf{温度}。
+
+由$p=\dfrac{2}{3}n\overline{\varepsilon_t}=nkT$，可得温度与分子的平均平动动能成正比。
+
+\begin{formula}
+    $\overline{\varepsilon_t}=\dfrac{3}{2}kT$
+\end{formula}
+
+\note{温度是统计概念，大量分子组成的系统才有温度，单个分子没有温度的概念。}
+    
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+    \centering \includegraphics[width=\textwidth]{asset/ch6/T2.png}
+\end{minipage}
+
+\begin{example}{温度和压强的微观含义}
+    (1)~某种理想气体分子的方均根速率为$\SI{450}{m/s}$，气体压强为$\SI{7e4}{Pa}$，求这种气体的密度。
+    
+    (2)~若一瓶氧气分子具有同样的方均根速率，求这瓶氧气的温度，气体常数$R=\SI{8.314}{J/(mol\cdot K)}$.
+    \tcblower
+    {\fangsong 思路：综合运用温度和压强的微观表达式，将$n,\rho$的含义用式子表达出来。}
+    \tcbline
+    (1)~根据压强的微观含义，$p=\dfrac{2}{3}n\overline{\varepsilon_t}$，其中$\overline{\varepsilon_t}=\dfrac{1}{2}m_0\overline{v^2}$.
+
+    其中分子数密度$n=\dfrac{N}{V}$，气体的密度可表示为$\rho=\dfrac{m}{V}$，而气体总质量就是$m=Nm_0$
+
+    联立以上各式解得$\rho=\dfrac{3p}{\overline{v^2}}$，代入$\sqrt{\overline{v^2}}=\SI{450}{m/s}$，求得$\rho\approx \SI{1.04}{kg/m^3}$
+
+    (2)~利用温度的微观含义，$\overline{\varepsilon_t}=\dfrac{3}{2}kT$，其中$\overline{\varepsilon_t}=\dfrac{1}{2}m_0\overline{v^2}$.
+
+    其中$k=\dfrac{R}{N_A}$，而$m_0=\dfrac{M}{N_A}$，氧气的摩尔质量为$M=\SI{32}{g/mol}$，可求得$T=\dfrac{M \overline{v^2}}{3R}\approx \SI{260}{K}$
+    \tcbline
+    【补充练习】若一瓶氧气和一瓶氦气的密度相等，分子平均平动动能相等，比较它们的温度和压强。
+\end{example}
+
+\section{内能}
+
+\subsection{运动自由度}
+
+运动自由度可理解为：决定物体空间位置的独立坐标数。
+
+在温度不太高、不太低的情况下，认为总自由度$i$可分为平动自由度$t$和转动自由度$r$。
+
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        分子类型 & 平动自由度$t$ & 转动自由度$r$ & 总自由度$i=t+r$ \\
+        \hline
+        单原子分子 & $3$ & $0$ & $3$ \\
+        \hline
+        双原子分子 & $3$ & $2$ & $5$ \\
+        \hline
+        多原子分子 & $3$ & $3$ & $6$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\note{分子可以在$x,y,z$三个方向上运动，平动自由度都是$t=3$。但是单原子分子不能转动，双原子分子缺少一个绕连线方向的转动自由度。}
+
+\subsection{能量均分定理}
+
+在温度$T$的平衡态，无论是平动还是转动，每个自由度的平均能量都是$\dfrac{1}{2}kT$.
+
+因此包含平动和转动在内，每个气体分子的平均总动能为$\overline{\varepsilon_k}=\dfrac{i}{2}kT$.
+
+\subsection{内能}
+
+气体的内能$E$是指所有分子的动能与势能之和，动能与温度有关，势能与体积有关。
+
+理想气体不考虑气体分子之间的相互作用力，因此就等于所有分子的动能之和，由温度决定。
+
+\note{若气体分子随着容器一起做机械运动，这部分机械运动的动能不计入内能当中。}
+
+\begin{formula}
+    $E=\dfrac{i}{2}\nu RT=\dfrac{i}{2}pV$
+\end{formula}
+
+\begin{example}{气体的内能}
+    储有$\SI{100}{g}$气体、容积为$\SI{20}{L}$的绝热容器以速率$\SI{200}{m/s}$匀速运动。假设容器突然停止运动，气体分子定向运动的动能有$80\%$转化为热运动的动能，气体常数$R=\SI{8.314}{J/(mol\cdot K)}$.~在以下两种情况下求温度和压强的增量：(1)~容器中装的是氢气；(2)~容器中装的是氦气。
+    \tcblower
+    {\fangsong 思路：热运动的动能就是内能的一部分，求出内能增量，再利用内能的公式。}
+    \tcbline
+    起初，气体分子定向运动的动能$E_k=\dfrac{1}{2}mv^2$，其中转化为热运动动能的为$\Delta E=80\%E_k=\SI{1600}{J}$
+
+    \vspace{0.3em}
+
+    根据内能公式，$E=\dfrac{i}{2}\nu RT=\dfrac{i}{2}pV$，可得$\Delta T=\dfrac{2\Delta E}{i\nu R},~\Delta p=\dfrac{2\Delta E}{iV}$
+
+    \vspace{0.5em}
+
+    (1)~若气体为氢气，则$\nu=\dfrac{m}{M}=\SI{50}{mol}$，氢气分子由两个原子构成，自由度$i=5$
+
+    \vspace{0.3em}
+
+    代入公式解得$\Delta T=\SI{1.54}{K},~\Delta p=\SI{3.2e4}{Pa}$（注：$\SI{20}{L}=\SI{0.02}{m^3}$）
+
+    \vspace{0.3em}
+
+    (2)~若气体为氦气，则$\nu=\dfrac{m}{M}=\SI{25}{mol}$，氦气分子由一个原子构成，自由度$i=3$
+
+    \vspace{0.3em}
+
+    代入公式解得$\Delta T=\SI{5.13}{K},~\Delta p=\SI{5.3e4}{Pa}$
+
+    
+    \tcbline
+    【补充练习】$\SI{1}{mol}$氧气储存在$\SI{2}{L}$的气瓶中，压强$\SI{1.25e6}{Pa}$。气体常数$R=\SI{8.314}{J/(mol\cdot K)}$.
+    
+    求：气体的分子数密度、温度、内能、平均平动动能、平均总动能、方均根速率、$\overline{v_x}$、$\overline{v_x^2}$。
+\end{example}
+
+\begin{example}{气体混合问题}
+    用绝热材料制成的容器，被固定绝热挡板分成体积均为$V_0$的两部分，A部分充有$\SI{1}{mol}$单原子理想气体，B部分充有$\SI{2}{mol}$双原子理想气体，且压强均为$p_0$。(1)~求两部分气体的内能；(2)~若抽去挡板使气体混合，求达平衡后时混合气体的温度。（气体常数为$R$）
+    \tcblower
+    {\fangsong 思路：在绝热容器中的气体混合，没有能量收放，总内能不变。}
+    \tcbline
+    (1)~根据内能公式$E=\dfrac{i}{2}pV$，A部分内能$E_A=\dfrac{3}{2}p_0V_0$，B部分内能$E_B=\dfrac{5}{2}p_0V_0$
+
+    \vspace{0.3em}
+    
+    (2)~混合前后气体的内能总和不变，混合前$E_{\text{前}}=E_A+E_B=4p_0V_0$
+
+    \vspace{0.3em}
+    
+    混合后，根据内能公式$E=\dfrac{i}{2}\nu RT$，A部分内能$E_A=\dfrac{3}{2}RT$，B部分内能$E_B=\dfrac{5}{2}\times 2RT$
+
+    \vspace{0.5em}
+
+    二者之和为$E_{\text{后}}=\dfrac{13}{2}RT$，根据$E_{\text{前}}=E_{\text{后}}$求得$T=\dfrac{8p_0V_0}{13R}$
+    \tcbline
+    【补充练习】一个绝热刚性容器被一固定绝热隔板分为体积相等的左右两室。左室充有$\SI{1}{mol}$氦气，温度为$\SI{400}{K}$；
+    右室充有$\SI{2}{mol}$氢气，温度为$\SI{300}{K}$。现将隔板换成可导热的固定隔板，系统最终达到热平衡。求：(1)~两室的温度；(2)~两室气体的内能、方均根速率、压强之比。
+\end{example}
+
+\section{气体分子的速率分布}
+
+\subsection{速率分布律}
+
+\subsubsection{速率分布函数}
+
+气体分子的速率分布可用速率分布函数$f(v)$表示，这是速率的概率密度函数。
+
+在图像上，某区间内图像下方的面积表示该区间的气体分子所占比例。
+
+图像下方的总面积为1，这一条件称为归一化条件。
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.6\linewidth]{asset/ch6/T5.png}
+\end{figure}
+
+\begin{formula}
+    $P(v_1<v<v_2)=\displaystyle \int_{v_1}^{v_2}f(v)dv,~~\displaystyle \int_0^{\infty}f(v)dv=1$
+\end{formula}
+
+\subsubsection{分子速率的三个统计值}
+
+\begin{itemize}
+    \item \textbf{最概然速率}$v_p$：$f(v)$取最大值时的速率
+    \item \textbf{平均速率}$\bar{v}$：速率的平均值（而不是速度的平均值）
+    \item \textbf{方均根速率}$\sqrt{\overline{v^2}}$：速率平方平均值的算数平方根
+\end{itemize}
+
+\begin{formula}
+    $\displaystyle \bar{v}=\int_0^{\infty}{vf(v)dv},~\overline{v^2}=\int_0^{\infty}{v^2f(v)dv}$
+\end{formula}
+
+\note{方均根速率$\sqrt{\overline{v^2}}$是先平方再取平均，而不是先平均再平方。}
+
+\begin{example}{三种统计速率}
+    某假想气体的速率分布函数为$
+f(v) =\begin{cases}
+	av^2&		0\leq v\leq v_0\\
+	0&		v>v_0\\
+\end{cases}
+$，其中$v_0$为已知量。 
+
+(1)~求$a$的值；(2)~求最概然速率、平均速率、方均根速率；(3)~求速率大于$\dfrac{1}{2}v_0$的分子比例。
+\tcblower
+{\fangsong 思路：先根据归一化条件求出待定参数，再根据公式求出各统计速率。}
+\tcbline
+(1)~根据归一化条件，$\displaystyle \int_0^{v_0}av^2dv=\dfrac{a}{3}v_0^3=1$，求得$a=\dfrac{3}{v_0^3}$
+
+\vspace{0.3em}
+
+(2)~当$v=v_0$时，$f(v)$取最大值，所以最概然速率$v_p=v_0$；平均速率$\overline{v}=\displaystyle \int_0^{v_0} v\cdot av^2dv=\dfrac{1}{4}av_0^4=\dfrac{3}{4}v_0$
+
+\vspace{0.5em}
+
+$\overline{v^2}=\displaystyle \int_0^{v_0} v^2\cdot av^2dv=\dfrac{1}{5}av_0^5=\dfrac{3}{5}v_0^2$，所以方均根速率$\sqrt{\overline{v^2}}=\sqrt{\dfrac{3}{5}v_0^2}=\dfrac{\sqrt{15}}{5}v_0$
+
+\vspace{0.5em}
+
+(3)~$P\left(v>\dfrac{1}{2}v_0\right)=\displaystyle \int_{1/2v_0}^{v_0} av^2dv=\dfrac{7}{24}av_0^3=\dfrac{7}{8}$
+\tcbline
+
+\vspace{-1em}
+
+\begin{minipage}{0.72\textwidth}
+   【补充练习】$N$个分子构成的假想气体的速率分布如右图所示，其中$N,v_0$为已知量。(1)~求$a$的值；(2)~求平均速率、方均根速率；(3)~求速率大于$1.5v_0$的分子数量。
+    
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+    \vspace{0.8em}
+        \centering \includegraphics[width=\textwidth]{asset/ch6/T4.png}
+    \end{minipage}
+
+\end{example}
+
+\vspace{-1em}
+
+\subsection{麦克斯韦速率分布律}
+
+\vspace{-1em}
+
+\noindent
+\begin{minipage}{0.75\textwidth}
+    \setlength{\parskip}{0.5em}
+    \setlength{\parindent}{2em}
+    \linespread{1.3}
+
+%\subsubsection{图像表达}
+
+平衡状态理想气体的速率分布，服从麦克斯韦速率分布律。
+
+同一种气体的温度越高，速率大的分子占比越多，曲线向右下方偏移。
+
+麦克斯韦速率分布律的三种统计速率可按下式计算。
+    
+\end{minipage}
+\hfill
+\begin{minipage}{0.23\textwidth}
+    \vspace{0.5em}
+    \centering \includegraphics[width=\textwidth]{asset/ch6/T9.png}
+\end{minipage}
+
+\vspace{-0.5em}
+
+%\subsubsection{定量关系}
+
+\begin{formula}
+    $v_p=\sqrt{\dfrac{2RT}{M}}=\sqrt{\dfrac{2kT}{m_0}},~~\bar{v}=\sqrt{\dfrac{8RT}{\pi M}}=\sqrt{\dfrac{8kT}{\pi m_0}},~~\sqrt{\overline{v^2}}=\sqrt{\dfrac{3RT}{M}}=\sqrt{\dfrac{3kT}{m_0}}$
+\end{formula}
+
+\note{由此可知，$v_p:\bar{v}:\sqrt{\overline{v^2}}=\sqrt{2}:\sqrt{\dfrac{8}{\pi}}:\sqrt{3}$.}
+
+\begin{example}{麦克斯韦速率分布律}
+    \begin{minipage}{0.78\textwidth}
+       右图的两条曲线分别表示相同温度的氢气与氦气的速率分布。
+       
+       (1)~判断两种气体分别对应哪条曲线；(2)~求两种气体的最概然速率、平均速率、方均根速率；(3)~求这一温度；(4)~两种气体各取$\SI{1}{mol}$，求内能。
+    
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.2\textwidth}
+        \centering \includegraphics[width=\textwidth]{asset/ch6/T7.png}
+    \end{minipage}
+    
+    \tcbline
+    {\fangsong 思路：温度相同表示分子平均平动动能相同，但分子质量不同，因此速率并不相同。}
+    
+    \tcblower
+    (1)~氢气的相对分子质量为$2$，氦气为$4$，所以氢气的每个分子质量小。但温度相同，说明分子平均平动动能相等，这就需要氢气的速度普遍大一些。因此曲线1表示氦气，曲线2表示氢气。
+
+    \vspace{0.3em}
+
+    (2)~氦气的$v_p=\SI{1000}{m/s}$，根据$v_p:\bar{v}:\sqrt{\overline{v^2}}=\sqrt{2}:\sqrt{\dfrac{8}{\pi}}:\sqrt{3}$，得$\bar{v}\approx \SI{1128}{m/s},~\sqrt{\overline{v^2}}\approx \SI{1225}{m/s}$
+
+    分子平均平动动能$\overline{\varepsilon_t}=\dfrac{1}{2}m_0\overline{v^2}$，因此分子质量与方均根速率的平方成反比。氢气的分子质量是氦气的一半，方均根速率就应该是$\sqrt{2}$倍，$\sqrt{\overline{v^2}}\approx \SI{1732}{m/s}$
+
+    \vspace{0.3em}
+
+    再根据$v_p:\bar{v}:\sqrt{\overline{v^2}}=\sqrt{1414}:\sqrt{\dfrac{8}{\pi}}:\sqrt{3}$，得$v_p\approx \SI{1772}{m/s},~\bar{v}\approx \SI{1225}{m/s}$
+
+    \vspace{0.5em}
+
+    (3)~根据公式$v_p=\sqrt{\dfrac{2RT}{M}}$，代入利用氦气的数据$M=\SI{2e-3}{kg/mol}$，可得$T=\SI{241}{K}$
+
+    \vspace{0.5em}
+
+    (4)~根据公式$E=\dfrac{i}{2}\nu RT$，注意氦气$i=3$，氧气$i=5$，可得$E_{\text{氢气}}=\SI{5000}{J},~E_{\text{氦气}}=\SI{3000}{J}$
+    \tcbline
+    \begin{minipage}{0.75\textwidth}
+       【补充练习】两种理想气体的速率分布如右图所示。
+       
+       (1)~若两种气体均为氢气，求他们的温度之比；
+       
+       (2)~若曲线1表示氧气，曲线2表示氮气，求他们的温度之比。
+    
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.22\textwidth}
+        \vspace{-0.3em}
+        \centering \includegraphics[width=\textwidth]{asset/ch6/T8.png}
+    \end{minipage}
+    
+\end{example}
+
+
+
+\section{拓展内容}
+
+\subsection{压强微观含义的推导过程}
+
+气体压强来自于气体分子对容器壁的桩基，取一块面积为$dA$的容器壁，不妨假设其垂直于$x$轴
+
+分析$x$方向速率为$v_{xi}$的分子，假设撞击为弹性碰撞，则冲量等于动能的变化量，为$2mv_{xi}$
+
+在$dt$时间内能撞上去的分子，应处于一个柱体内，底面积为$dA$，高为$v_{xi}dt$，且考虑方向，应该只有一半的分子能撞上去
+
+记这种速率的分子数密度为$n_i$，则撞击上去的分子数量为$\dfrac{1}{2}n_iv_{xi}dtdA$
+
+这些分子所产生的冲量为$I_{i}=\dfrac{1}{2}n_iv_{xi}dtdA\times 2mv_{xi}=mn_iv^2_{xi}dtdA$
+
+考虑所有速率的分子，产生的总冲量为$I=m\sum{n_iv^2_{xi}}\cdot dtdA$
+
+根据动量定理，可求出压强为$p=\dfrac{I}{dtdA}=m\sum{n_iv^2_{xi}}=mn\overline{v^2_x}$
+
+根据分子的无规则运动，三个方向的速率应该是随机的，因此$\overline{v^2_x}=\dfrac{1}{3}\overline{v^2}$
+
+从而可得压强的公式$p=\dfrac{1}{3}mn\overline{v^2}=\dfrac{2}{3}n\overline{\varepsilon_t}$
+
+\subsection{玻尔兹曼分布}
+
+在温度为$T$的平衡态，任何系统微观粒子按状态的分布，与粒子的能量$E$有关，与$e^{-E/kT}$成正比。
+
+在重力场中，可得高度为$h$处的大气压强为$p=p_0e^{-Mgh/RT}$，其中$p_0$表示高度为零处的压强。
+
+\subsection{实际气体等温变化}
+
+对于一种实际气体，不断压缩体积，可能出现两种情况：
+\begin{itemize}
+    \item 若温度较低，则会开始液化，在液化过程中，液体与蒸汽共存，此时的蒸汽称为饱和蒸汽，对应的压强称为饱和蒸气压，气体压强维持这一数值，直至完全液化，液体几乎不可压缩
+    \item 若温度较高，无论如何压缩，气体都不能液化
+\end{itemize}
+
+这两种情况的温度界限，称为临界温度，相应的等温线称为临界等温线，相应也可找到临界点。
+
+在气体压缩过程中，需要凝结核才能液化。如果气体过于纯净，则可能超过饱和蒸气压却没有液化，称为过饱和蒸汽。
+
+类似地，若液体过于纯净，膨胀时压强已小于饱和蒸气压却不汽化，称为过热液体。
+
+过饱和蒸汽和过热液体是不稳定的，引入微尘则会引起剧烈液化或汽化。

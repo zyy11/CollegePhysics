@@ -1,0 +1,149 @@
+\chapter{狭义相对论}
+\setcounter{example_counter}{1}
+
+\section{相对论时空观}
+
+如无特别说明，本章考虑两个参考系：大地$S$、飞船$S^\prime$，飞船相对于大地沿$x$方向以速度$u$匀速运动。
+
+\subsection{伽利略变换}
+
+伽利略提出，一切力学规律在不同的惯性系中应有相同的形式，称为\textbf{牛顿相对性原理}。
+
+牛顿力学的时空观是\textbf{绝对时空观}，时间与空间相互独立，且与外界无关。
+
+在这种时空观下，质点在两个参考系中的时间、坐标、速度的关系，称为\textbf{伽利略变换}。
+
+\begin{formula}
+    $x^\prime=x-ut,~t^\prime=t,~~\vec{v^\prime}=\vec{v}-\vec{u}$
+\end{formula}
+
+\note{$y,z$方向坐标不变，本章都不列在公式当中。}
+
+但绝对时空观与麦克斯韦方程组存在矛盾，在解释迈克尔孙-莫雷实验时存在严重困难。
+
+\subsection{狭义相对论的基本假设}
+
+爱因斯坦提出以下假设，成为狭义相对论的基础。
+
+\begin{itemize}
+    \item \textbf{爱因斯坦相对性原理}：物理规律对所有惯性系都一样，不存在特殊（绝对静止）的惯性系
+    \item \textbf{光速不变原理}：在所有惯性系中，光在真空中的速率都相等
+\end{itemize}
+
+\section{洛伦兹变换}
+
+\subsection{洛伦兹坐标变换}
+
+在相对论中，为方便起见，定义$\gamma=\dfrac{1}{\sqrt{1-u^2/c^2}}$
+
+在相对论的观点下，质点在两个参考系中的时间、坐标具有以下的关系，称为\textbf{洛伦兹变换}。
+
+\begin{formula}
+    $x^\prime=\gamma(x-ut),~t^\prime=\gamma\left(t-\dfrac{u}{c^2}x\right)$
+\end{formula}
+
+%\note{如果反过来，参考系$S$相对于参考系$S^\prime$沿$x$方向以速度$-u$匀速运动，相应符号替换后即为洛伦兹逆变换。}
+
+\note{可见，在相对论中，时间和空间的测量是相互联系的。}
+
+\subsection{洛伦兹速度变换}
+
+在参考系$S$中以速度$\vec{v}$匀速运动的物体，通过求导可得其在参考系$S^\prime$中的速度为
+\begin{formula}
+    $v_x^\prime=\dfrac{v_x-u}{1-uv_x/c},~~v_y^\prime=\dfrac{v_y \sqrt{1-u^2/c^2}}{(1-uv_x/c)},~~v_z^\prime=\dfrac{v_z \sqrt{1-u^2/c^2}}{(1-uv_x/c)}$
+\end{formula}
+
+\note{若考虑光的传播，代入$v_x=c,~v_y=v_z=0$，可得$v^\prime_x=c$，这说明光在任何惯性系中的速率都是$c$.}
+
+事实上，任何物体的速度在变换后都不会超过$c$.
+
+\section{相对论的效应}
+
+\subsection{同时的相对性}
+
+光速不变原理将导致时间度量的相对性，一个参考系中同时的两个事件，在另一参考系中不一定同时。
+
+若在参考系$S^\prime$中有两个事件同时发生，则在参考系$S$看来，位于运动后方的事件先发生。
+
+\note{想象参考系$S$是大地，参考系$S^\prime$是向前运动的飞船。设想飞船中点发出闪光，到达前后壁的事件同时发生。但在大地看来，光传播的过程中，飞船向前移动了，所以先到达后壁，再到达前壁。}
+
+\subsection{时间延缓}
+
+在参考系$S^\prime$中的同一地点，先后发生的两个事件，其时间间隔$\Delta t^\prime$称为\textbf{固有时}。
+
+因为参考系$S^\prime$在运动，所以在参考系$S$中，这两个事件并不发生在同一地点，而且时间间隔$\Delta t$也会延长，这一效应称为\textbf{时间延缓}。
+
+在伽利略变换中，令$x^\prime=0$可得
+
+\begin{formula}
+    $\Delta t=\gamma \Delta t^\prime=\dfrac{t^\prime}{\sqrt{1-u^2/c^2}}$
+\end{formula}
+
+\note{找到在同一地点测量时间间隔的参考系，这个测量结果是固有时，固有时最短。}
+
+\subsection{长度收缩}
+
+在参考系$S^\prime$中有一根静止的木棒沿$x$放置，其长度的测量结果称为\textbf{固有长度}。
+
+而在参考系$S$中，木棒是运动的，测量不是同时的，其长度测量结果会缩短，这一效应称为\textbf{长度收缩}。
+
+在伽利略变换中，令$t^\prime=0$可得
+
+\begin{formula}
+    $l=l^\prime{\sqrt{1-u^2/c^2}}$
+\end{formula}
+
+\note{找到木棒在其中静止的参考系，这个测量结果是固有长度，固有长度最长。}
+
+\note{长度收缩只发生在参考系相对运动方向，其他方向长度不变。}
+
+\section{相对论动力学}
+
+\subsection{相对论质量}
+
+在相对论中，为了保留动量$\vec{p}=m\vec{v}$的概念和关系$\vec{F}=\dfrac{d\vec{p}}{dt}$，定义高速运动物体的\textbf{相对论质量}为
+
+\begin{formula}
+    $m=\gamma m_0=\dfrac{m_0}{\sqrt{1-v^2/c^2}}$
+\end{formula}
+
+其中，$m_0$称为静质量，即静止状态的质量，由此可见，高速运动的粒子“质量”增加。
+
+\note{因为粒子的相对论质量随速度而变化，因此不能写成$\vec{F}=m\vec{a}$.}
+
+有一类粒子总是以光速$c$运动，例如光子，它们具有相对论质量，但静质量$m_0=0$
+
+\note{国外主流教材普遍不采用相对论质量的概念，但国内教材仍保留这一概念。}
+
+\subsection{相对论能量}
+
+\subsubsection{质能方程}
+
+一定的质量相应于一定的能量，这就是爱因斯坦质能方程，这里的质量是相对论质量。
+
+\begin{formula}
+    $E=mc^2$
+\end{formula}
+
+\subsubsection{动能}
+
+相对论能量$E$还可分为两部分，$m_0c^2$表示粒子静止时就具有的能量，称为\textbf{静能}。而其余部分就是因为运动而具有的能量，也就是\textbf{动能}。
+
+\begin{formula}
+    $E_k=mc^2-m_0 c^2$
+\end{formula}
+
+\subsubsection{质量亏损}
+
+在核反应的过程中释放能量，则会产生\textbf{质量亏损}，这里的质量是静质量，由此可计算释放的能量。
+
+\begin{formula}
+    $\Delta E=\Delta m_0c^2$
+\end{formula}
+
+\subsubsection{动量与能量的关系}
+
+相对论动量$p$、能量$E$之间的关系如下，可想象一个直角三角形，以$m_0c^2$、$pc$为直角边，$E$为斜边。
+\begin{formula}
+    $E^2=p^2c^2+m_0^2c^4$
+\end{formula}

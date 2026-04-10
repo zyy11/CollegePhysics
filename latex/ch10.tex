@@ -1,0 +1,89 @@
+\chapter{稳恒电流的磁场}
+\setcounter{example_counter}{1}
+
+\section{电流与电动势}
+
+\subsection{电流}
+
+\subsubsection{电流强度}
+
+电流是电荷的定向运动，单位时间内通过某一截面的电量称为电流强度，简称电流。
+
+\begin{formula}
+    $I=\dfrac{dq}{dt}$
+\end{formula}
+
+电流强度是标量，只有大小，没有方向。
+
+\subsubsection{电流密度}
+
+电流密度矢量$\vec{j}$能同时描述各处电流的大小和方向，它的方向就是正电荷运动的方向，大小等于通过该点单位面积的电流密度。
+
+\begin{formula}
+    $dI=\vec{j}\cdot d\vec{S}~~~I=\displaystyle \iint_S{\vec{j}\cdot d\vec{S}}$
+\end{formula}
+
+\subsection{电动势}
+
+电源的电动势$\mathcal E$，是电源把单位正电荷从负极移向正极过程中，非静电力所做的功。
+
+单位正电荷受到的非静电力，称为“非静电场的场强”，则电动势就是这种场强沿闭合回路的积分。
+
+\begin{formula}
+    $\mathcal E=\dfrac{W_{\text{非}}}{q}=\displaystyle\oint_L{\vec{E}_{\text{非}}\cdot d\vec{l}}$
+\end{formula}
+
+\section{恒定电流产生的磁场}
+
+\subsection{毕奥-萨伐尔定律}
+
+载有电流的长度为$dl$的通电导线，称为一个电流元，用$Id\vec{l}$表示，方向与电流方向相同。
+
+对于电流元$Id\vec{l}$，用$\vec{r}$表示它指向P点的向量，则电流元在P点产生的磁场为
+
+\begin{formula}
+    $d\vec{B}=\dfrac{\mu_0}{4\pi}\dfrac{Id\vec{l}\times\vec{e}_r}{r^2}$
+\end{formula}
+
+其中，$\mu_0$称为真空磁导率，$\mu_0=\dfrac{1}{\varepsilon_0c^2}=4\pi\times10^{-7}\unit{N/A^2}$
+
+若记电流元$Id\vec{l}$与$\vec{r}$的夹角为$\theta$，则磁场强度的大小为$\dfrac{\mu_0}{4\pi}\dfrac{Id\vec{l}\sin{\theta}}{r^2}$，方向垂直于二者所确定的平面。
+
+\note{在电流元延长线上的点，电流元不产生磁场。}
+
+\subsection{磁通连续定理（磁场的高斯定理）}
+
+目前并未发现单独存在的磁单极子，磁场是无源有旋场，在任何磁场中，通过任意封闭曲面的磁通量都为零。
+
+\begin{formula}
+    $\displaystyle\varoiint_S{\vec{B}}\cdot d\vec{S}=0$
+\end{formula}
+
+\subsection{典型电流的磁场分布}
+
+\section{安培环路定理}
+
+\subsection{安培环路定理}
+
+在恒定电流的磁场中，磁感应强度沿任何路径的线积分，等于路径包围电流强度之和的$\mu_0$倍。
+
+\begin{formula}
+    $\displaystyle\oint_C {\vec{B}\cdot d\vec{c}}=\mu_0 \sum{I_{\text{内}}}$
+\end{formula}
+
+\subsection{利用安培环路定理求磁场分布}
+
+\section{拓展内容}
+
+\subsection{电流的微观解释}
+
+\subsection{基尔霍夫定律}
+
+\subsection{运动电荷产生的磁场}
+
+电流是电荷运动产生的，因此运动的电荷也可产生磁场，计算方法与毕奥-萨伐尔定律相似。
+
+\begin{formula}
+    $d\vec{B}=\dfrac{\mu_0}{4\pi}\dfrac{q\vec{v}\times\vec{e}_r}{r^2}$
+\end{formula}
+

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r \"D:\\\\zyy-code\\\\personal-site\\\\CollegePhysics\\\\docs\" \"D:\\\\zyy-code\\\\personal-site\\\\CollegePhysics\\\\.worktrees\\\\web/\")",
+      "Bash(cp -r \"D:\\\\zyy-code\\\\personal-site\\\\CollegePhysics\\\\latex\" \"D:\\\\zyy-code\\\\personal-site\\\\CollegePhysics\\\\.worktrees\\\\web/\")",
+      "Bash(python build.py)"
+    ]
+  }
+}

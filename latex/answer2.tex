@@ -1,0 +1,162 @@
+\chapter*{补充练习答案}
+
+\section*{第7章}
+
+\noindent 1.~~~原带电体可以看做两个部分的叠加：
+
+(1)~八个顶点均为$q=\SI{1e-6}{C}$电荷的立方体，根据对称性，这在正方体中心处的电场强度为零
+
+(2)~在一个顶点处$-2q$的点电荷，这个点电荷到正方体中心的距离是体对角线的一半，即$\dfrac{\sqrt{3}}{2}L$.
+
+因此场强的大小为$E=\dfrac{2q}{4\pi\varepsilon_0 (\sqrt{3}L/2)^2}=\SI{2.4e4}{V/m}$，方向指向负电荷。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 2.~~~(1)~根据对称性，只需求$y$分量。
+
+将半圆切分成圆心角为$d\theta$的小段，每段长度为$Rd\theta$，带电量为$dq=2Q\dfrac{Rd\theta}{\pi R}=\dfrac{2Qd\theta}{\pi}$
+
+每个小段产生的电场强度大小为$dE=\dfrac{dq}{4\pi\varepsilon_0 R^2}=\dfrac{Qd\theta}{2\pi^2\varepsilon_0 R^2}$
+
+对于角度为$\theta$的小段，其$y$分量的大小为$dE_y=\dfrac{Q\sin{\theta}d\theta}{2\pi^2\varepsilon_0 R^2}$，方向为$-y$
+
+因此整个细线产生的场强大小为$\displaystyle \int_0^\pi {\dfrac{Q\sin{\theta}d\theta}{2\pi^2\varepsilon_0 R^2}}=-\left.\dfrac{Q\cos{\theta}}{2\pi^2\varepsilon_0 R^2}\right|_0^\pi=\dfrac{Q}{\pi^2\varepsilon_0 R^2}$，方向为$-y$
+
+(2)~根据对称性，只需求$x$分量，$y$分量可相互抵消。
+
+对于右半部分，场强大小与上一问相同，$x$分量的大小为$dE_x=\dfrac{Q\cos{\theta}d\theta}{2\pi^2\varepsilon_0 R^2}$，方向为$+x$
+
+因此右半部分产生的场强的$x$分量为$dE_x=\displaystyle \int_0^{\pi/2}\dfrac{Q\cos{\theta}d\theta}{2\pi^2\varepsilon_0 R^2}=\left.\dfrac{Q\sin{\theta}}{2\pi^2\varepsilon_0 R^2}\right|_0^{\pi/2}=\dfrac{Q}{2\pi^2\varepsilon_0 R^2}$
+
+同理，左半部分产生场强的$x$分量也为此值，且方向也为$+x$
+
+因此整个细线产生的场强大小为$\dfrac{Q}{\pi^2\varepsilon_0 R^2}$，方向为$+x$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 3.~~~将半球面沿轴线切分成若干圆心角为$d\theta$的圆环
+
+每个圆环宽度为$Rd\theta$，折合线电荷密度为$\lambda=\sigma Rd\theta$
+
+则对于角度为$\theta$的圆环，其半径为$R\sin{\theta}$，周长为$2\pi R\sin{\theta}$
+
+乘以宽度得到面积$2\pi R^2\sin{\theta}d\theta$，其带电量为$2\pi R^2\sigma \sin{\theta}d\theta$
+
+球心到这个圆环所在平面的距离$x=R\sin\theta$，例3已求出环形细线在各点处的场强
+
+利用该结果可得这个圆环在圆心产生的场强是$dE=\dfrac{R\cos\theta \cdot \sigma Rd\theta\cdot R\sin\theta}{2\varepsilon_0 R^3}=\dfrac{\sigma\sin2\theta d\theta }{4\varepsilon_0}$ 
+
+整个半球面的场强为$E=\displaystyle\int_0^{\pi/2}{\dfrac{\sigma\sin2\theta d\theta}{4\varepsilon_0}}=-\left.\dfrac{\sigma\cos 2\theta}{8\varepsilon_0}\right|_0^{\pi/2}=\dfrac{\sigma}{4\varepsilon_0}$，方向沿轴线远离半球面
+
+\newpage
+
+\noindent 4.~~~假想作出一个以电荷为球心，$\sqrt{2}R$为半径的球
+
+则点电荷发出的电场线，能通过要求平面的，都能穿过该平面所截得的球冠，且均为垂直穿过。
+
+利用球冠面积公式，可得$S=2\pi \sqrt{2}R (\sqrt{2}R-R)=2(2-\sqrt{2})\pi R^2$
+
+在该球上各点的电场强度大小均为$E=\dfrac{q}{4\pi\varepsilon_0 (\sqrt{2}R)^2}=\dfrac{q}{8\pi\varepsilon_0 R^2}$
+，电通量$\Phi_e=E\cdot S=\dfrac{(2-\sqrt{2}) q}{4\varepsilon_0}$
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 5.~~~(1)~错误，高斯定理适用于所有的静电场，但只能用于求具有对称性的电场强度。
+
+(2)~错误，外部电荷不影响电通量，但会影响场强，所以场强可以不为零。
+
+(3)~错误，高斯面上场强处处为零，说明电通量为零，但只能说明内部净电荷为零，可能正负抵消。
+
+(4)~错误，场强处处不为零，但电通量可能为零，内部可以无电荷。
+
+(5)~正确，根据高斯定理，电通量与内部净电荷成正比。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 6.~~~(1)~电场线为$+x$方向，因此只需关注与之垂直的两个面。
+
+电场线从$x=1$处穿入，从$x=2$处穿出，两处场强大小分别为$E_1=800~\unit{V/m},~E_2=800\sqrt{2}~\unit{V/m}$
+
+若以从内到外穿出为正，则通过立方体的电通量为$\Phi_e=E_2 S- E_1 S=800(\sqrt{2}-1)~\unit{V\cdot m}$
+
+(2)~根据高斯定理，$\Phi_e=\dfrac{\sum q_{\text{内}}}{\varepsilon_0}$，得内部总电荷量$\sum q_{\text{内}}=\Phi_e \varepsilon_0\approx \SI{2.9E-9}{C}$，且为正电荷。
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 7.~~~(1)~这是一个柱对称的带电体，可知电场线全部沿半径方向指向外侧。
+
+取高斯面为圆柱面，半径为$r$，高为$H$，则由高斯定理，$\Phi_e=\dfrac{\sum q_{\text{内}}}{\varepsilon_0}=2\pi rH\cdot E$，即$E=\dfrac{\sum q_{\text{内}}}{2\varepsilon_0\pi rH}$
+
+\begin{itemize}
+    \item 当$r<R$时，高斯面内无电荷，$\sum q_{\text{内}}=0$，因此$E=0$
+    \item 当$R\leq r<2R$时，$\sum q_{\text{内}}=\rho\pi(r^2-R^2)H$，得$E=\dfrac{\rho(r^2-R^2)}{2\varepsilon_0 r}$
+    \item 当$r\geq 2R$时，$\sum q_{\text{内}}=\rho\pi[(2R)^2-R^2]H=3\rho\pi R^2 H$，得$E=\dfrac{3\rho R^2}{2\varepsilon_0 r}$
+\end{itemize}
+
+(2)~这是一个面对称的带电体，以厚壁中心为对称面，电场线全部垂直对称面指向外侧。
+
+取高斯面为柱面，底面积为$S$，且底面与对称面平行，位于坐标为$\pm x$处。
+
+由高斯定理，$\Phi_e=\dfrac{\sum q_{\text{内}}}{\varepsilon_0}=2E S$，即$E=\dfrac{\sum q_{\text{内}}}{2S \varepsilon_0}$
+
+\begin{itemize}
+    \item 当$x<b/2$时，$\sum q_{\text{内}}=2\rho Sx$，得$E=\dfrac{\rho x}{\varepsilon_0}$
+    \item 当$x\geq b/2$时，$\sum q_{\text{内}}=\rho Sb$，得$E=\dfrac{\rho b}{2\varepsilon_0}$
+\end{itemize}
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 8.~~~(1)~这是一个球对称的带电体，电场线全部沿半径方向指向外侧。
+
+两个空心带电球壳产生的场强分别为$
+    E_1=\begin{cases}
+    	0&		\left( r<R_1 \right)\\[6pt]
+    	\dfrac{kQ_1}{r^2}&		\left( r\geq R_1 \right)\\
+    \end{cases}
+    $和$
+    E_2=\begin{cases}
+    	0&		\left( r<R_2 \right)\\[6pt]
+    	\dfrac{kQ_2}{r^2}&		\left( r\geq R_2 \right)\\
+    \end{cases}
+    $
+
+将两者叠加可得$
+    E=E_1+E_2=\begin{cases}
+    	0&		\left( r<R_1 \right)\\[3pt]
+        \dfrac{kQ_1}{r^2}&		\left( R_1\leq r<R_2 \right)\\[6pt]
+    	\dfrac{k(Q_1+Q_2)}{r^2}&		\left( r\geq R_2 \right)\\
+    \end{cases}
+    $
+
+(2)~该形体可视为一个半径为$R$的正电荷球体，与一个直径为$R$的负电荷球体叠加。
+
+正电荷球体的带电量$Q_1=+\dfrac{4}{3}\pi \rho R^3$，负电荷球体的带电量$Q_2=-\dfrac{4}{3}\pi \rho \left(\dfrac{R}{2}\right)^3=-\dfrac{1}{6}\pi \rho R^3$
+
+对于A点，正电球体的场强$E_1=0$，负电球体的场强为$E_2=\dfrac{\frac{1}{6}\pi \rho R^3}{4\pi\varepsilon_0 (\frac{1}{2}R)^2}=\dfrac{\rho R}{6\varepsilon_0}$，方向向右
+
+因此该处场强就是$E=\dfrac{\rho R}{6\varepsilon_0}$（向右）
+
+对于B点，正电球体的场强为$E_1=\dfrac{\frac{4}{3}\pi\rho R^3}{4\pi \varepsilon_0 R^2}=\dfrac{\rho R}{3\varepsilon_0}$（向右），负电球体的场强为$E_2=\dfrac{\rho R}{6\varepsilon_0}$（向左）
+
+因此合场强为$E_1-E_2=\dfrac{\rho R}{6\varepsilon_0}$（向右）
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 9.~~~该平板可切分为宽度为$dl$的无限长直线，对于坐标为$l$处的直线，线电荷密度为$\lambda=kl\cdot dl$
+
+该直线在$x$处的场强为$E=\dfrac{\lambda }{2\pi \varepsilon_0 (x-l)}=\dfrac{kl\cdot dl}{2\pi \varepsilon_0 (x-l)}$（向右）
+
+因此整个平板产生的场强是$E=\dfrac{k}{2\pi \varepsilon_0}\displaystyle\int_0^b {\dfrac{l}{x-l}dl}$
+
+其中$\displaystyle\int_0^b {\dfrac{l}{x-l}dl}=\int_0^b\left(\dfrac{x}{x-l}-1\right)dl=x\ln{\dfrac{x}{x-b}}-b$
+
+因此$E=\dfrac{k}{2\pi \varepsilon_0}\left(x\ln{\dfrac{x}{x-b}}-b\right)$，方向为$+x$.
+
+\noindent\hdashrule{\textwidth}{1pt}{1pt}
+
+\noindent 10.~~~根据直线与圆弧的对应关系，两个射线可以等效为1/4圆，且他们关于圆心对称，场强相互抵消。
+
+因此整个带电直线的场强，就只相当于原有1/4圆产生的场强。
+
+根据圆弧的场强公式，可得场强大小为$E=\dfrac{\sqrt{2}\lambda }{4\pi \varepsilon_0 R}$，方向$45^\circ$向上。
+

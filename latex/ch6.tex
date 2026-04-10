@@ -1,0 +1,693 @@
+\chapter{机械波}
+\setcounter{example_counter}{1}
+
+\section{机械波的描述}
+
+\subsection{基本概念}
+
+\textbf{波动}是振动状态的传播，机械振动在介质中的传播称为\textbf{机械波}。
+
+\note{振动是振动状态的传播，而不是介质本身的传播。}
+
+机械波的产生要求有做机械振动的物体（\textbf{波源}），还要有连续的介质。
+
+振动方向与传播方向垂直的称为\textbf{横波}，平行的称为\textbf{纵波}。
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.75\linewidth]{asset/ch6/T1.png}
+\end{figure}
+
+\vspace{-2.5em}
+
+\subsection{特征量}
+
+简谐振动的传播称为\textbf{简谐波}，是最简单的波。描述简谐波的特征量有：
+
+\begin{itemize}
+    \item 波速$u$：振动状态的传播速度，由介质决定
+    \item 周期$T$：任意质元简谐振动的周期，也是一个完整波通过某点所需时间；频率$\nu$是周期的倒数
+    \item 波长$\lambda$：相邻同相质元（相位差为$2\pi$）的距离
+\end{itemize}
+
+\note{其中波速$u$是振动状态的传播速度，并不是质元本身的运动速度。}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.45\linewidth]{asset/ch6/T2.png}
+\end{figure}
+
+\vspace{-1em}
+
+\subsection{波的传播规律}
+
+经过一个周期，波刚好传播一个波长，因此简谐波特征量之间的关系为
+
+\begin{formula}
+    $u=\lambda \nu$
+\end{formula}
+
+沿波的传播方向，每隔一个波长$\lambda$，开始振动的时间落后一个周期$T$，相位落后$2\pi$，其比例关系为
+
+\begin{formula}
+    $\dfrac{\Delta \varphi}{2\pi}=\dfrac{\Delta x}{\lambda}=\dfrac{\Delta t}{T}$
+\end{formula}
+
+\begin{example}{简谐波的特征量}
+    频率为$\SI{100}{Hz}$的简谐波以$\SI{300}{m/s}$的速度传播，振幅为$\SI{0.1}{m}$，依次经过相距$\SI{1}{m}$的质元A、B。
+    
+    求：(1)~波长；(2)~A的最大速度；(3)~A、B的相位差；(4)~当A处于负向最大位移时，B的位移。
+
+    \tcblower
+
+    (1)~波长$\lambda=\dfrac{u}{\nu}=\SI{3}{m}$；(2)~质元A振动的角速度$\omega=2\pi f$，最大速度为$v_m=A\omega=20\pi \unit{m/s}$
+
+    (3)~每隔一个波长，相位落后$2\pi$，所以B落后的相位差$\Delta \varphi=\dfrac{\Delta x}{\lambda}\cdot 2\pi=\dfrac{2\pi}{3}$
+
+    \vspace{0.3em}
+
+    (4)~此时A相位$\varphi_A=\pi$，B的相位为$\varphi_B=\pi-\dfrac{2\pi}{3}=\dfrac{\pi}{3}$，位移为$x_B=A\cos\varphi_B=\SI{+0.05}{m}$
+
+    \tcbline
+
+    【补充练习】一平面简谐波的波速为$\SI{6}{m/s}$，波源振动的周期为$\SI{0.1}{s}$，在波的传播方向上有质元A、B，其距离小于一个波长，且振动的相位差为$\dfrac{5\pi}{6}$.~求：(1)~波长；(2)~A、B之间的距离。
+    
+\end{example}
+
+\vspace{-0.8em}
+
+\subsection{简谐波的波函数}
+
+\vspace{-0.5em}
+
+\subsubsection{波函数的形式}
+
+简谐波的波函数以位置$x$和时间$t$作为变量，描述了各质元、各时间的振动位移。
+
+\begin{formula}
+    $y=A\cos\left[\omega\left(t\mp\dfrac{x}{u}\right)+\varphi_0\right]$或$y=A\cos\left(\omega t+\varphi_0\mp \dfrac{2\pi}{\lambda}x\right)$或$y=A\cos\left(\omega t+\varphi_0\mp kx\right)$
+\end{formula}
+
+\note{若波正向传播，则$\mp$符号应取负号；若波反向传播，则$\mp$符号应取正号。}
+
+\begin{itemize}
+    \item 第一种表达式的含义是，位于$x$处的质点，振动开始的时间落后了$\dfrac{x}{u}$
+    \item 第二种表达式的含义是，位于$x$处的质点，相位落后了$\dfrac{2\pi}{\lambda}x$
+    \item 第三种表达式定义了角波数$k=\dfrac{2\pi}{\lambda}$，那么位于$x$处的质点，相位落后了$kx$
+\end{itemize}
+
+\vspace{-0.3em}
+
+\begin{example}{波函数的含义}
+    已知一列简谐波的波函数为$y=A\cos\pi(4t+2x)$（SI）。求：(1)~波长、频率、波速，判断传播方向；(2)~当$t=\SI{4.2}{s}$时，离原点最近的波峰；(3)~$t=\SI{4.2}{s}$之后，第一个波峰通过原点的时间。
+    \tcblower
+
+    \vspace{-0.3em}
+    
+    (1)~根据波函数可知$\omega=4\pi$，所以周期$T=\dfrac{2\pi}{\omega}=\SI{0.5}{s}$，频率$\nu=\dfrac{1}{T}=\SI{2}{Hz}$
+
+    波函数中$x$的系数是$\dfrac{2\pi}{\lambda}$，可得$\lambda=\SI{1}{m}$，进而$u=\lambda\nu=\SI{2}{m/s}$
+    
+    $x$的系数为正号，说明波向$-x$方向传播。
+
+    (2)~当$t=\SI{4.2}{s}$时，$y=A\cos\pi(16.8+2x)$，波峰应满足$\pi(16.8+2x)=2k\pi (k\in \mathbb{Z})$，即$x=k-8.4$，当$k=8$时，$x=\SI{-0.4}{m}$，这是离原点最近的波峰。
+
+    (3)~令$x=0$，则$y=A\cos 4\pi t$，波峰应满足$4\pi t=2k\pi (k\in \mathbb{Z})$，即$t=0.5 k$，当$k=9$时，$t=\SI{4.5}{s}$，这是$\SI{4.2}{s}$之后第一个符合条件的时刻。
+    \tcbline
+    【补充练习】一列简谐波的波函数为$y=0.05\cos(10\pi t-4\pi x)$（SI）。求：(1)~波长、频率、波速，判断传播方向；(2)~求各质元振动的最大速度和最大加速度；(3)~$x=\SI{1}{m}$处质点来到平衡位置的所有时刻；(4)~$t=\SI{0.2}{s}$时所有波峰的位置。
+\end{example}
+
+%将波函数沿波的传播方向移动一小段距离，即可判断各质点的速度方向。
+
+\subsubsection{波函数的求解}
+
+在求解波函数时，可分以下三步：
+\begin{itemize}
+    \item 先求出任意一点（例如$x_0$处）的振动函数为$y=A\cos(\omega t+\varphi)$
+    \item 求出波的特征量（我喜欢用波长$\lambda$），并判断波的传播方向
+    \item 利用每隔一个波长$\lambda$，相位落后$2\pi$对相位进行调整，得到波函数$y=A\cos\left(\omega t+\varphi\mp 2\pi\cdot \dfrac{x-x_0}{\lambda}\right)$
+\end{itemize}
+
+\begin{example}{波函数的求解}
+    一列简谐波向$x$轴正方向传播，振幅$\SI{10}{cm}$，频率$\SI{10}{Hz}$，波长大于$\SI{10}{cm}$。在$t=\SI{1}{s}$时刻，$x=\SI{10}{cm}$处的A质元通过平衡位置且向负方向运动；而$x=\SI{20}{cm}$处的B质元位移为$y=\SI{5}{cm}$且向正方向运动。求：(1)~A、B两点的相位差；(2)~波长；(3)~波函数。
+
+    \tcblower
+    
+    (1)~根据旋转矢量法，$t=\SI{1}{s}$时刻，A的相位为$\dfrac{\pi}{2}$，B的相位为$-\dfrac{\pi}{3}$，B落后A的相位为$\dfrac{5\pi}{6}$
+
+    \vspace{0.3em}
+
+    (2)~根据波的传播规律，距离相差$\lambda$，相位就落后$2\pi$
+
+    \vspace{0.5em}
+    
+    根据这个比例关系，$\dfrac{x_B-x_A}{\lambda}=\dfrac{5\pi/6}{2\pi}$，得波长$\lambda=\SI{0.24}{m}$
+
+    \vspace{0.5em}
+    
+    (3)~先求A质元的振动方程，根据频率和振幅，可得$x_A=0.1 \cos{\left(7\pi t+\varphi \right)}$
+
+    \vspace{0.5em}
+
+    在$t=\SI{1}{s}$时刻，相位$\left(7\pi t+\varphi \right)=\dfrac{\pi}{2}$，求得初相位$\varphi=-\dfrac{\pi}{2}$，所以$y_A=0.1 \cos{\left(7\pi t-\dfrac{\pi}{2} \right)}$
+
+    \vspace{0.5em}
+
+    最后调整为波函数$y=0.1 \cos{\left(7\pi t-\dfrac{\pi}{2} -2\pi\cdot \dfrac{x-0.1}{\lambda}\right)}=0.1 \cos{\left(7\pi t-\dfrac{25\pi}{3} x+\dfrac{\pi}{3}\right)}$
+    
+    \tcbline
+    
+        【补充练习】已知$t=0$和$t=\SI{0.5}{s}$时，波形图分别为实线和虚线，已知周期$T>\SI{0.5}{s}$，求波函数。
+   
+    \begin{center}
+        \includegraphics[width=0.35\textwidth]{asset/ch6/T5.png}
+    \end{center}
+    
+\end{example}
+
+\subsubsection{波形图}
+
+波函数同时表达了$y$与$x,t$的关系：
+\begin{itemize}
+    \item 若固定某一个位置$x$，则波函数表达了该位置质元振动的位移$y$与时间$t$的关系，可画出振动图像
+    \item 若固定某一个时刻$t$，则波函数表达了该时刻各质元的振动位移$y$，可画出波形图
+\end{itemize}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.65\linewidth]{asset/ch6/T3.png}
+\end{figure}
+
+\begin{example}{波形图与振动图像}
+    一列简谐波在$t=\SI{2}{s}$时的波形图和$x=\SI{5}{m}$处质点的振动图像如图所示。
+    
+    (1)~判断波的传播方向；(2)~求波速；(3)~求波函数；(4)~求$x=0$处的质元在$t=0$时的速度.
+
+    \vspace{-0.5em}
+
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{asset/ch6/T6.png}
+    \end{center}
+
+    \tcblower
+    
+    (1)~在振动图像上，$x=\SI{5}{m}$处的质点在$t=\SI{2}{s}$时，位于平衡位置，且向正方向运动。
+
+    在波形图上，若图像向左微小平移，可以实现该位置向上运动，因此波向$-x$方向传播。
+
+    (2)~根据波形图可知$\lambda=\SI{12}{m}$，根据振动图像可知周期$T=\SI{8}{s}$，所以波速$u=\lambda\nu=\lambda/T=\SI{1.5}{m/s}$
+
+    \vspace{0.5em}
+
+    (3)~先写出$x=\SI{5}{m}$处质点的振动方程为$y=10\cos{\left(\dfrac{\pi}{4}t+\pi\right)}$
+
+    \vspace{0.5em}
+
+    再结合波长和传播方向，可写出波函数为$y=10\cos{\left(\dfrac{\pi}{4}t+\pi+2\pi\dfrac{x-5}{12}\right)}=10\cos\pi\left(\dfrac{t}{4}+\dfrac{x}{6}+\dfrac{1}{6}\right)$
+
+    \vspace{0.5em}
+
+    (4)~将$x=0$代入波函数，得振动方程$y=10\cos\pi\left(\dfrac{t}{4}+\dfrac{1}{6}\right)$
+
+    \vspace{0.5em}
+
+    求导可得速度表达式$v=-\dfrac{5\pi}{2}\sin\left(\dfrac{t}{4}+\dfrac{1}{6}\right)$.~当$t=0$时，速度$v=-\dfrac{5}{4}\pi~\unit{m/s}$
+    
+    \tcbline
+
+     \begin{minipage}{0.7\textwidth}
+        【补充练习】一列平面简谐波以$\SI{4}{m/s}$的速度向$x$正方向传播。
+
+        (1)~若右图表示$x=0$处质元的振动图像，求波函数；
+        
+        (2)~若右图表示$t=0$时的波形图，求波函数。
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.27\textwidth}
+        \centering \includegraphics[width=\textwidth]{asset/ch6/T7.png}
+    \end{minipage}
+\end{example}
+
+\section{波的能量}
+
+\subsection{变化规律}
+
+能量可以随着波动而传播，在简谐波中，每一质元的动能和势能同时变化，且任意时刻都相等。
+
+\begin{itemize}
+    \item 在平衡位置，动能、势能都达到最大值
+    \item 在波峰、波谷，动能、势能都为零
+\end{itemize}
+
+\warn{在机械振动中，动能和势能的变化是反向的；而在简谐波中，动能和势能的变化是同向的。}
+
+\subsection{定量关系}
+
+介质单位体积内的能量称为波的能量密度$w$，若介质的密度为$\rho$，则\textbf{平均能量密度}$\bar{w}=\dfrac{1}{2}\rho \omega^2A^2$.
+
+单位时间通过面积$S$的能量称为\textbf{能流}。通过垂直于波传播方向上单位面积能流的时间平均值，称为\textbf{波的强度}$I=\bar{w}u$，就等于\textbf{平均能流密度}。
+
+\vspace{-0.5em}
+
+\begin{formula}
+    $\bar{w}=\dfrac{1}{2}\rho \omega^2A^2,~~~I=\bar{w}u$
+\end{formula}
+
+\note{从公式中可以看出，振动频率越大、振幅越大，则波的能量密度就越大。}
+
+\begin{example}{波的能量}
+    一列简谐横波在张紧的弦上传播，波函数为$y=0.02\cos(4\pi x−200\pi t)$（SI）
+
+    (1)~判断波的传播方向，并求出波长和波速。(2)~在$x=0$的质元，什么时候能量最小？(3)~在$t=0$时刻，哪里的质元能量最大？(4)~若弦的线密度为$\SI{8e-3}{kg/m}$，求波的平均能量密度和波的强度。
+
+    \tcblower
+
+    (1)~发现$t$前面的系数是负号，应先用诱导公式变形，$y=0.02\cos(200\pi t-4\pi x)$
+
+    \vspace{0.3em}
+    
+    此时$x$前面的系数是负号，说明波向$x$正方向传播。$x$的系数是$\dfrac{2\pi}{\lambda}=4\pi$，得波长$\lambda=\SI{0.5}{m}$
+
+    \vspace{0.2em}
+
+    角频率$\omega=200\pi~\unit{s^{-1}}$，频率$\nu=\dfrac{\omega}{2\pi}=\SI{100}{Hz}$，所以波速$u=\lambda\nu=\SI{50}{m/s}$
+
+    (2)~波峰和波谷的能量最小，代入$x=0$，应有$200\pi t=k\pi~(k\in\mathbb{Z})$，解得$t=\dfrac{k}{200}~\unit{s}~(k\in\mathbb{Z})$
+
+    \vspace{0.5em}
+
+    (3)~平衡位置的能量最大，代入$t=0$，应有$4\pi x=\dfrac{\pi}{2}+k\pi~(k\in\mathbb{Z})$，解得$t=\left(\dfrac{\pi}{8}+\dfrac{k}{4}\right)~\unit{s}~(k\in\mathbb{Z})$
+
+    \vspace{0.2em}
+
+    (4)~将$\rho=\SI{8e-3}{kg/m},~\omega=200\pi~\unit{s^{-1}},~A=\SI{0.02}{m},~u=\SI{1}{m/s}$代入公式
+
+    \vspace{0.5em}
+
+    得平均能量密度$\bar{w}=\dfrac{1}{2}\rho \omega^2A^2\approx \SI{0.63}{J/m}$，平均能流密度$I=\bar{w}u\approx \SI{31.6}{W}$
+    
+    \tcbline
+    【补充练习】关于机械波，判断下列说法是否正确：(i)~各质元做简谐振动，动能与势能相互转化，机械能守恒；(ii)~动能最大的质元，势能也最大；(iii)~处于平衡位置的质元，动能最大、势能为零；(iv)~各质元将自己的能量传递给相邻质元，能量在传播过程中逐渐减小
+\end{example}
+
+\section{干涉与衍射}
+
+\subsection{惠更斯原理与衍射}
+
+\subsubsection{惠更斯原理}
+
+媒质中任意波面上的各点，都可看作是发射子波的波源，其后的任一时刻，这些子波面的包络面就是波在该时刻的新的波面。
+
+\subsubsection{衍射}
+
+衍射是波传播遇到障碍物时，能绕过障碍物的边缘而偏离直线传播的现象。
+
+相对波长而言，障碍物线度越小，衍射现象越明显。
+
+\vspace{-0.5em}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.78\linewidth]{asset/ch6/T8.png}
+\end{figure}
+
+\subsection{波的叠加与干涉}
+
+%\subsubsection{波传播的独立性}
+\subsubsection{波的叠加原理}
+
+几列波可以保持各自特点同时通过同一介质，不受其它波的影响。
+
+在几列波相遇而互相交叠的区域中，某点的振动是各列波单独传播时在该点引起的振动的合成。
+
+\vspace{-0.8em}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.6\linewidth]{asset/ch6/T11.png}
+\end{figure}
+
+\vspace{-1.2em}
+
+\subsubsection{波的干涉}
+
+波叠加时在空间出现稳定的振动加强和减弱的分布叫波的干涉。
+
+波的干涉需要满足\textbf{相干条件}，即两列波频率相同、振动方向相同、相位差固定。
+
+\note{这隐含了两列波的波长一定相等，但振幅不一定相同。}
+
+\subsubsection{相长干涉与相消干涉}
+
+若波源$S_1,~S_2$产生两列相干波，初相位之差为$\Delta \varphi_0$，到$P$点的距离差为$\Delta r$，则在$P$点的相位差为
+
+\noindent
+\begin{minipage}{0.81\linewidth}
+    \begin{formula}
+        $\Delta \varphi=\Delta \varphi_0-2\pi \dfrac{\Delta r}{\lambda}$
+    \end{formula}
+    
+    \begin{itemize}
+        \item 当$\Delta \varphi=2k\pi$（同相）时，是干涉加强点（相长干涉），振幅是两者之和
+        \item 当$\Delta \varphi=(2k+1)\pi$（反相）时，是干涉减弱点（相消干涉），振幅是两者之差
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.16\linewidth}
+    \centering \includegraphics[width=\linewidth]{asset/ch6/T10.png}
+\end{minipage}
+
+\note{若波源同相，可直接用距离差$\Delta r$判定。若P点到波源距离之差为波长的整数倍$\Delta r=k\lambda~(k\in\mathbb{Z})$，则为相长干涉；若为半波长的奇数倍$\Delta r=(k+\dfrac{1}{2})\lambda~(k\in\mathbb{Z})$，则为相消干涉。}
+
+\begin{example}{波的干涉——相位关系}
+    $S_1,~S_2$是相干波源，发出波长为$\SI{2}{m}$的简谐波。它们到P点的距离分别为$\SI{4}{m},~\SI{4.4}{m}$.~已知$S_1$的振动方程为$y_1=\cos{(2\pi t+\pi)}$，$S_2$的振幅为$\SI{2}{m}$.~(1)~求波速；(2)~若P点为相长干涉，求$S_2,~P$的振动方程；(3)~若P点为相消干涉，求$S_2,~P$的振动方程。
+
+    \tcblower
+
+    {\fangsong 思路：首先根据相干条件判断频率相同，再根据干涉情况确定相位。}
+
+    \tcbline
+    (1)~根据振动方程，可知角频率$\omega=2\pi$，频率$\nu=\dfrac{\omega}{2\pi}=1$，所以波速$u=\lambda\nu=\SI{2}{m/s}$
+
+    \vspace{0.3em}
+
+    (2)~设$S_2$的振动初相为$\varphi_2$，代入公式可知，两列波在P点的相位差为$\Delta \varphi=(\varphi_2-\pi)-\dfrac{2\pi}{5}=\varphi_2-\dfrac{7\pi}{5}$
+
+    若为相长干涉，则$\Delta \varphi=2k\pi$，可取$\varphi_2=-0.6\pi$，因此$S_2$振动方程为$y_2=2\cos{(2\pi t-0.6\pi)}$
+
+    P点的振幅为二者之和，相位与$S_1$相同，可直接写出$y_P=3\cos{2\pi t+\pi}$
+
+    (3)~若为相长干涉，则$\Delta \varphi=(2k+1)\pi$，可取$\varphi_2=0.4\pi$，因此$S_2$振动方程为$y_2=2\cos{(2\pi t+0.4\pi)}$
+
+    P点的振幅为二者之差，相位与$S_1$相反，可直接写出$y_P=\cos{(2\pi t)}$
+
+    \tcbline
+
+    【补充练习】$S_1,~S_2$是相干波源，相距$\SI{3}{m}$，波长均为$\SI{2}{m}$，已知$S_1$的初相是$\pi/2$。分别在以下条件下求$S_2$的初相。(1)~$S_1S_2$的中垂线各点均为相消干涉；(2)~$S_1S_2$的延长线上各点均为相消干涉。
+\end{example}
+
+\begin{example}{波的干涉——加强/减弱点的数量}
+    两相干波源$S_1,~S_2$在$x$轴上的位置为$x=\SI{0}{m}$和$x=\SI{45}{m}$，波长均为$\SI{20}{m}$.~已知$S_1$比$S_2$超前$\pi/2$个相位。求：(1)~在$x$轴上，所有相长和相消干涉的点的坐标；(2)~在以原点为圆心，$\SI{35}{m}$为半径的圆上，共有几个振动加强点和减弱点？
+
+    \tcblower
+    {\fangsong 思路：如果波源不是同相，要使用相位关系进行判断。}
+    \tcbline
+
+    (1)~设点P到波源的距离是$r_1,r_2$，不妨假设波到达P点时，$S_1$的相位就是$\pi/2$，$S_2$的相位是$0$.
+
+    \vspace{0.5em}
+
+    则波源$S_1$的波到达P点时，相位落后$\dfrac{2\pi}{\lambda}r_1$，变成$\dfrac{\pi}{2}-\dfrac{2\pi}{\lambda}r_1$
+    
+    \vspace{0.5em}
+    
+    同理波源$S_2$的波到达P点时，相位变成$-\dfrac{2\pi}{\lambda}r_2$，两者之差为$\Delta \varphi=\dfrac{\pi}{2}+\dfrac{\pi}{10}(r_2-r_1)$
+
+    \vspace{0.5em}
+
+    振动加强点和减弱点应满足$\Delta \varphi=2k\pi$和$(2k+1)\pi$，即$r_2-r_1=20k-5$和$20k+5~(k\in\mathbb{Z})$
+
+    \begin{itemize}
+        \item 在波源之间，设坐标为$x~(0<x<45)$，则$r_2-r_1=45-2x$.~代入条件得$x=5,15,25,35$是加强点，$x=10,20,30,40$是减弱点
+        \item 在$S_2$右侧，$r_2-r_1=-45$，都是加强点；在$S_1$左侧，$r_2-r_1=45$，都是减弱点
+    \end{itemize}
+
+    (2)~在这个圆上，$r_1=35$，$r_2$的取值为$10\sim 80$
+
+    当$r_2-r_1=20k-5$时是加强点，可取$r_2=10,30,50,70$.~注意$r_2=10$只有一个点符合条件，而其他在上半圆和下半圆各有一个，所以共7个加强点。
+
+    当$r_2-r_1=20k+5$时是减弱点，可取$r_2=20,40,60,80$.~注意$r_2=80$只有一个点符合条件，而其他在上半圆和下半圆各有一个，所以共6个减弱点。
+    
+    \tcbline
+    
+    【补充练习】两相干波源$S_1,~S_2$在$x$轴上的位置为$x=\SI{0}{m}$和$x=\SI{30}{m}$，$x=\SI{9}{m}$和$\SI{12}{m}$处的两点是相邻的两个因干涉而静止的点。求两波的波长和两波源的相位差。
+
+\end{example}
+
+\subsection{多普勒效应}
+
+由于波源(S)或观察者(R)的运动，接收到的频率$\nu_R$不同于波源频率$\nu_S$的现象，称为多普勒效应。
+
+利用波速$u$，可推导出$\nu_R$与$\nu_S$的关系为
+
+\begin{formula}
+    $\nu_R=\dfrac{u+v_R}{u-v_S}\nu_S$
+\end{formula}
+
+波源和观察者的速度$v_S,v_R$的符号规定为，靠近彼此运动的方向为正，远离彼此的方向为负。
+
+\note{这一公式可能有不同的写法，区别在于速度的正负规定不同。}
+
+\note{若速度方向与波源、观察者的连线不共线，只考虑在连线上的分量。}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\linewidth]{asset/ch6/T9.png}
+\end{figure}
+
+\begin{example}{多普勒效应}
+    一警车追赶摩托车，两者在同一直路上行驶。警车的速度为$\SI{30}{m/s}$，发出频率为$\SI{400}{Hz}$的警笛，摩托车的速度为$\SI{20}{m/s}$，设空气中声速为$\SI{340}{m/s}$。
+    
+    %同时，空中一架飞机以$\SI{180}{m/s}$的速度行驶，发出频率为$\SI{1000}{Hz}$的声音。
+    
+    (1)~求静止在地面的观测者在警车前和警车后听到的声音频率；(2)~求摩托车司机听到的声音频率。
+    
+    %(3)~若有$\SI{10}{m/s}$的风向前吹，第(1)问的结果会如何变化？
+    
+    (3)~空中一架飞机以$\SI{180}{m/s}$的速度行驶，发出频率为$\SI{1000}{Hz}$的声音。当飞机与静止观测者的连线与地面成$60^\circ$和$90^\circ$角时，求他听到飞机声音的频率。
+
+    \tcblower
+
+    (1)~警车前方的观察者认为警车靠近自己，$v_S=+\SI{30}{m/s}$，代入公式可得$\nu_R=\dfrac{u}{u-v_S}\nu_S\approx \SI{439}{Hz}$
+
+    \vspace{0.3em}
+
+    而警车后方的观察者认为警车远离自己，$v_S=-\SI{30}{m/s}$，代入公式可得$\nu_R=\dfrac{u}{u-v_S}\nu_S\approx \SI{368}{Hz}$
+
+    \vspace{0.3em}
+
+    (2)~将$v_S=+\SI{30}{m/s},~v_R=-\SI{20}{m/s}$代入公式，可得$\nu_R=\dfrac{u+v_R}{u-v_S}\nu_S\approx\SI{413}{Hz}$
+
+    \vspace{0.3em}
+
+    %(3)~空气中的声速应理解为声波相对于空气的速度，如果有风，则要用相对运动的公式叠加。
+
+    %声音向前方传播时，与风速相同，速度应相加，相对于观察者的速度是$u^\prime=\SI{350}{m/s}$
+
+    %同理，声音向后方传播时，与风速相反，速度应相减，相对于观察者的速度是$u^\prime=\SI{330}{m/s}$
+
+    %代回第(1)问公式可得$\nu_R$分别变为$\SI{434}{Hz}$和$\SI{364}{Hz}$.
+
+    (3)~若飞机与观测者连线与地面成$60^\circ$角时，飞机在连线上的速度为$\SI{180}{m/s}\times \cos{60^\circ}=\SI{90}{m/s}$
+
+    \vspace{0.3em}
+
+    当飞机在自己后方时，飞机靠近自己，速度取正号，$\nu_R=\dfrac{u}{u-v_S}\nu_S= \SI{1360}{Hz}$
+
+    \vspace{0.3em}
+
+    当飞机在自己后方时，飞机靠近自己，速度取负号，$\nu_R=\dfrac{u}{u-v_S}\nu_S= \SI{791}{Hz}$
+
+    \vspace{0.3em}
+
+    若飞机与观测者连线与地面成$90^\circ$角，飞机在连线上速度为零，听到频率仍为$\SI{1000}{Hz}$
+
+    \tcbline
+    
+    【补充练习】一静止声源S的频率为$\nu_S=\SI{300}{Hz}$，声速$u=\SI{330}{m/s}$，观察者R以速度$v_R=\SI{60}{m/s}$向右运动。在观察者右侧有一个反射壁，以速度$v=\SI{100}{m/s}$向右运动。此时，观测者会同时接收到直接来自声源和反射壁反射的声音，但二者频率不同，求观察者测得的拍频。
+    （提示：可认为墙壁作为接收者接收声音后，又作为运动的发射者以相同频率发射声音。）
+\end{example}
+
+\section{拓展内容}
+
+\subsection{驻波}
+
+\subsubsection{驻波的概念}
+
+两列相干的行波沿相反方向传播而叠加时，就形成\textbf{驻波}，这是一种重要的干涉现象。
+
+\subsubsection{驻波的描述}
+
+假设两列波的波函数分别为$y_1=A\cos(\omega t-kx),~~y_2=A\cos(\omega t+kx)$
+
+\begin{formula}
+    和差化积公式：$\cos\alpha+\cos \beta=2\cos\dfrac{\alpha+\beta}{2}\cos\dfrac{\alpha-\beta}{2}$
+\end{formula}
+
+根据和差化积公式，可得合成结果为
+
+\begin{formula}
+    $y=y_1+y_2=2A\cos{kx}\cdot \cos \omega t$
+\end{formula}
+
+这个实际是一个振动方程，$|2A\cos{kx}|$表示振幅，$\omega t$是相位。
+
+由此可见，不同位置的振幅不同，某些位置振幅最大为$2A$，某些位置振幅为零。
+
+\begin{example}{驻波的描述}
+    在弦上有一驻波，其表达式为$y=0.02\cos{20x}\cos{750t}$.~(1)~求两个相邻波节的距离；(2)~这个驻波是哪两列波叠加而成的？给出波动方程。
+    \tcblower
+    (1)~驻波的振幅是$|0.02\cos{20x}|$，波节处振幅最小，即$20x=\dfrac{\pi}{2}+k\pi$，得$x=\dfrac{\pi}{40}+\dfrac{k\pi}{20}~(k\in \mathbb{Z})$
+
+    \vspace{0.3em}
+    
+    因此相邻波节之间的距离是$\pi/20$
+
+    \vspace{0.4em}
+
+    (2)~根据积化和差公式，$y=0.01\cos{(750t+20x)}+0.01\cos{(750t-20x)}$，这就是两列波的方程。
+    
+    \tcbline
+    【补充练习】两列简谐波沿$x$轴传播，波动方程为$y=A\cos{2\pi(t-x)}$和$y=A\cos{2\pi(t+x)}$，叠加形成驻波。(1)~求波节的位置坐标；(2)~求波腹的振幅。
+\end{example}
+
+\subsubsection{驻波的特点}
+
+\begin{itemize}
+    \item 振幅：不等大，振幅最大处称为波腹，振幅最小处称为波节，相邻波节间距离为$\dfrac{\lambda}{2}$。
+    \item 相位：两个波节内部的各点相位相同，一个波节两侧各点相位相反
+    \item 能量：驻波不传播能量，只在相邻波节和波腹之间有能量交换
+\end{itemize}
+
+\note{如果两列波振幅不相等，也能称为驻波，只是波节处仍有振动。}
+
+\vspace{-0.5em}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.35\linewidth]{asset/ch6/T13.png}
+\end{figure}
+
+\vspace{-1em}
+
+\subsection{波的反射与驻波}
+
+\subsubsection{波的反射}
+
+驻波常由反射前后的波叠加形成，波在反射前后，除了传播方向相反，相位也可能会发生变化。
+\begin{itemize}
+    \item 波在\textbf{固定端}的反射前后，相位会突变$\pi$，称为\textbf{半波损失}
+    \item 波在\textbf{自由端}的反射前后，相位没有变化，没有半波损失的现象。
+\end{itemize}
+
+若反射前后的波叠加形成驻波，在固定端一定是波节，自由端一定是波腹。
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.55\linewidth]{asset/ch6/T14.png}
+\end{figure}
+
+%\vspace{-1.3em}
+
+\subsubsection{界面处的反射}
+
+若波从一种介质传播到另一种介质，将同时发生反射和透射，透射都不会发生相位变化，但反射要看两种介质的性质。
+\begin{itemize}
+    \item 若波从波疏介质传播到波密介质（轻绳到密绳），相当于固定端，反射时有半波损失，相位突变$\pi$
+    \item 若波从波密介质传播到波疏介质（密绳到轻绳），相当于自由端，反射时相位不变
+\end{itemize}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.7\linewidth]{asset/ch6/T15.png}
+\end{figure}
+
+\vspace{-1em}
+
+\begin{formula}
+    在求解反射波方程时，若波在$x=d$处反射，用$2d-x$替换原来的$x$，若有半波损失，再加$\pi$即可。
+\end{formula}
+
+\begin{example}{因反射形成的驻波}
+    一平面简谐波沿$x$轴正方向传播，在$x=3\lambda /4$处遇到界面而反射。设入射波和反射波的振幅均为$A$，频率为$\nu$.~已知在$t=0$时，原点处的合振动是经过平衡位置向负方向运动。
+    
+    (1)~判断波是从波疏介质传播到波密介质，还是从波密介质传播到波疏介质；
+    
+    (2)~求$x=7\lambda/12$处，入射波与反射波的合振动方程。
+
+    \tcblower
+
+    (1)~先写出入射波方程$y_1=A\cos{(2\pi \nu t-\dfrac{2\pi}{\lambda}x+\varphi_0)}$，要求反射波方程，就把$x$替换成$2\cdot \dfrac{3}{4}\lambda-x$
+
+    \vspace{0.5em}
+    
+    假设没有半波损失，则$y_2=A\cos{[2\pi \nu t-\dfrac{2\pi}{\lambda}(2\cdot \dfrac{3}{4}\lambda-x)+\varphi_0]}=A\cos{(2\pi \nu t+\dfrac{2\pi}{\lambda}x+\varphi_0-\pi)}$
+
+    \vspace{0.5em}
+
+    利用和差化积公式，二者叠加的结果是$y=y_1+y_2=2A\cos{(\dfrac{2\pi}{\lambda}x-\dfrac{\pi}{2})}\cos{(2\pi\nu t+\varphi_0-\dfrac{\pi}{2})}$
+
+    \vspace{0.5em}
+
+    将$x=0$代入发现原点不振动，与题意不符。因此有半波损失，说明是从波疏介质传播到波密介质。
+
+    \vspace{0.5em}
+
+    (2)~$y_2$应在上面的基础上，把相位反相，即$y_2=A\cos{(2\pi \nu t+\dfrac{2\pi}{\lambda}x+\varphi_0)}$
+
+    \vspace{0.5em}
+
+    利用和差化积公式，二者叠加的结果是$y=y_1+y_2=2A\cos{(\dfrac{2\pi}{\lambda}x)}\cos{(2\pi\nu t+\varphi_0)}$
+
+    \vspace{0.5em}
+
+    将$x=0$代入，得$y=2A\cos{(2\pi\nu t+\varphi_0)}$.~由旋转矢量法可知初相位为$\varphi_0=\pi/2$
+
+    \vspace{0.5em}
+
+    将$x=\dfrac{7\lambda}{12}$代入，得$y=2A\cos{(\dfrac{2\pi}{\lambda}\dfrac{7\lambda}{12})}\cos{(2\pi\nu t+\dfrac{\pi}{2})}=\sqrt{3}A\cos{(2\pi\nu t-\dfrac{\pi}{2})}$
+    
+    \tcbline
+
+    【补充练习】在长为$\SI{3}{m}$、两端固定的弦上激发驻波，这段弦上共有3个波腹，波腹的振幅为$\SI{0.01}{m}$。这个驻波可视为入射波和反射波叠加而成，波速为$\SI{100}{m/s}$。取弦的中点为原点，$t=0$时原点处于振幅正向最大处。求：(1)~波长和频率；(2)~入射波、反射波和驻波的表达式。
+\end{example}
+
+\subsubsection{简正模式}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.7\linewidth]{asset/ch6/T16.png}
+\end{figure}
+
+\newpage
+
+驻波系统存在多个特定的振动频率，每个频率对应一个稳定振动方式，称作系统的\textbf{简正模式}，相应频率称作简正频率或\textbf{固有频率}。
+
+\note{固有频率完全由驻波系统决定，驻波系统在固定端必须是波节，自由端必须是波腹。}
+
+若将两个波节之间的部分称为一个“段”，则有：
+\begin{itemize}
+    \item 若两端都是自由端，或都是固定端，则中间的长度相当于$k$个“段”，即$\dfrac{k}{2}$个波长
+    \item 若一端是自由端，另一端是固定端，则中间的长度相当于$k+0.5$个“段”，即$\dfrac{2k+1}{4}$个波长
+\end{itemize}
+
+\begin{example}{简正模式}
+    一频率为$\SI{248.5}{Hz}$的音叉放在盛水的细管口，连续调节水面高度，当空气柱的高度相继为$L_1=\SI{0.34}{m}$ 和 $L_2=\SI{1.02}{m}$ 时发生共鸣（即空气柱形成驻波）。(1)~若要形成驻波，空气柱的高度与声波的波长具有怎样的关系？(2)~求声音在空气中的传播速率。
+
+    \tcblower
+
+    (1)~细管的上端与空气连通，是自由端，对应波腹；下端为封闭的水面，是固定端，对应波节。
+
+    根据简正模式，细管的长度$L$要等于$(k+0.5)$个“段”。
+
+    \vspace{0.3em}
+
+    而每“段”的长度是$\dfrac{\lambda}{2}$，因此二者的关系为$L=\left(k+\dfrac{1}{2}\right)\dfrac{\lambda}{2}=\dfrac{(2k+1)}{4}\lambda~(k\in\mathbb{Z})$
+
+    \vspace{0.3em}
+
+    (2)~根据题意，$L_1$和$L_2$是相邻的两个符合条件的$L$
+
+    \vspace{0.3em}
+
+    而根据前面求出的表达式，$k$的系数是$\dfrac{\lambda}{2}$。这说明$k$每增加$1$，$L$增加$\dfrac{\lambda}{2}$
+    
+    因此$\dfrac{\lambda}{2}=L_2-L_1$，解得$\lambda=\SI{1.36}{m}$，因此声速$u=\lambda \nu\approx \SI{338}{m/s}$
+
+    \tcbline
+
+    【补充练习】将音叉放在长度可调节、两端开口的细管口，在长度为$l=\SI{15}{cm}$和$\SI{20}{cm}$时相继发生共鸣。设声速为$\SI{340}{m/s}$，求音叉的振动频率。
+
+\end{example}
+
+

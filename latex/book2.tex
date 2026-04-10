@@ -1,0 +1,79 @@
+\documentclass{LIKE}
+
+\definecolor{MainGreen}{RGB}{22, 160, 133}
+\definecolor{MainPurple}{RGB}{142, 68, 173}
+\definecolor{MainYellow}{RGB}{211, 84, 0}
+\definecolor{MainBlue}{RGB}{41, 128, 185}
+\definecolor{MainRed}{RGB}{192, 57, 43}
+\definecolor{MainBlack}{RGB}{44, 62, 80}
+
+\begin{document}
+
+\vfill
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, inner sep=0] at (current page.north west) {%
+        \includegraphics[width=\paperwidth, height=\paperheight]{asset/cover2.png} 
+    };
+
+    \fill[JungleGreen] 
+        (current page.north east) rectangle ++(-8.0cm, -12.0cm);
+    
+    %\coordinate (topright) at ([xshift=-2cm, yshift=-5cm]current page.north east);
+    \fill[white] 
+        ([xshift=-2cm, yshift=-5cm]current page.north east) rectangle ++(-6.0cm, -7.0cm); 
+
+    % “大学物理”大字
+    \node[font=\fontsize{64}{64}\selectfont\bfseries, anchor=center] 
+        at ([xshift=-5cm, yshift=-6.8cm]current page.north east) {大学};
+    \node[font=\fontsize{64}{64}\selectfont\bfseries, anchor=center] 
+        at ([xshift=-5cm, yshift=-9.3cm]current page.north east) {物理};
+
+    \fill[brown!90!black] 
+        ([xshift=-2cm, yshift=-12cm]current page.north east) rectangle ++(-6.0cm, -2.5cm);
+        
+    \node[font=\fontsize{18}{22}\selectfont\sffamily\bfseries, Gray, anchor=center] 
+        at ([xshift=-5cm, yshift=-11.2cm]current page.north east) {必修~2};
+    \node[font=\fontsize{24}{24}\selectfont\bfseries, black, anchor=center] 
+        at ([xshift=-5cm, yshift=-13.25cm]current page.north east) {电磁学};
+
+    \node[font=\fontsize{12}{14}\selectfont, text=black, anchor=center] 
+        at ([xshift=-5cm, yshift=-2.8cm]current page.north east) {大~学~课~程~自~编~讲~义};
+        
+    \node[font=\fontsize{14}{14}\selectfont\sffamily\bfseries, text=white, anchor=center] 
+        at ([xshift=3cm, yshift=2cm]current page.south west) {张云翼~~编};
+\end{tikzpicture}
+
+\newpage
+
+\colorlet{maincolor}{MainBlue}
+\colorlet{sidecolor}{MainBlue!50}
+
+\setcounter{part}{2}
+
+\setcounter{chapter}{6}
+
+\part{电磁学}
+
+\include{ch7}
+
+\include{ch8}
+
+\include{ch9}
+
+%\include{ch10}
+
+\include{ch10-2}
+
+\include{ch11}
+
+\include{ch12}
+
+\colorlet{maincolor}{Black}
+\colorlet{sidecolor}{Black!50}
+
+\silentpart{附录~~补充练习答案}
+
+\input{answer2}
+
+\end{document}
+

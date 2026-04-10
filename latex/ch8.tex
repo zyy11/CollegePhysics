@@ -1,0 +1,179 @@
+\chapter{电势}
+\setcounter{example_counter}{1}
+
+\section{电势的概念}
+
+\subsection{静电场的保守性}
+
+\subsubsection{电场力的保守性}
+
+静电力是保守力，这意味着：
+\begin{itemize}
+    \item 电荷沿任意路径转一圈，静电力做功为零：$\displaystyle \oint_C \vec{F}\cdot d\vec{r}=0$
+    \item 电荷从A点到B点，静电力做功与路径无关：$W=\displaystyle\int_{(A)}^{(B)}{\vec{F}\cdot d\vec{r}}$
+\end{itemize}
+
+利用$\vec{F}=q\vec{E}$进行变形，即可排除电荷的因素，得到静电场的性质。
+
+\subsubsection{静电场的环路定理}
+
+电场强度沿任意路径转一圈的积分为零，这就是\textbf{静电场的环路定理}。
+
+\begin{formula}
+    $\displaystyle \oint_C \vec{E}\cdot d\vec{r}=0$
+\end{formula}
+
+\subsection{静电力做功}
+
+\subsubsection{电势差}
+
+电场强度的线积分与路径无关，这一积分结果称为电势差。
+
+A与B的电势差，就等于电场强度沿任意路径从A到B的积分。
+
+\begin{formula}
+    $U_{AB}=\varphi_A-\varphi_B=\displaystyle \int_{(A)}^{(B)} \vec{E}\cdot d\vec{r}$
+\end{formula}
+
+\warn{注意A与B的电势差，等于A点电势减B点电势，不要减反。}
+
+\subsubsection{电势}
+
+选择任意一点作为电势的零点，即可确定其余各点的电势$\varphi$，习惯上默认取无穷远处为电势零点。
+
+\warn{注意电势是标量，只有大小，没有方向。}
+
+\note{真正有意义的是电势差，电势零点选择不同，各点的电势也不同，但电势差不变。}
+
+\subsubsection{电势能}
+
+因为静电力是保守力，因此可定义电势能，电荷的电势能就等于电荷乘以该点的电势，$E_p=q\varphi$。
+
+根据保守力做功的特点，静电力做功等于电势能的减少量，也等于电荷乘以电势差。
+
+\begin{formula}
+    $W=-\Delta E_p=q(\varphi_A-\varphi_B)=qU_{AB}$
+\end{formula}
+
+\section{电势的计算}
+
+\subsection{利用电场强度求电势}
+
+某点的电势，就等于电场强度从该点到电势零点的积分。
+
+\begin{formula}
+    $\varphi_A=\displaystyle \int_{(A)}^{(0)} \vec{E}\cdot d\vec{r}$
+\end{formula}
+
+\begin{example}{利用电场强度求电势}
+    有一均匀带电的厚球层，电荷体密度为$\rho$，内外表面半径分别为$R,2R$。(1)~求电场强度的空间分布；(2)~设无穷远处为电势零点，求空腔内任一点的电势。
+    \tcblower
+
+    (1)~电荷呈球对称分布，可知场强方向一定沿半径方向，大小可用高斯定理求出，高斯面选择球面。
+
+    当$r<R$时，高斯面内无电荷，$E=0$
+
+    当$R<r<2R$时，高斯面内电荷量为$\dfrac{4}{3}\pi(r^3-R^3)\rho$
+
+    利用高斯定理，$E\cdot 4\pi r^2=\dfrac{4\pi(r^3-R^3)\rho}{3\varepsilon_0}$，得$E=\dfrac{\rho(r^3-R^3)}{3\varepsilon_0 r^2}$
+
+    当$r>2R$时，高斯面内电荷量为$\dfrac{4}{3}\pi[(2R)^3-R^3]\rho=\dfrac{28\pi R^3}{3}\rho$
+
+    利用高斯定理，$E\cdot 4\pi r^2=\dfrac{28\pi R^3\rho}{3\varepsilon_0}$，得$E=\dfrac{7R^3\rho}{3\varepsilon_0 r^2}$
+
+    (2)~球心处的电势为$\varphi=\displaystyle\int_R^{2R}{\dfrac{\rho(r^3-R^3)}{3\varepsilon_0 r^2}dr}+\int_{2R}^{\infty}{\dfrac{7R^3\rho}{3\varepsilon_0 r^2}dr}=\dfrac{3\rho R^2}{2\varepsilon_0}$
+    
+    \tcbline
+    【补充练习】半径为$R,2R$的同轴无限长圆柱面上均匀带电，单位长度的带电量分别为$+\lambda,-\lambda$.~(1)~求电场强度的空间分布；(2)~求内外筒之间的电势差；(3)~以无穷远处为电势零点，求轴线上的电势。
+\end{example}
+
+\subsection{电势的叠加原理}
+
+\subsubsection{电势的叠加原理}
+
+一个电荷系的电场中任意一点的电势，等于每个带电体单独存在时在该点产生电势的代数和。
+
+\subsubsection{点电荷的电势}
+
+点电荷周围的电势分布只与到点电荷的距离$r$有关。
+
+\begin{formula}
+    $\varphi=\dfrac{q}{4\pi\varepsilon_0r}$
+\end{formula}
+
+\note{其实就是$\varphi=\dfrac{kq}{r}$，由此可见，正电荷周围的电势为正，负电荷周围的电势为负。}
+
+\begin{example}{利用叠加原理求电势——离散}
+    如图所示，在A、B两点处放有电荷量分别为$+Q,-Q$的点电荷，距离$2R$。(1)~将试探电荷$+q$沿以B为圆心、半径为$R$的半圆从C移动到D，求电场力所做的功；(2)~再将该试探电荷从D移动到无穷远处，求电场力所做的功。
+    \tcblower
+    
+    \tcbline
+    【补充练习】边长为$L$的正三角形的三个顶点分别放有电荷量为$+q,~-q,~-2q$的点电荷。(1)~求正三角形中心的电势；(2)~将一个试探电荷$+Q$从无穷远处移动到三角形中心，求电场力所做的功。
+\end{example}
+
+\begin{example}{利用叠加原理求电势——连续}
+    电荷$+Q$均匀分布在长为$2L$的细杆AB上。(1)~求杆延长线上，到杆端距离为$L$的点C的电势；(2)~质量为$m$、电荷量为$+q$的粒子在静电场中运动，经过点C时的速率为$v$，求该粒子在静电力作用下运动到无穷远处时的速率。
+    \tcblower
+    
+    \tcbline
+    【补充练习】真空中有一半径为$R$的半圆细环，均匀带电$+Q$。(1)~以无穷远处为电势零点，求圆心处的电势；(2)~将带电量为$+q$的点电荷从无穷远处移动到圆心，求电场力做的功；(3)~若半圆环不是均匀带电的，圆心处的电场强度和电势会改变吗？
+\end{example}
+
+\subsubsection{空心球壳的电势}
+
+对于一个半径为$R$的空心球壳，其外部的电势如同点电荷的电势，内部的电势处处相等。
+
+$\varphi_{\text{外}}=\dfrac{q}{4\pi\varepsilon_0r},~\varphi_{\text{内}}=\dfrac{q}{4\pi\varepsilon_0R}$
+
+\begin{example}{利用已知带电体求电势}
+    真空中半径为$R$和$2R$的两个同心球面，其上分别均匀带电$+Q,~-3Q$。(1)~若以无穷远处为电势零点，求两球面之间，到球心距离为$r$的点的电势；(2)~将电荷为$+q$的点电荷紧贴内球面由静止释放，求到达外球面时的动能；(3)~空间中还存在一个零势能面，求其半径。
+    \tcblower
+
+    \tcbline
+    【补充练习】真空中有一半径为$R$的球面均匀带电，球心处还有一点电荷$+q$，已知球面的电势为$\varphi$。(1)~求球面的电荷量；(2)~求球外任意点的电场强度与电势。
+    
+\end{example}
+
+\subsection{电势与电场强度的关系}
+
+\subsubsection{等势面}
+
+在电场中电势相等的点组成的曲面称为等势面。
+
+等势面都是闭合的曲面，且与电场线均为垂直相交。
+
+\subsubsection{电势梯度}
+
+若已知电势的空间分布$\varphi(x,y,z)$，则电场强度就是电势梯度的相反数，这是电势下降最快的方向。
+
+\begin{formula}
+    $\vec{E}=-\nabla \varphi=-\left(\dfrac{\partial\varphi}{\partial x},\dfrac{\partial\varphi}{\partial y},\dfrac{\partial\varphi}{\partial z}\right)$
+\end{formula}
+
+\begin{example}{根据电势求电场强度}
+    一半径为$R$的均匀带电细圆环，带电量为$+Q$，水平放置。(1)~求圆环轴线上各点的电势；(2)~求圆环轴线上各点的电场强度；(3)~质量为$m$、电荷量为$+q$的小球，从轴线上方距离圆环$R$的高度静止下落，求运动到圆心时的速率。
+    \tcblower
+    \tcbline
+    【补充练习】半径为$R$的均匀带电圆板，电荷面密度为$+\sigma$.~(1)~求圆盘轴线上各点的电势；(2)~求圆盘轴线上各点的电场强度；(3)~质量为$m$、电荷量为$-q$的粒子，沿轴线从距圆心$R$的位置上向圆心射去，初速度为$v_0$，求击中圆板时的速率。
+\end{example}
+
+
+
+\section{拓展内容}
+
+\subsection{电偶极子}
+
+相隔一定距离的等量异号点电荷$+q,~-q$，称为\textbf{电偶极子}。
+
+用$\vec{l}$表示从负电荷指向正电荷的矢量线段，则电偶极子的电矩定义为$\vec{p}=q\vec{l}$
+
+电偶极子的电场中所受的合力为零，但合力矩$\vec{M}=\vec{p}\times\vec{E}$
+
+\begin{example}{电偶极子}
+    电荷量分别为$+q,-q$的点电荷相距$l$，求其延长线上和中垂线上一点的电场强度。设该点到两电荷中心的距离为$x$，$x\gg l$.
+    
+    \tcblower
+    \tcbline
+    【补充练习】两个相同的电偶极子组成一个电四极子，如图所示。求在电四极子延长线上和中垂线上各点的电场强度。
+
+\end{example}

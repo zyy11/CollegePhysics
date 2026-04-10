@@ -1,0 +1,82 @@
+\documentclass{LIKE}
+
+\definecolor{MainGreen}{RGB}{22, 160, 133}
+\definecolor{MainPurple}{RGB}{142, 68, 173}
+\definecolor{MainYellow}{RGB}{211, 84, 0}
+\definecolor{MainBlue}{RGB}{41, 128, 185}
+\definecolor{MainRed}{RGB}{192, 57, 43}
+\definecolor{MainBlack}{RGB}{44, 62, 80}
+
+\begin{document}
+
+\vfill
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, inner sep=0] at (current page.north west) {%
+        \includegraphics[width=\paperwidth, height=\paperheight]{asset/cover3.png} 
+    };
+
+    \fill[JungleGreen] 
+        (current page.north east) rectangle ++(-8.0cm, -12.0cm);
+    
+    %\coordinate (topright) at ([xshift=-2cm, yshift=-5cm]current page.north east);
+    \fill[white] 
+        ([xshift=-2cm, yshift=-5cm]current page.north east) rectangle ++(-6.0cm, -7.0cm); 
+
+    % “大学物理”大字
+    \node[font=\fontsize{64}{64}\selectfont\bfseries, anchor=center] 
+        at ([xshift=-5cm, yshift=-6.8cm]current page.north east) {大学};
+    \node[font=\fontsize{64}{64}\selectfont\bfseries, anchor=center] 
+        at ([xshift=-5cm, yshift=-9.3cm]current page.north east) {物理};
+
+    \fill[brown!90!black] 
+        ([xshift=-2cm, yshift=-12cm]current page.north east) rectangle ++(-6.0cm, -2.5cm);
+        
+    \node[font=\fontsize{18}{22}\selectfont\sffamily\bfseries, Gray, anchor=center] 
+        at ([xshift=-5cm, yshift=-11.2cm]current page.north east) {必修~3};
+    \node[font=\fontsize{24}{24}\selectfont\bfseries, black, anchor=center] 
+        at ([xshift=-5cm, yshift=-12.75cm]current page.north east) {热学~光学};
+    \node[font=\fontsize{24}{24}\selectfont\bfseries, black, anchor=center] 
+        at ([xshift=-5cm, yshift=-13.75cm]current page.north east) {近代物理};
+
+    \node[font=\fontsize{12}{14}\selectfont, text=black, anchor=center] 
+        at ([xshift=-5cm, yshift=-2.8cm]current page.north east) {大~学~课~程~自~编~讲~义};
+        
+    \node[font=\fontsize{14}{14}\selectfont\sffamily\bfseries, text=white, anchor=center] 
+        at ([xshift=3cm, yshift=2cm]current page.south west) {张云翼~~编};
+\end{tikzpicture}
+
+\newpage
+
+\colorlet{maincolor}{MainYellow}
+\colorlet{sidecolor}{MainYellow!50}
+
+\setcounter{part}{3}
+
+\setcounter{chapter}{12}
+
+\part{热学}
+
+\include{ch13}
+
+\include{ch14}
+
+\colorlet{maincolor}{MainRed}
+\colorlet{sidecolor}{MainRed!50}
+
+\part{光学}
+
+\include{ch15}
+
+\include{ch16}
+
+\colorlet{maincolor}{MainBlack}
+\colorlet{sidecolor}{MainBlack!50}
+
+\part{近代物理}
+
+\include{ch17}
+
+\include{ch18}
+
+\end{document}
+

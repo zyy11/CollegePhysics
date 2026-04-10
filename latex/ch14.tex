@@ -1,0 +1,251 @@
+\chapter{热力学定律}
+\setcounter{example_counter}{1}
+
+\section{热力学第一定律}
+
+\subsection{基本概念}
+
+\subsubsection{过程与途径}
+
+系统从一个状态变化到另一个状态，称为一个\textbf{过程}，完成这个过程的具体方式称为\textbf{途径}。
+
+若系统的变化非常缓慢，任意状态都可近似看作平衡态，则称为\textbf{准静态过程}。
+
+\subsubsection{状态量与过程量}
+
+\begin{itemize}
+    \item 状态量与具体途径无关，$p,V,T,E$都是状态量，其变化只与系统的始末状态有关
+    \item 过程量与具体途径有关，$A,Q$是过程量，用不同的途径完成同一个过程，做功和吸热可能不同
+\end{itemize}
+
+\subsection{热力学第一定律}
+
+\subsubsection{表达式}
+
+在一给定的过程中，外界对系统做的功和传给系统的热量之和，等于系统内能的增量。
+
+\begin{formula}
+    $Q=\Delta E+A$
+\end{formula}
+
+\begin{itemize}
+    \item $Q$表示系统所吸收的热量，规定吸热为正，放热为负；
+    \item $A$表示系统对外界所做的功，规定体积膨胀为正，体积收缩为负
+\end{itemize}
+
+\warn{热力学第一定律有不同的表达形式，务必注意$Q,A$符号的规定。}
+
+\note{为了和高中写法相区分，这里做功采用多数大学教材所使用的符号$A$。}
+
+\subsubsection{$\Delta E$的计算}
+
+内能$E=\dfrac{i}{2}\nu RT$是状态量，$\Delta E$只与初末状态的温度变化有关，与具体途径无关。
+
+对于一定气体而言，内能的变化$\Delta E=\dfrac{i}{2}\nu R\Delta T$
+
+另外，结合$E=\dfrac{i}{2}pV$，可知当$p$不变时，$\Delta E=\dfrac{i}{2}p\Delta V$；当$V$不变时，$\Delta E=\dfrac{i}{2}V\Delta p$
+
+\newpage
+
+\subsubsection{$A$的计算}
+
+气体的体积从$V_1$变为$V_2$的过程中，对外所做的功可通过积分求解。
+
+\begin{formula}
+    $A=\displaystyle \int_{V_1}^{V_2}{p~dV}$
+\end{formula}
+
+在$p-V$图像中，$A$的绝对值就等于曲线与横轴围成的面积，膨胀为正，收缩为负。
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.35\linewidth]{asset/ch7/T1.png}
+\end{figure}
+
+\begin{example}{热力学第一定律}
+    
+\end{example}
+
+\subsection{热容}
+
+\subsubsection{热容的概念}
+
+$\SI{1}{mol}$物质吸收的热量与升高温度之比称为\textbf{摩尔热容}。
+
+定体摩尔热容$C_{V,m}$和定压摩尔热容$C_{p,m}$的表达式如下：
+
+\begin{formula}
+    $C_{V,m}=\dfrac{i}{2}R,~~C_{p,m}=\dfrac{i+2}{2}R,~~C_{p,m}-C_{V,m}=R$
+\end{formula}
+
+\note{定压摩尔热容较大，这是因为等压条件下，气体吸热膨胀，对外做功，升温更难。}
+
+\vspace{0.3em}
+
+定压摩尔热容$C_{p,m}$与定体摩尔热容$C_{V,m}$的比$\gamma=\dfrac{i+2}{i}$称为\textbf{比热比}。
+
+\subsubsection{$Q$的计算}
+
+在等体或等压过程中，热量可采用相应的摩尔热容$C_m$计算。
+
+\begin{formula}
+    $Q=\nu C_m \Delta T$
+\end{formula}
+
+\note{其他过程当然也可能有热量收放，但不能直接用公式计算，需要用热力学第一定律求解。}
+
+\begin{example}{热容}
+    
+\end{example}
+
+\subsection{等值过程}
+
+\subsubsection{等体过程}
+
+在等体过程中，体积$V$不变，因此$A=0$.~热量$Q$使用定体摩尔热容计算，$Q=\dfrac{i}{2}\nu R\Delta T$
+
+内能变化$\Delta E=\dfrac{i}{2}\nu R\Delta T$，与热力学第一定律$Q=\Delta E$契合。
+
+\subsubsection{等压过程}
+
+在等压过程中，压强$p$不变，因此$A=p\Delta V$.~热量$Q$使用定压摩尔热容计算，$Q=\dfrac{i+2}{2}\nu R\Delta T$
+
+内能变化$\Delta E=\dfrac{i}{2}\nu R\Delta T$，与热力学第一定律$Q=\Delta E+A$契合。
+
+\subsubsection{等温过程}
+在等温过程中，温度$T$不变，因此$\Delta E=0$.~根据理想气体状态方程，$pV=\nu RT$为定值。
+
+代入做功的公式，$A=\displaystyle\int_{V_1}^{V_2}{pdV}=p_1V_1\ln{\dfrac{V_2}{V_1}}$，利用热力学第一定律可求出热量$Q=A$
+
+\warn{等温过程虽然温度不变，但也有热量收放。}
+
+\subsubsection{绝热过程}
+
+在绝热过程中，没有热量收放，$Q=0$.~绝热过程的特点是$pV^{\gamma}$为定值，其中$\gamma=\dfrac{i+2}{i}$为比热容比。
+
+\begin{formula}
+    绝热过程$pV^{\gamma}=$定值
+\end{formula}
+
+代入做功的公式，$A=\displaystyle\int_{V_1}^{V_2}{pdV}=\dfrac{1}{\gamma-1}(p_1V_1-p_2V_2)$
+
+在图像上，绝热过程比等温过程更陡峭，这是因为绝热膨胀气体对外做功，内能减小使温度下降，压强减小更多。
+
+\subsubsection{等值过程的对比}
+
+\subsection{气体向真空的绝热自由膨胀}
+
+气体向真空的绝热自由膨胀不是准静态过程，不吸热、不做功，因此内能不变，温度不变。
+
+\note{但这一过程不是准静态过程，所以不能说是等温过程。}
+
+\section{循环过程与热机}
+
+\subsection{循环过程的特点}
+
+循环过程是指系统经一系列变化后又回到初态的整个过程，可用$p-V$图上的一个闭合曲线表示，循环一周内能不变。
+
+\subsection{热循环与制冷循环}
+
+\subsubsection{热循环}
+
+顺时针方向称为热循环，每循环一周，系统吸热并对外做功。
+
+循环曲线所围面积就是系统对外所做的净功$A$，设吸热$Q_1$，放热$|Q_2|$，定义热循环效率为
+
+\begin{formula}
+    $\eta=\dfrac{A}{Q_1}=1-\dfrac{|Q_2|}{Q_1}$
+\end{formula}
+
+\subsubsection{制冷循环}
+
+逆时针方向称为制冷循环，每循环一周，外界对系统做功，系统放热。
+
+循环曲线所围面积是外界对系统做的净功$|A|$，设吸热$Q_1$，放热$|Q_2|$，定义制冷系数为
+
+\begin{formula}
+    $w=\dfrac{Q_2}{A}$
+\end{formula}
+
+\note{热循环效率一定在$0\sim 1$之间，但制冷系数可以大于$1$.}
+
+\subsection{卡诺热机}
+
+卡诺循环是工质只和两个恒温热源交换热量的无摩擦的准静态循环，由等温过程和绝热过程组成。
+
+卡诺热机是按卡诺循环工作的热机，卡诺热机的效率是热循环效率的上限，只与两个热源的温度有关。
+
+\note{卡诺热机按逆向循环就是卡诺制冷机，其制冷系数也是上限。}
+
+\begin{formula}
+    $\eta=1-\dfrac{T_2}{T_1},~~w=\dfrac{T_2}{T_1-T_2}$
+\end{formula}
+
+\section{热力学第二定律}
+
+\subsection{热力学第二定律的宏观表述}
+
+热力学第二定律是关于自然过程方向性的一条基本定律，有两种等价的表述。
+
+\begin{itemize}
+    \item 开尔文表述：其\textbf{唯一效果}是热量全部转变为功的过程是不可能的。（第二类永动机不可制成）
+    \item 克劳修斯表述：热量不能\textbf{自动地}从低温物体传向高温物体。
+
+\end{itemize}
+
+\subsection{热力学第二定律的微观含义}
+
+\subsubsection{可逆过程}
+
+可逆过程是结果（系统和外界的变化）可完全被消除的过程，可逆过程必然可以沿原路径的反向进行，结果是系统和外界同时复原。
+
+卡诺循环就是可逆过程，但一切与热现象有关的实际宏观过程（自然过程）都不可逆。
+
+\subsubsection{热力学概率}
+
+系统的同一个宏观状态实际上可能对应于非常多的微观状态，孤立系统的各个微观状态出现的概率相等。
+
+任一宏观态所对应的微观态数称为该宏观态的热力学概率$\Omega$，一个孤立系统其内部自发进行的过程，总是由热力学概率小的宏观态向热力学概率大的宏观态过渡。
+
+\subsubsection{玻尔兹曼熵公式}
+
+玻耳兹曼引入熵$S$表示平衡态系统无序性的大小，熵是系统状态的函数。
+
+\begin{formula}
+    $S=k\ln{\Omega}$
+\end{formula}
+
+\subsubsection{熵增原理}
+
+孤立系统内的自然过程总是沿着熵增加的方向进行，这是热力学第二定律的另一种表述。
+
+即对于孤立系统中进行的过程，$\Delta S\geq 0$，只有可逆过程的$\Delta S=0$，自然过程的$\Delta S$必然大于零。
+
+\note{可逆绝热过程就是熵变为零的过程。}
+
+\section{拓展内容}
+
+\subsection{熵变}
+
+\subsubsection{克劳修斯熵公式}
+
+一个系统进行可逆过程时，熵变计算公式为
+
+\begin{formula}
+    $dS=\dfrac{dQ}{T},~~~\Delta S=\displaystyle\int_1^2{\dfrac{dQ}{T}}$
+\end{formula}
+
+\note{其中$Q$表示气体吸收的热，熵$S$的单位为$\unit{J/K}$.}
+
+对于$\SI{1}{mol}$理想气体而言，利用理想气体状态方程，可得
+
+\begin{formula}
+    $\Delta S=C_{V,m}\ln{\dfrac{T_2}{T_1}}+R\ln{\dfrac{V_2}{V_1}}$
+\end{formula}
+
+\subsubsection{熵变的计算}
+
+熵是状态函数，熵变只与始末状态有关，而与变化过程无关。
+
+因此要求熵变，则不用考虑实际的变化过程，只需设计一个可逆过程，利用克劳修斯熵公式计算即可。
+

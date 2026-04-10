@@ -1,0 +1,372 @@
+\chapter{稳恒电流的磁场}
+\setcounter{example_counter}{1}
+
+\section{电流与电动势}
+
+\subsection{电流}
+
+\subsubsection{电流强度}
+
+电流是电荷的定向运动，单位时间内通过某一截面的电量称为电流强度，简称电流。
+
+\begin{formula}
+    $I=\dfrac{dq}{dt}$
+\end{formula}
+
+电流强度是标量，只有大小，没有方向。
+
+\subsubsection{电流密度}
+
+电流密度矢量$\vec{j}$能同时描述各处电流的大小和方向，它的方向就是正电荷运动的方向，大小等于通过该点单位面积的电流密度。
+
+\begin{formula}
+    $dI=\vec{j}\cdot d\vec{S}~~~I=\displaystyle \iint_S{\vec{j}\cdot d\vec{S}}$
+\end{formula}
+
+\note{电流密度与电流强度的关系：$I=\displaystyle\iint_S\vec{j}\cdot d\vec{S}$，即通过某一截面的电流等于电流密度矢量对该截面通量。}
+
+\begin{example}{电流密度的计算}
+    有一根半径为$R$的均匀导线，电流为$I$均匀通过导线截面。求导线内部距离轴线为$r$处的电流密度大小。
+    \tcblower
+    电流均匀通过导线截面，说明电流密度方向沿轴线方向，大小处处相等。
+
+    对于距离轴线为$r$处的圆面，其面积为$\pi r^2$，通过该面积的电流为
+
+    $I=\dfrac{\pi r^2}{\pi R^2}\cdot I=\dfrac{r^2}{R^2}I$
+
+    根据电流密度的定义，$j=\dfrac{I}{S}$，因此
+
+    $j=\dfrac{I}{\pi r^2}\cdot\dfrac{r^2}{R^2}=\dfrac{I}{\pi R^2}$
+
+    可知均匀导线中电流密度大小处处相等，方向沿轴线方向。
+
+    \tcbline
+    【补充练习】若电流在导线截面上不是均匀分布，而是满足$j=j_0(1-\dfrac{r}{R})$，其中$j_0$为轴线处的电流密度，$r$为到轴线的距离，求通过导线截面的总电流。
+\end{example}
+
+\subsection{电动势}
+
+电源的电动势$\mathcal E$，是电源把单位正电荷从负极移向正极过程中，非静电力所做的功。
+
+单位正电荷受到的非静电力，称为“非静电场的场强”，则电动势就是这种场强沿闭合回路的积分。
+
+\begin{formula}
+    $\mathcal E=\dfrac{W_{\text{非}}}{q}=\displaystyle\oint_L{\vec{E}_{\text{非}}\cdot d\vec{l}}$
+\end{formula}
+
+\note{电动势与端电压的区别：电动势是电源本身的性质，取决于电源把单位正电荷从负极移到正极时非静电力所做的功；而端电压是电源两极之间的电势差，当电路断开时，端电压等于电动势；当电路接通时，端电压小于电动势（因为电源有内阻）。}
+
+\section{恒定电流产生的磁场}
+
+\subsection{毕奥-萨伐尔定律}
+
+载有电流的长度为$dl$的通电导线，称为一个电流元，用$Id\vec{l}$表示，方向与电流方向相同。
+
+对于电流元$Id\vec{l}$，用$\vec{r}$表示它指向P点的向量，则电流元在P点产生的磁场为
+
+\begin{formula}
+    $d\vec{B}=\dfrac{\mu_0}{4\pi}\dfrac{Id\vec{l}\times\vec{e}_r}{r^2}$
+\end{formula}
+
+其中，$\mu_0$称为真空磁导率，$\mu_0=\dfrac{1}{\varepsilon_0c^2}=4\pi\times10^{-7}\unit{N/A^2}$
+
+若记电流元$Id\vec{l}$与$\vec{r}$的夹角为$\theta$，则磁场强度的大小为$\dfrac{\mu_0}{4\pi}\dfrac{Id\vec{l}\sin{\theta}}{r^2}$，方向垂直于二者所确定的平面。
+
+\note{在电流元延长线上的点，电流元不产生磁场。}
+
+\subsection{磁通连续定理（磁场的高斯定理）}
+
+目前并未发现单独存在的磁单极子，磁场是无源有旋场，在任何磁场中，通过任意封闭曲面的磁通量都为零。
+
+\begin{formula}
+    $\displaystyle\varoiint_S{\vec{B}}\cdot d\vec{S}=0$
+\end{formula}
+
+\subsection{典型电流的磁场分布}
+
+与第7章中典型带电体的电场分布类似，本节讨论几种典型电流分布产生的磁场。
+
+\subsubsection{载流直导线}
+
+设有一根无限长直导线载有电流$I$，求距导线为$a$处的磁感应强度。
+
+取电流元$Id\vec{l}$，设它到P点的距离为$r$，电流元与$\vec{r}$的夹角为$\theta$。则电流元在P点产生的磁场大小为$dB=\dfrac{\mu_0}{4\pi}\dfrac{Idl\sin\theta}{r^2}$，方向由右手定则确定。
+
+\begin{example}{无限长直导线周围的磁场}
+    求无限长直导线外距离导线$a$处的磁感应强度。
+    \tcblower
+    建立如图所示坐标系，设P点到导线的垂足为O，$OP=a$，电流元$Id\vec{l}$到P点的连线与电流方向的夹角为$\theta$。
+
+    设电流元到O点的距离为$l$，则$r=\sqrt{l^2+a^2}$，$\sin\theta=\dfrac{a}{\sqrt{l^2+a^2}}$
+
+    因此$dB=\dfrac{\mu_0}{4\pi}\dfrac{Idl\cdot a}{(l^2+a^2)^{3/2}}$
+
+    积分范围从$-\infty$到$+\infty$，可得
+
+    \vspace{0.5em}
+
+    $B=\displaystyle\int_{-\infty}^{+\infty}{\dfrac{\mu_0}{4\pi}\dfrac{Ia\,dl}{(l^2+a^2)^{3/2}}}=\dfrac{\mu_0 I}{2\pi a}$
+
+    \vspace{0.5em}
+
+    方向由右手定则确定：若电流向上，则磁场方向为逆时针（俯视）；若电流向下，则磁场方向为顺时针。
+
+    \tcbline
+    【补充练习】两根无限长直导线相互平行，电流分别为$I_1$和$I_2$，方向相同，距离为$d$。求两根导线之间的作用力。
+\end{example}
+
+\note{无限长直导线周围的磁场大小与距离成反比，$B=\dfrac{\mu_0 I}{2\pi r}$，方向沿切线方向。}
+
+\subsubsection{载流圆线圈}
+
+设有一半径为$R$的载流圆线圈，电流为$I$，求圆心处的磁感应强度。
+
+对于圆线圈上的任一电流元$Id\vec{l}$，它到圆心的连线与电流方向的夹角为$90^\circ$，因此在圆心处产生的磁场大小为$dB=\dfrac{\mu_0}{4\pi}\dfrac{Idl}{R^2}$，方向沿轴线方向。
+
+\begin{example}{圆电流中心的磁场}
+    求载流圆线圈在圆心处的磁感应强度。
+    \tcblower
+    对于圆线圈上的任意电流元$Id\vec{l}$，电流方向与到圆心连线的夹角均为$90^\circ$，因此在圆心处产生的磁场大小为
+
+    $dB=\dfrac{\mu_0}{4\pi}\dfrac{Idl\sin90^\circ}{R^2}=\dfrac{\mu_0}{4\pi}\dfrac{Idl}{R^2}$
+
+    整个圆线圈积分可得
+
+    $B=\displaystyle\int_0^{2\pi R}{\dfrac{\mu_0}{4\pi}\dfrac{Idl}{R^2}}=\dfrac{\mu_0 I}{2R}$
+
+    方向由右手定则确定：若电流为逆时针（俯视），则磁场方向垂直于线圈平面向外；若电流为顺时针，则磁场方向垂直于线圈平面向里。
+
+    \tcbline
+    【补充练习】一半径为$R$的圆形线圈，电流为$I$。求在线圈轴线上距离圆心为$x$处的磁感应强度。
+\end{example}
+
+\note{圆电流中心的磁场大小为$B=\dfrac{\mu_0 I}{2R}$，方向由右手定则确定。}
+
+\subsubsection{载流螺线管}
+
+螺线管是由密绕的载流导线组成的螺旋管。若螺线管的长度远大于其半径，可视为无限长螺线管。
+
+\begin{example}{长直螺线管内部的磁场}
+    设长直螺线管的半径为$R$，单位长度匝数为$n$，电流为$I$。求螺线管内部的磁感应强度。
+    \tcblower
+    对于无限长螺线管，可判断其磁场具有轴对称性：
+    \begin{itemize}
+        \item 螺线管内部为匀强磁场，方向沿轴线方向
+        \item 螺线管外部磁场近似为零
+    \end{itemize}
+
+    取安培环路为矩形回路$abcd$，其中$ab$边平行于轴线，位于螺线管内部，长度为$l$；$cd$边在螺线管外；$bc$和$da$边垂直于轴线。
+
+    根据安培环路定理：
+    \begin{itemize}
+        \item 在$ab$边上，$\vec{B}$与$d\vec{l}$方向相同，$\vec{B}\cdot d\vec{l}=B\,dl$
+        \item 在$cd$边上，$B\approx0$
+        \item 在$bc$和$da$边上，$\vec{B}$与$d\vec{l}$垂直
+    \end{itemize}
+
+    因此$\displaystyle\oint\vec{B}\cdot d\vec{l}=Bl$
+
+    环路包围的电流为$nIl$，根据安培环路定理：
+
+    $Bl=\mu_0 nIl$
+
+    得$B=\mu_0 nI$
+
+    \tcbline
+    【补充练习】有一匝数为$N$、半径为$R$、长度为$L$的螺绕环，电流为$I$。求环内磁感应强度的分布。
+\end{example}
+
+\note{长直螺线管内部为匀强磁场，$B=\mu_0 nI$，方向由右手定则确定（用右手握住螺线管，四指指向电流方向，则拇指指向磁场方向）。}
+
+\subsubsection{环形螺线管（螺绕环）}
+
+环形螺线管即螺绕环，是绕在环形管上的线圈。
+
+\begin{formula}
+    $B=\dfrac{\mu_0 NI}{2\pi r}$
+\end{formula}
+
+其中$N$为总匝数，$r$为环内一点到环心的距离。当环的半径远大于横截面半径时，环内磁场可近似为匀强。
+
+\note{螺绕环是磁场的"环形螺线管"，其磁场主要分布在环内，$B=\dfrac{\mu_0 NI}{2\pi r}$。}
+
+\section{安培环路定理}
+
+\subsection{安培环路定理}
+
+在恒定电流的磁场中，磁感应强度沿任何路径的线积分，等于路径包围电流强度之和的$\mu_0$倍。
+
+\begin{formula}
+    $\displaystyle\oint_C {\vec{B}\cdot d\vec{c}}=\mu_0 \sum{I_{\text{内}}}$
+\end{formula}
+
+\subsection{利用安培环路定理求磁场分布}
+
+虽然安培环路定理适用于任何电流分布的磁场，但利用安培环路定理求磁感应强度时，只能解决具有对称性的情况。
+
+与高斯定理类似，使用安培环路定理求解磁场的条件是：磁场的分布必须具有某种对称性，使得$\vec{B}$的大小在积分回路上容易判断，且$\vec{B}$的方向与回路切线方向夹角要么为$0^\circ$要么为$90^\circ$。
+
+常见具有对称性的电流分布包括：无限长直导线、无限长螺线管、环形螺线管等。
+
+\begin{example}{利用安培环路定理求无限长直导线的磁场}
+    利用安培环路定理求无限长直导线周围的磁场分布。
+    \tcblower
+    首先分析磁场的对称性：
+    \begin{itemize}
+        \item 无限长直导线的磁场具有轴对称性
+        \item 磁场方向沿切线方向（由右手定则确定）
+        \item 磁场大小只与到导线的距离有关
+    \end{itemize}
+
+    取安培环路为以导线为圆心、半径为$r$的圆周$C$，方向与电流方向满足右手定则。
+
+    在圆周上，$\vec{B}$的大小处处相等，方向与$d\vec{l}$方向相同，因此
+
+    $\displaystyle\oint_C\vec{B}\cdot d\vec{l}=B\cdot 2\pi r$
+
+    环路包围的电流为$I$，根据安培环路定理：
+
+    $B\cdot 2\pi r=\mu_0 I$
+
+    得$B=\dfrac{\mu_0 I}{2\pi r}$
+
+    \tcbline
+    【补充练习】有一根无限长直圆筒导体，电流$I$均匀分布在圆筒的截面上。求圆筒内部（$r<R$）和外部（$r>R$）的磁场分布。
+\end{example}
+
+\begin{example}{利用安培环路定理求无限长螺线管的磁场}
+    利用安培环路定理求无限长螺线管内部的磁场分布。
+    \tcblower
+    首先分析磁场的对称性：
+    \begin{itemize}
+        \item 无限长螺线管的磁场具有轴对称性
+        \item 螺线管内部为匀强磁场，方向沿轴线方向
+        \item 螺线管外部磁场近似为零
+    \end{itemize}
+
+    取安培环路为矩形回路$abcd$，其中$ab$边平行于轴线，长度为$l$，位于螺线管内部。
+
+    在$ab$边上，$\vec{B}$与$d\vec{l}$方向相同；在$cd$边上，$B\approx0$；在$bc$和$da$边上，$\vec{B}$与$d\vec{l}$垂直。
+
+    因此$\displaystyle\oint\vec{B}\cdot d\vec{l}=Bl$
+
+    环路包围的电流为$nIl$（$n$为单位长度匝数），根据安培环路定理：
+
+    $Bl=\mu_0 nIl$
+
+    得$B=\mu_0 nI$
+
+    \tcbline
+    【补充练习】若螺线管不是无限长，但长度$L$远大于半径$R$，求螺线管内部靠近中心处的磁场大小。
+\end{example}
+
+\begin{example}{利用安培环路定理求螺绕环的磁场}
+    利用安培环路定理求螺绕环内部的磁场分布。
+    \tcblower
+    首先分析磁场的对称性：
+    \begin{itemize}
+        \item 螺绕环的磁场具有轴对称性
+        \item 磁场方向沿环的切线方向（环绕环轴）
+        \item 磁场大小只与到环心的距离有关
+    \end{itemize}
+
+    取安培环路为以环心为圆心、半径为$r$的圆周$C$（$r$在环内）。
+
+    在圆周上，$\vec{B}$的大小处处相等，方向与$d\vec{l}$方向相同，因此
+
+    $\displaystyle\oint_C\vec{B}\cdot d\vec{l}=B\cdot 2\pi r$
+
+    环路包围的电流为$NI$（$N$为总匝数），根据安培环路定理：
+
+    $B\cdot 2\pi r=\mu_0 NI$
+
+    得$B=\dfrac{\mu_0 NI}{2\pi r}$
+
+    \note{当环的半径远大于横截面半径时，可近似认为环内磁场均匀，$B\approx\dfrac{\mu_0 NI}{2\pi R}$，其中$R$为环的平均半径。}
+
+    \tcbline
+    【补充练习】有一根同轴电缆，内芯半径为$R_1$，外皮半径为$R_2$，电流$I$从内芯流入，从外皮流出。求各区域的磁场分布。
+\end{example}
+
+\note{使用安培环路定理的关键在于：1）分析磁场对称性；2）选择合适的安培环路（通常是与磁场方向平行的直线或与磁场方向垂直的圆）；3）判断环路包围的电流。}
+
+\section{拓展内容}
+
+\subsection{电流的微观解释}
+
+从微观角度来看，电流是大量带电粒子的定向运动。设导体单位体积内的自由电荷数为$n$，每个电荷的电荷量为$q$，定向运动的平均速度为$v$（称为漂移速度），导体的横截面积为$S$，则电流强度为
+
+\begin{formula}
+    $I=nqSv$
+\end{formula}
+
+相应地，电流密度矢量为
+
+\begin{formula}
+    $\vec{j}=nq\vec{v}$
+\end{formula}
+
+\note{漂移速度$v$通常非常小（数量级约为$10^{-4}\unit{m/s}$），但由于单位体积内的自由电荷数$n$非常大，因此可以形成可观的电流。}
+
+\begin{example}{金属导线的电流}
+    有一根铜导线，横截面积为$\SI{1}{mm^2}$，电流为$\SI{1}{A}$。已知铜的自由电子密度为$n=\SI{8.5e28}{m^{-3}}$，电子电荷量为$e=\SI{1.6e-19}{C}$。求自由电子的漂移速度。
+    \tcblower
+    根据$I=nqvS$，漂移速度
+
+    $v=\dfrac{I}{nqS}=\dfrac{1}{8.5\times10^{28}\times1.6\times10^{-19}\times10^{-6}}=\SI{7.4e-5}{m/s}$
+
+    可以看到，漂移速度是非常小的，这也说明了电流的传播速度（实际上是电场的传播速度）远大于电荷的定向运动速度。
+
+    \tcbline
+    【补充练习】若要使漂移速度达到$\SI{1}{mm/s}$，则需要多大的电流？（假设导线参数不变）
+\end{example}
+
+\subsection{基尔霍夫定律}
+
+基尔霍夫定律是电路分析的基本定律，包括电流环路定理和电压环路定理。
+
+\subsubsection{基尔霍夫电流定律（KCL）}
+
+基尔霍夫电流定律指出：对于电路中的任意节点，流入节点的电流代数和等于流出节点的电流代数和。
+
+\begin{formula}
+    $\displaystyle\sum I_{\text{入}}=\sum I_{\text{出}}$
+\end{formula}
+
+这一定律的本质是电荷守恒，因为在稳恒电流中，电荷不会在节点处累积。
+
+\note{基尔霍夫电流定律不仅适用于节点，也适用于任意闭合区域。}
+
+\subsubsection{基尔霍夫电压定律（KVL）}
+
+基尔霍夫电压定律指出：对于电路中的任意回路，沿回路绕行一周，各段电压的代数和为零。
+
+\begin{formula}
+    $\displaystyle\sum U=0$
+\end{formula}
+
+这一定律的本质是能量守恒，因为单位正电荷沿闭合回路一周回到原点，电势能不变。
+
+\begin{example}{利用基尔霍夫定律解电路}
+    有一个回路如图所示，电源电动势分别为$\mathcal E_1=\SI{12}{V}$、$\mathcal E_2=\SI{6}{V}$，内阻分别为$r_1=\SI{1}{\Omega}$、$r_2=\SI{0.5}{\Omega}$，外电阻$R_1=\SI{5}{\Omega}$、$R_2=\SI{4}{\Omega}$。求各支路的电流。
+    \tcblower
+    设电流$I_1$和$I_2$如图所示，对回路应用基尔霍夫电压定律：
+
+    $\mathcal E_1-\mathcal E_2=I_1(r_1+R_1)-I_2(R_2+r_2)$
+
+    解得$I_1=\SI{1.5}{A}$，$I_2=\SI{0.75}{A}$
+
+    \tcbline
+    【补充练习】若在两电源之间再并联一个电阻$R_3=\SI{10}{\Omega}$，求各支路的电流。
+\end{example}
+
+\note{基尔霍夫定律是第7章回路定理的推广，可作为复习。}
+
+\subsection{运动电荷产生的磁场}
+
+电流是电荷运动产生的，因此运动的电荷也可产生磁场，计算方法与毕奥-萨伐尔定律相似。
+
+\begin{formula}
+    $d\vec{B}=\dfrac{\mu_0}{4\pi}\dfrac{q\vec{v}\times\vec{e}_r}{r^2}$
+\end{formula}
+
